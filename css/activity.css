@@ -1,0 +1,390 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: 'Noto Sans TC', sans-serif;
+}
+body{
+    background-color:rgb(247, 247, 247);
+}
+
+.container{
+  font-size: 0;
+  min-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  /* border:1px solid green; */
+}
+
+div.breadcrumb{
+    margin-top: 170px;
+    /* border:3px solid red; */
+    font-size: 0;
+    padding-bottom: 50px;
+}
+.breadcrumb > ol{
+    font-size: 22px;
+    /* border:3px solid rgb(23, 10, 205); */
+    margin: 0 auto;
+    width: 1200px;
+    display: flex;
+}
+div.breadcrumb ol.breadcrumb_list{
+  /* margin: 0;
+  padding: 0; */
+  list-style: none;
+}
+div.breadcrumb ol.breadcrumb_list > li{
+  display: inline-block;
+  margin-right: 10px;
+}
+
+/* 利用 ::before 擬似元素，創造斜線做為分隔 */
+div.breadcrumb ol.breadcrumb_list > li::before{
+  content: ">";
+  font-size: 18px;
+  color: rgb(28, 26, 26);
+  margin-right: 12px;
+}
+/* 第一個 li 元素，將 ::before 設定回來需要的 */
+div.breadcrumb ol.breadcrumb_list > li:first-child::before{
+  content: "";
+  margin-right: 0;
+}
+
+/* 基本文字樣式 */
+div.breadcrumb ol.breadcrumb_list > li > a{
+  text-decoration: none;
+  display: inline-block;
+  color: #1d1d1d;
+  padding: 5px;
+}
+div.breadcrumb ol.breadcrumb_list > li:nth-child(2) a{
+    display: inline-block;
+    /* font-weight: bolder; */
+    color:rgb(255, 255, 255);
+    background-color: rgb(129, 191, 188);
+    /* text-shadow: 1px 1px 0px rgb(124, 124, 124); */
+}
+
+/* 滑動移過後文字增加陰影 */
+div.breadcrumb ol.breadcrumb_list > li > a:hover{
+  text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.467);
+}
+
+/* 選單開始 */
+
+.menu{
+  font-size: 25px;
+  width:800px;
+  /* border:1px solid red; */
+  margin: 0 auto;
+  margin-bottom:100px;
+
+}
+
+.menu ul{
+  display: flex;
+  margin: 0 auto;
+  /* border: 1px solid purple; */
+  width:1200; 
+}
+
+.menu ul > li{
+  margin: 0 auto;
+}
+
+.menu ul > li > a{
+  display: inline-block;
+  padding: 10px 20px;
+  color: #1d1d1d;
+  /* margin:auto 20px; */
+  position: relative;
+  letter-spacing:1px;
+}
+
+.menu ul > li > a::before{
+  content: '|';
+  position: absolute;
+  top: 8px;
+  left:-15px;
+}
+/* 第一個 li 元素，將 ::before 設定回來需要的 */
+.menu ul :nth-child(1) ::before{
+  content:'';
+}
+
+/* 選單結束 */
+
+/* 資料內容開始 */
+
+.titlebanner{
+  width: 1200px;
+  margin: 0 auto;
+  position: relative;
+}
+.titlebanner > h2{
+  font-size:50px;
+  color: azure;
+  position: absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-51%,-50%) ;
+}
+.titlebanner > img{
+  width: 1200px;
+  height: 300px;
+  background-attachment: fixed;
+  background-position:center center;
+  display: inline-block;
+  background-image: url(../picture/activity/intro03.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 50px;
+  border: none;
+  outline: none;
+}
+
+.content{
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-top: 100px;
+  border:1px solid pink;
+  
+}
+.content .item01{
+  width: 1200px;
+  display: flex;
+  margin: 0 auto;
+  justify-content: space-evenly;
+}
+.content .item01 .left{
+  width: 650px;
+  /* border:1px solid rgb(72, 0, 240); */
+  background-size: contain;
+}
+.content .item01 .left .pic{
+  width: 100%;
+  min-height:950px;
+  overflow: hidden;
+}
+.content .item01 .left .pic img{
+  /* max-width:100%; */
+  min-height:950px;
+}
+.content .item01 .left .text{
+  /* border: 1px solid red; */  
+  /* text-align: center; */
+}
+.content .item01 .left .text p.title{
+  font-size: 35px;
+  font-weight: 600;
+  padding-top: 15px;
+}
+.content .item01 .left .text p.date{
+  font-size: 25px;
+  font-weight:400;
+  padding-top: 10px;
+}
+.content .item01 .left .text .bottom{
+  display: flex;
+  padding-top: 10px;
+  /* justify-content: center; */
+}
+.content .item01 .left .text .bottom .star{
+  display: flex;
+  align-items: baseline;
+  /* border: 1px solid blue; */
+  /* margin-right: 10px; */
+  
+}
+.content .item01 .left .text .bottom .star p{
+  font-size:30px;
+  font-weight:600;
+  /* padding-right: 10px; */
+}
+.content .item01 .left .text .bottom .star i{
+  font-size: 30px;
+  color:rgb(255, 174, 0);
+  margin-left: 5px;
+}
+.content .item01 .left .text button{
+  font-size: 25px;
+  background-color: rgb(134, 202, 193);
+  border:.5px solid rgb(198, 229, 225);
+  color: rgb(255, 255, 255);
+  /* text-shadow:1px 0px 0px rgb(105, 105, 105) ; */
+  letter-spacing:1px;
+  padding:5px;
+  border-radius: 5px;
+  /* float: right; */
+  transform:translate(535px,-127px);
+}
+
+/* 右側 */
+
+.content .item01 .right{
+  /* border:1px solid rgb(153, 0, 255); */
+  /* max-width: 380px; */
+  /* margin: 0 auto; */
+}
+.content .item01 .right .pic{
+  width: 380px;
+  height: 380px;
+  overflow: hidden;
+}
+.content .item01 .right .pic img{
+  /* width: 100%; */
+}
+.content .item01 .right .text{}
+.content .item01 .right .text p.title{
+  font-size: 25px;
+  font-weight: 600;
+  padding-top: 10px;
+  width: 280px;
+  line-height: 1.5em;
+}
+.content .item01 .right .text p.date{
+  font-size: 20px;
+  font-weight:400;
+  padding-top: 5px;
+}
+.content .item01 .right .text .bottom{
+  display: flex;
+  padding-top: 5px;
+}
+.content .item01 .right .text .bottom .star{
+  display: flex;
+  align-items: baseline;
+}
+.content .item01 .right .text .bottom .star p{
+  font-size:23px;
+  font-weight:600;
+}
+.content .item01 .right .text .bottom .star i{
+  font-size: 25px;
+  color:rgb(255, 174, 0);
+  margin-left: 5px;
+}
+.item01 .right .rightitem .text button{
+  font-size: 20px;
+  background-color: rgb(134, 202, 193);
+  border:.5px solid rgb(198, 229, 225);
+  color: rgb(255, 255, 255);
+  /* text-shadow:1px 0px 0px rgb(105, 105, 105) ; */
+  letter-spacing:1px;
+  padding:5px;
+  border-radius: 5px;
+  /* float: right; */
+  transform:translate(283px,-135px);
+}
+
+/* item02 */
+.item02 .right{
+  display: flex;
+  justify-content: space-around;
+}
+.content .item02 .right{
+  /* border:1px solid rgb(153, 0, 255); */
+  /* max-width: 380px; */
+  /* margin: 0 auto; */
+}
+.content .item02 .right .pic{
+  width: 380px;
+  height: 380px;
+  overflow: hidden;
+}
+.content .item02 .right .pic img{
+  /* width: 100%; */
+}
+.content .item02 .right .text{}
+.content .item02 .right .text p.title{
+  font-size: 25px;
+  font-weight: 600;
+  padding-top: 10px;
+  width: 280px;
+  line-height: 1.5em;
+}
+.content .item02 .right .text p.date{
+  font-size: 20px;
+  font-weight:400;
+  padding-top: 5px;
+}
+.content .item02 .right .text .bottom{
+  display: flex;
+  padding-top: 5px;
+}
+.content .item02 .right .text .bottom .star{
+  display: flex;
+  align-items: baseline;
+}
+.content .item02 .right .text .bottom .star p{
+  font-size:23px;
+  font-weight:600;
+}
+.content .item02 .right .text .bottom .star i{
+  font-size: 25px;
+  color:rgb(255, 174, 0);
+  margin-left: 5px;
+}
+.item02 .right .rightitem .text button{
+  font-size: 20px;
+  background-color: rgb(134, 202, 193);
+  border:.5px solid rgb(198, 229, 225);
+  color: rgb(255, 255, 255);
+  /* text-shadow:1px 0px 0px rgb(105, 105, 105) ; */
+  letter-spacing:1px;
+  padding:5px;
+  border-radius: 5px;
+  /* float: right; */
+  transform:translate(283px,-135px);
+}
+
+
+
+
+
+/* 資料內容結束 */
+
+/* 頁碼開始 */
+.pagenum{
+    font-size: 20px;
+    /* border:1px solid red; */
+    margin: auto;
+    margin-top: 100px;
+    margin-bottom:100px;
+  }
+  .pagenum > ul{
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    
+  }
+  
+  .pagenum > ul > li{
+    border:1px solid rgba(0, 0, 0, 0.5);
+    margin: 0 8px;
+    background-color: rgb(255, 255, 255);
+    width: 40px;
+    height: 40px;
+    line-height: 2em;
+    text-align: center;
+  }
+  
+  .pagenum > ul > li > a{
+    padding: 10px;
+    color: #1d1d1d;
+  
+  }
+  
+  .pagenum > ul > li:first-child,.pagenum > ul > li:last-child{
+    border: none;
+    background-color:rgb(247, 247, 247);
+    width: 100px;
+    height: 40px;
+    /* border:1px solid rgba(0, 0, 0, 0.589); */
+  
+  }
+  /* 頁碼結束 */

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="dist/hamburgers.css" rel="stylesheet">
+        <link rel="stylesheet" href="./hb.css">
+        <!-- 漢堡按鈕外掛link -->
+        <title>Document</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                list-style: none;
+                text-decoration: none;
+                box-sizing: border-box;
+                font-family: 'Noto Sans TC', sans-serif;
+            }
+            /* button{
+        display:none;
+        } */
+
+            nav.main_nav {
+                /* border: 1px solid red; */
+                /* width: 150px; */
+                display: none;
+
+            }
+            /* @media screen and (min-width:768px){
+        nav.main_nav{
+            display:block !important;
+        }
+        } */
+
+            nav.main_nav ul.nav_list li {
+                /* border: 1px solid blue; */
+                /*   display:inline-block; */
+                list-style: none;
+                font-size: 30px;
+                padding-left: 15px;
+                border-bottom: 1px solid rgb(113, 112, 112);
+                width: 190px;
+                background-color: rgba(255, 255, 255, 0.919);
+                /* transform: translateX(-100px); */
+            }
+
+            nav.main_nav ul.nav_list li > a{
+                color:pink;
+            }
+
+            /* @media screen and (max-width: 767px){
+            button{
+            display:block;
+            }
+
+            nav.main_nav{
+            color:red;
+            display:none;
+            }
+        
+            nav.main_nav ul.nav_list li{
+            border:1px solid blue;
+            display:block;
+            }
+        } */
+        </style>
+    </head>
+    <body>
+
+        <button class="hamburger hamburger--stand btn_switch" type="button">
+            <span class="hamburger-box">
+                <span class="hamburger-inner"></span>
+            </span>
+        </button>
+
+        <nav class="main_nav">
+            <ul class="nav_list">
+                <li>
+                    <a href="#">找活動&景點</a>
+                </li>
+                <li>
+                    <a href="#">文章專欄</a>
+                </li>
+                <li>
+                    <a href="#">我的頁面</a>
+                </li>
+                <li>
+                    <a href="#">登入</a>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- 載入Jquery-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+        <!-- 點擊後顯示選單 -->
+        <script>
+            $(function () {
+                // 點擊按鈕，選單縮放
+                $("button.btn_switch").on("click", function () {
+                    $("nav.main_nav").slideToggle();
+                });
+
+            });
+        </script>
+        <!-- 控制漢堡button變化 -->
+        <script>
+            $(function () {
+
+                // hamburger icon 的切換
+                $("button.hamburger").on("click", function () {
+                    $(this).toggleClass("is-active");
+                });
+
+            });
+        </script>
+    </body>
+</html>

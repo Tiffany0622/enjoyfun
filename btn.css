@@ -1,0 +1,42 @@
+.wrap{
+    z-index: 1;
+    margin: auto 0;
+    /* transform: translateX(280px); */
+    /*搜尋框位移的位子*/
+}
+.search{
+    position: relative;
+}
+.search-bar {
+width: 440px;
+font-size: 20px;
+border:.5px solid rgb(129, 191, 188);
+/*自定義邊框*/
+border-radius: 50px;
+padding:15px;
+}
+/*控制搜尋框的顏色*/
+::placeholder {
+color: rgb(129, 191, 188);
+}
+/*控制搜尋框外面的 focus*/
+input:focus {
+outline: 0;
+}
+/*搜尋的按鈕*/
+.search-btn {
+width: 80px;
+height: 40px;
+outline: none;
+border: 0 solid transparent;
+/*自定義邊框*/
+cursor: pointer;
+/*碰到按鈕鼠標會變手*/
+border-radius: 50px;
+background-image: url("search_button.png");
+background-size: cover;
+background-repeat: no-repeat;
+position: absolute;
+top: 0;left: 0;
+transform: translate(380px,8px);
+}

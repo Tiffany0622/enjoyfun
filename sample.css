@@ -1,0 +1,117 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: 'Noto Sans TC', sans-serif;
+}
+body{
+    background-color:rgb(247, 247, 247);
+}
+
+.container{
+  font-size: 0;
+  min-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  border:1px solid green;
+}
+
+div.breadcrumb{
+    margin-top: 170px;
+    border:3px solid red;
+    font-size: 0;
+    padding-bottom: 50px;
+}
+.breadcrumb > ol{
+    font-size: 22px;
+    border:3px solid rgb(23, 10, 205);
+    margin: 0 auto;
+    width: 1200px;
+    display: flex;
+}
+div.breadcrumb ol.breadcrumb_list{
+  /* margin: 0;
+  padding: 0; */
+  list-style: none;
+}
+div.breadcrumb ol.breadcrumb_list > li{
+  display: inline-block;
+  margin-right: 10px;
+}
+
+/* 利用 ::before 擬似元素，創造斜線做為分隔 */
+div.breadcrumb ol.breadcrumb_list > li::before{
+  content: ">";
+  font-size: 18px;
+  color: rgb(28, 26, 26);
+  margin-right: 12px;
+}
+/* 第一個 li 元素，將 ::before 設定回來需要的 */
+div.breadcrumb ol.breadcrumb_list > li:first-child::before{
+  content: "";
+  margin-right: 0;
+}
+
+/* 基本文字樣式 */
+div.breadcrumb ol.breadcrumb_list > li > a{
+  text-decoration: none;
+  display: inline-block;
+  color: #1d1d1d;
+  padding: 5px;
+}
+div.breadcrumb ol.breadcrumb_list > li:nth-child(3) a{
+    display: inline-block;
+    /* font-weight: bolder; */
+    color:rgb(255, 255, 255);
+    background-color: rgb(129, 191, 188);
+    /* text-shadow: 1px 1px 0px rgb(124, 124, 124); */
+}
+
+/* 滑動移過後文字增加陰影 */
+div.breadcrumb ol.breadcrumb_list > li > a:hover{
+  text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.467);
+}
+
+/* 頁碼開始 */
+.pagenum{
+  font-size: 20px;
+  width: 1200px;
+  /* border:1px solid red; */
+  margin: auto;
+  margin-top: 100px;
+  margin-bottom:100px;
+}
+.pagenum > ul{
+  display: flex;
+  margin: auto;
+  justify-content: center;
+  
+}
+
+.pagenum > ul > li{
+  border:1px solid rgba(0, 0, 0, 0.5);
+  margin: 0 8px;
+  background-color: rgb(255, 255, 255);
+  width: 40px;
+  height: 40px;
+  line-height: 2em;
+  text-align: center;
+}
+
+.pagenum > ul > li > a{
+  padding: 10px;
+  color: #1d1d1d;
+
+}
+
+.pagenum > ul > li:first-child,.pagenum > ul > li:last-child{
+  border: none;
+  background-color:rgb(247, 247, 247);
+  width: 100px;
+  height: 40px;
+  /* border:1px solid rgba(0, 0, 0, 0.589); */
+
+}
+/* 頁碼結束 */

@@ -1,0 +1,314 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: 'Noto Sans TC', sans-serif;
+}
+body{
+    background-color:rgb(247, 247, 247);
+}
+
+.container{
+  font-size: 0;
+  width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  /* border:1px solid green; */
+}
+
+div.breadcrumb{
+    margin-top: 100px;
+    /* border:3px solid red; */
+    font-size: 0;
+    padding-bottom: 50px;
+}
+.breadcrumb > ol{
+    font-size: 22px;
+    /* border:3px solid rgb(23, 10, 205); */
+    margin: 0 auto;
+    width: 1200px;
+    display: flex;
+}
+div.breadcrumb ol.breadcrumb_list{
+  /* margin: 0;
+  padding: 0; */
+  list-style: none;
+}
+div.breadcrumb ol.breadcrumb_list > li{
+  display: inline-block;
+  margin-right: 10px;
+}
+
+/* 利用 ::before 擬似元素，創造斜線做為分隔 */
+div.breadcrumb ol.breadcrumb_list > li::before{
+  content: ">";
+  font-size: 18px;
+  color: rgb(28, 26, 26);
+  margin-right: 12px;
+}
+/* 第一個 li 元素，將 ::before 設定回來需要的 */
+div.breadcrumb ol.breadcrumb_list > li:first-child::before{
+  content: "";
+  margin-right: 0;
+}
+
+/* 基本文字樣式 */
+div.breadcrumb ol.breadcrumb_list > li > a{
+  text-decoration: none;
+  display: inline-block;
+  color: #1d1d1d;
+  padding: 5px;
+}
+div.breadcrumb ol.breadcrumb_list > li:nth-child(3) a{
+    display: inline-block;
+    /* font-weight: bolder; */
+    color:rgb(255, 255, 255);
+    background-color: rgb(129, 191, 188);
+    /* text-shadow: 1px 1px 0px rgb(124, 124, 124); */
+}
+
+/* 滑動移過後文字增加陰影 */
+div.breadcrumb ol.breadcrumb_list > li > a:hover{
+  text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.467);
+}
+
+/* 資料內容開始 */
+
+.content{
+  font-size: 0;
+  width:1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content:space-between;
+}
+.content .mainitem{
+  width: 850px;
+  background-color: rgb(255, 255, 255);
+  align-items:flex-start;
+}
+
+.content .mainitem h3{
+  font-size:35px;
+  width: 800px;
+  margin: 0 auto;
+  line-height: 1.5em;
+  padding-top: 20px;
+  padding-bottom: 25px;
+  color: #000000bd;
+}
+
+.toptext{
+  width: 800px;
+  margin: 0 auto;
+  padding-bottom: 10px;
+}
+
+.content .mainitem .toptext{
+  display: flex;
+  font-size: 20px;
+  justify-content: space-between;
+  
+}
+.content .mainitem .toptext .text{
+  display: flex;
+  color: #5a5a5a;
+  /* border:1px solid red; */
+  position: relative;
+}
+.content .mainitem .toptext .text p.date{
+  margin-right:30px;
+}
+.content .mainitem .toptext .text p.date::after{
+  content:'';
+  width: 2px;
+  background-color: rgba(0, 0, 0, 0.657);
+  display: inline-block;
+  height:27px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translate(158px,2px);
+}
+
+.heart{
+  display: flex;
+ 
+}
+.heart .num{
+  color: #111010d0;
+  font-size: 25px;
+  line-height: 1em;
+}
+
+.heart i {
+  font-size: 25px;
+  color: rgb(255, 83, 135);
+  padding-right:5px;
+}
+.mainpic01,.mainpic04{
+  margin: 0 auto;
+  width: 800px;
+  font-size: 20px;
+  padding-bottom:50px;
+}
+.mainpic02,.mainpic03{
+  margin: 0 auto;
+  width: 800px;
+  font-size: 20px;
+  padding-bottom:100px;
+}
+.source{
+  text-align: right;
+  color: #2c2c2c;
+  padding-top:15px;
+}
+.mainpic01 img,.mainpic02 img,.mainpic03 img,.mainpic04 img{
+  max-width: 100%;
+}
+.title{
+  font-size: 25px;
+  line-height: 2em;
+  width: 800px;
+  margin: 0 auto;
+  padding-bottom: 10px;
+  color: rgb(250, 67, 21);
+  font-weight: 600;
+}
+
+.p_main{
+  width: 800px;
+  font-size: 25px;
+  line-height: 2em;
+  margin: 0 auto;
+  padding-bottom:50px;
+  color: #1d1d1d;
+}
+
+.mainitem > .share{
+  /* font-size: 25px; */
+  /* border: 1px solid blue; */
+  text-align: right;
+  width: 800px;
+  padding-bottom: 20px;
+  margin: 0 auto;
+}
+
+.share::after{
+  content:'';
+  width: 800px;
+  height:.5px;
+  background-color: rgba(22, 22, 22, 0.479);
+  display: block;
+  margin-top: 30px;
+}
+
+.share > button.fb,button.line{
+  font-size:23px;
+  width: 160px;
+  border:.5px solid rgba(20, 20, 20, 0.5);
+  background-color: rgb(255, 255, 255);
+  border-radius: 5px;
+  margin: 0 auto;
+}
+button.line{
+  margin-left: 10px;
+}
+.share > button.fb i{
+  color:rgb(24,119,242);
+  font-size:30px;
+  padding-left:3px;
+  line-height:1.3em;
+}
+.share > button.line i{
+  color:#00c300;
+  font-size:30px;
+  padding-left:3px;
+  line-height:1.3em;
+}
+
+.exarti{
+  width: 800px;
+  display: flex;
+  justify-content: space-between;
+  /* border:1px solid pink; */
+  margin: auto;
+  padding-bottom: 100px;
+}
+.exarti .toparti p,.exarti .nextarti p{
+font-size: 25px;
+text-align: center;
+padding-bottom: 8px;
+}
+
+.exarti .toparti p.title,.exarti .nextarti p.title{
+  font-size:20px;
+  width: 320px;
+  line-height:1.3em;
+  text-align:justify;
+  color: #1d1d1d;
+}
+
+.exarti .toparti .pic,.exarti .nextarti .pic{
+  height: 193px;
+  width: 320px;
+  overflow: hidden;
+  margin-bottom: 8px;
+}
+
+.exarti .toparti .pic img,.exarti .nextarti .pic img{
+  width: 100%;
+}
+
+.aside{
+  width: 300px;
+  /* border: 1px solid blue; */
+}
+
+.aside .asideitem01{
+  background-color: rgb(255, 255, 255);
+  /* border: 1px solid yellow; */
+  margin-bottom: 50px;
+}
+
+.aside h4.ex{
+  font-size:25px;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #2c2c2c;
+}
+.aside h3{
+  text-align: center;
+  font-size:20px;
+  line-height:1.5em;
+  color: #0f0f0fbe;
+  border:1px solid rgb(255, 255, 255);
+  margin-top: 3px;
+  margin-bottom: 10px;
+}
+
+.aside .asideitem01 .pic{
+  width:300px;
+  /* border:1px solid red; */
+}
+
+.aside .asideitem01 .pic img{
+  max-width: 100%;
+}
+
+.asideitem01 > .heart{
+  display: flex;
+  padding-left:230px;
+  padding-bottom:5px;
+}
+.asideitem01 > .heart i {
+  color: rgb(255, 83, 135);
+}
+.asideitem01 .heart .num{
+  font-size: 18px;
+  line-height:1.5em;
+}
+
+/* 資料內容結束 */
+

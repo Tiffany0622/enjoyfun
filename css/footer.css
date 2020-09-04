@@ -1,0 +1,50 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family:'Noto Sans TC', sans-serif;
+}
+
+div.footer{
+    /* border: 1px solid red; */
+    background-color: rgb(198, 229, 225);
+    text-align: center;
+    font-size: 0;
+    /* min-width: 1200px; */
+    width: 100%;
+    min-width: 1200px;
+    
+}
+
+div.mainfooter{
+    width: 100%;
+    min-width: 1200px;
+    font-size: 18px;
+}
+div.mainfooter p{
+    padding-top:63px ;
+    padding-bottom:27px ;
+}
+
+div.social  {
+    padding-bottom: 40px;
+}
+
+div.social a {
+    margin: 58px;
+}
+
+div.social a img{
+    width: 40px;
+    height: 40px;
+}
+div.mainfooter hr{
+    width: 781px;
+    margin: 0 auto;
+    background-color: rgb(49, 42, 42);
+    height: 2px;
+    border: none;
+    
+}

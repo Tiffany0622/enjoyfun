@@ -1,0 +1,140 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: 'Noto Sans TC', sans-serif;
+}
+
+header {
+    display: flex;
+    /* border: 1px solid rgb(0, 0, 0); */
+    font-size: 0;
+    background-color: rgb(255, 255, 255);
+    margin: 0 auto;
+    width: 100%;
+    min-width: 1200px;
+    position: sticky;
+    top: 0;
+    left:50%;
+    /* transform: translateX(-50%); */
+    z-index: 99;
+    height: 100px;
+    box-shadow: 1px 1px 1px rgb(199, 199, 199);
+
+}
+div.head {
+    display: flex;
+    width: 100%;
+    width: 1200px;
+    /* max-width: 1200px; */
+    background-color: rgb(255, 255, 255);
+    justify-content:space-between;
+    /* align-items:flex-start; */
+    margin: 0 auto;
+    position: relative;
+    
+}
+div.logo {
+    /* border:1px solid rgb(90, 8, 221); */
+    margin: auto 0;
+    /*logo垂直置中*/
+    width: 112px;
+    align-self: start;
+}
+div.logo img {
+    max-width: 100%;
+    /* border:1px solid rgb(88, 171, 255); */
+}
+
+.navright{
+    display: flex;
+}
+
+nav.main_nav {
+                border: 1px solid rgb(255, 255, 255); 
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                z-index:90;
+                transform: translateX(1037px);
+            }
+nav.main_nav ul.nav_list li {
+                /* border: 1px solid blue; */
+                /* display:inline-block; */
+                list-style: none;
+                font-size: 25px;
+                border-bottom: 1px solid rgb(255, 255, 255);
+                width: 170px;
+                background-color: rgb(129, 191, 188);
+                /* text-align: right; */
+                
+            }
+nav.main_nav ul.nav_list li:last-child{
+    border-bottom:none;
+    
+}
+
+nav.main_nav ul.nav_list li > a{
+                color:rgb(255, 255, 255);
+                line-height:2em;
+                /* padding: auto 30px; */
+                text-shadow: 1px 1px 1px rgb(99, 99, 99);
+                letter-spacing:1.2px;
+                padding: 0px 4px 0 7px;
+
+            }
+            .wrap{
+                z-index: 1;
+                margin: auto 0;
+                /* border: 1px solid red; */
+                display: flex;
+                /* transform: translateX(280px); */
+                /*搜尋框位移的位子*/
+            }
+            .search{
+                position: relative;
+                /* border: 1px solid red; */
+            }
+            .search-bar {
+            width: 440px;
+            font-size: 20px;
+            border:.5px solid rgb(129, 191, 188);
+            /*自定義邊框*/
+            border-radius: 50px;
+            padding:15px;
+            }
+            /*控制搜尋框的顏色*/
+            ::placeholder {
+            color: rgb(129, 191, 188);
+            }
+            /*控制搜尋框外面的 focus*/
+            input:focus {
+            outline: 0;
+            }
+            /*搜尋的按鈕*/
+            
+            .search-btn a img{
+            width: 80px;
+            height: 40px;
+            }
+
+            .search-btn {
+            width: 80px;
+            height: 40px;
+            outline: none;
+            border: 0 solid transparent;
+            /*自定義邊框*/
+            cursor: pointer;
+            /*碰到按鈕鼠標會變手*/
+            border-radius: 50px;
+            /* background-image: url("../search_button.png"); */
+            background-size: cover;
+            background-repeat: no-repeat;
+            position: absolute;
+            top: 0;left: 0;
+            transform: translate(350px,8px);
+            }
+            

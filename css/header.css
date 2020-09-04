@@ -1,0 +1,167 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: 'Noto Sans TC', sans-serif;
+}
+header {
+    display: flex;
+    /* border: 1px solid rgb(0, 0, 0); */
+    font-size: 0;
+    background-color: rgb(255, 255, 255);
+    margin: 0 auto;
+    width: 100%;
+    min-width: 1200px;
+    position: sticky;
+    top: 0;
+    left:50%;
+    /* transform: translateX(-50%); */
+    z-index: 99;
+    height: 100px;
+    box-shadow: 1px 1px 1px rgb(199, 199, 199);
+}
+div.head {
+    display: flex;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1200px;
+    background-color: rgb(255, 255, 255);
+    justify-content: space-between;
+    /* border:1px solid rgb(90, 8, 221); */
+}
+div.logo {
+    /* border:1px solid rgb(90, 8, 221); */
+    margin: auto 0;
+    /*logo垂直置中*/
+}
+div.logo a {
+    display: block;
+    width: 112px;
+    margin: 0 4px;
+}
+div.logo a img {
+    max-width: 100%;
+    /* border:1px solid rgb(88, 171, 255); */
+}
+
+ul.list {
+    /* width: 100%; */
+    display: flex;
+    background-color: rgb(255, 255, 255);
+    align-items: center;/*文字垂直置中*/
+}
+
+ul.list > li > a {
+    font-size: 24px;
+    color: rgba(55, 55, 55, 0.8);
+    text-shadow: 1px 1px 0px rgb(216, 216, 216);
+    position: relative;
+    display: block;
+    cursor: pointer;
+    /*鼠標樣式*/
+    transition: color 0.4s ease;
+    padding: 20px 30px;
+    margin: 5px 5px 0px 5px ;
+    /* transition: .3s ease-in;; */
+}
+
+/*a標籤連結 後面加底線，預設寬0*/
+li >a::after{
+    content:'';
+    display: block;
+    width: 0%;
+    height: 3px;
+    background-color: rgb(129, 191, 188);
+    transition: width .3s .1s; /*線延展的時間,線延遲出現的時間*/
+    margin: auto; /*線重中間展開*/
+    margin-top: 10px;
+}
+/*摸到a標籤連結，後面底線出現*/
+li > a:hover::after{
+    width: 100%;
+}
+
+ ul.list a:hover {
+    color:rgb(129, 191, 188);
+    transition: .1s linear;
+    /* text-shadow: none; */
+     text-shadow: 2px 2px 0px rgb(240, 240, 240);
+    
+} 
+
+/*橫幅Banner*/
+
+.banner {
+    margin: 0 auto;
+    min-width: 1200px;
+    /* width: 100%; */
+    /* height: 100%; */
+    /* margin-top: 100px; */
+    /* 因為上方nav定位fixed*/
+    background-image: url("../picture/main/banner03.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    /* border: 1px solid rgb(0, 94, 255); */
+    background-position: center;
+}
+
+/*banner放的位置*/
+
+/*banner超連結*/
+div.banner .test_a {
+    /* border:1px solid rgb(0, 94, 255) ; */
+    min-width: 100%;
+    min-height: 685px;
+    z-index: -2;
+}
+.search-bar {
+    width: 100%;
+    height: 60px;
+    font-size: 20px;
+    border: 0 solid transparent;
+    /*自定義邊框*/
+    border-radius: 50px;
+    padding: 30px;
+
+}
+/*控制搜尋框的顏色*/
+::placeholder {
+    color: rgb(129, 191, 188);
+
+}
+/*控制搜尋框外面的 focus*/
+input:focus {
+    outline: 0;
+}
+/*搜尋的按鈕*/
+.search-btn {
+    width: 103px;
+    height: 50px;
+    outline: none;
+    border: 0 solid transparent;
+    /*自定義邊框*/
+    cursor: pointer;
+    /*碰到按鈕鼠標會變手*/
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(-10%,10%);
+    border-radius: 50px;
+    background-image: url("../search_button.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.wrap {
+    width: 500px;
+    height: 50px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -250%);
+    z-index: 1;
+    /*搜尋框位移的位子*/
+}

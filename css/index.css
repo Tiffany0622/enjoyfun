@@ -1,0 +1,629 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family:'Noto Sans TC', sans-serif;
+    /* outline:1px solid red; */
+}
+body{
+    background-color:rgb(247, 247, 247);
+}
+div.week{
+font-size: 0;
+max-width:1200px;
+width: 100%;
+margin: 0 auto;
+/* border:1px solid red; */
+margin-bottom:200px;
+}
+
+/*all標題h1*/
+div.week h1, div.article h1{
+    text-align: center;
+    width: 170px;
+    font-size: 40px;
+    margin-top:120px;
+    margin-bottom:80px;
+    color:rgb(46, 46, 46);
+    /* border-bottom: 2px solid tomato; */
+}
+/*讓第一個文字變大*/
+div.week h1::first-letter{
+    font-size: 45px;
+    float: left;
+    /* margin: .1em; */
+    line-height:0.9;
+}
+
+div.hot h1{
+    text-align: center;
+    width: 240px;
+    font-size: 40px;
+    margin-top:100px;
+    margin-bottom:100px;
+    border-bottom: 2px solid tomato;
+}
+
+/*本周主打1*/
+div.item1{
+    display: flex;
+    align-items: flex-end;
+    /* 置下對齊 */
+    /* border: 1px solid rgb(0, 218, 199); */
+    min-width: 1200px;
+    margin-bottom:200px;
+}
+div.item1 div.whiteblock{
+    background-color: rgb(255, 255, 255);
+    min-width:560px;
+    height: 175px;
+    position: relative;
+    margin-top:60px;
+    /* border:1px solid pink; */
+    /* transform: translateY(100px); */
+}
+/*綠色文字區*/
+div.item1 div.text{
+    background-color: rgb(232,244, 243);
+    display: flex;
+    min-width: 560px;
+    width:570px;
+    height: 180px;
+    /* border: 1px solid rgb(255, 0, 179); */
+    position: absolute;
+    top:-35px;
+    left:30px;
+    align-items: flex-end;
+    /* transform: translate(17px,-54px); */
+}
+
+/*item01文字區域*/
+div.item1 div.text div.text_right{
+    text-align: center;
+    margin: auto;
+    /* border:1px solid pink; */
+}
+
+/*熱門活動標題*/
+div.item1 div.text h2,div.item2 div.text h2{
+    font-size: 35px;
+    line-height: 1.2em;
+    padding: 2px 0px;
+}
+div.text p,i{
+    font-size: 20px;
+    line-height: 1.2em;
+    padding: 2px 0 0 0;  
+}
+/*本周主打日期圖片*/
+div.item1 div.text div.text_left,div.item2 div.text div.text_left{
+    /* border: 1px solid rgb(255, 115, 0); */
+    margin: auto 20px;
+    max-width: 100px;
+}
+div.item1 div.text div.text_left div.date img,div.item2 div.text div.text_left div.date img{
+    max-width: 100%;
+}
+/*more*/
+.item1 .text .link{
+margin-bottom: 10px;
+margin-right:20px;
+}
+.item1 .text .link > a{
+    font-size: 20px;
+    color: rgb(28, 26, 26);
+    font-weight: 500;
+}
+div.item2 div.text div.text_right a{
+    font-size: 20px;
+     color: rgb(28, 26, 26);
+    font-weight: bolder;
+    float: right;
+    transform: translate(75px,5px);
+}
+
+
+
+/*評價星星區域*/
+div.text div.text_right div.star{
+    display: flex;
+    justify-content: center;
+    /* border: 1px solid green; */
+    align-items: baseline;
+}
+/*評價分數*/
+div.text div.text_right div.star p{
+    font-size: 25px;
+    padding: 3px;
+    font-weight: bold;
+}
+/*評價星星*/
+div.text div.text_right div.star i{
+    color: rgb(255, 197, 87);
+    font-size: 25px;
+    padding: 4px;
+    text-shadow: 1px 1px 1px rgb(180, 180, 180);/*陰影讓星星有立體感*/
+}
+
+div.text div.text_right div.location i{
+    margin-right: 10px;
+}
+
+div.text div.text_right div.location{
+    display: flex;
+    justify-content: center;
+}
+/*本周主打2文字區域的地點*/
+div.text div.text_right div.location > p, div.text div.text_right div.location > i {
+    line-height: 2em;
+}
+
+div.item1 div.content{
+    /* border: 1px solid rgb(156, 0, 247); */
+    position: relative;
+    top: 0;
+    left:0;
+    /* transform: translateX(-46px); */
+}
+
+div.item1 div.img01-2{
+    /* border: 1px solid blue;     */
+    /* height:535px; */
+    width:445px;
+    margin-left:151px;      
+}
+
+/*相片01-1邊框線*/
+div.item1 div.img01-1{
+    /* border: 1px solid rgb(197, 255, 36); */
+    /* transform: translateX(-45px); */
+   width: 600px;
+}
+.img01-1 img,.img01-2 img{
+    max-width: 100%;
+}
+
+/*本周主打2*/
+
+div.item2{
+    display: flex;
+    align-items: flex-end;/*置下對齊*/
+    /* border: 1px solid rgb(255, 0, 0); */
+    max-width: 1200px;
+    position: relative;
+}
+
+div.item2 div.whiteblock{
+    background-color: #fff;
+    min-width: 535px;
+    height: 135px;
+    position: relative;
+}
+/*綠色文字區*/
+div.item2 div.text{
+    background-color: rgb(232,244, 243);
+    display: flex;
+    width: 510px;
+    height: 190px;
+    /* border: 1px solid rgb(255, 0, 179); */
+    position: absolute;
+    top:0;
+    left:0;
+    transform: translate(24px,-79px);
+} 
+
+/*本周主打2-右邊大圖片*/
+div.item2 div.img02-2{
+    /* border: 1px solid black; */
+    max-width: 600px;
+}
+
+div.item2 div.text div.text_right{
+    text-align: center;
+    /* border: 1px solid rgb(0, 0, 0); */
+    margin: auto 0 ;
+}
+
+/*more*/
+.item2 .text .link{
+    margin-top:150px;
+    height: 50px;
+    }
+    .item2 .text .link > a{
+        font-size: 20px;
+        color: rgb(28, 26, 26);
+        font-weight: 500;
+        padding-left:10px;
+    }
+
+
+
+/*最新活動區域*/
+
+div.new-time{
+    position: relative;
+    width: 100%;
+    /* border: 1px solid red; */
+    z-index:98;
+    margin-top: 600px;
+    margin-bottom: 500px;
+}
+
+/*白底*/
+div.new-time > div.white_block{
+width: 100%;
+height:1000px;
+background-color: rgb(255, 255, 255);
+/* border:1px solid rgb(183, 0, 255); */
+z-index: -2;
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+}
+
+/*+more超連結*/
+.new-time > .white_block > a{
+    font-size: 20px;
+    /* border:1px solid red; */
+    color:rgb(17, 16, 16);
+    font-weight: bolder;
+    float: right; 
+    margin-top: 950px;
+    margin-right:30px;
+    }
+
+
+/*黃底*/
+div.new-time > div.yellow_block{
+    width: 100%;
+    height: 215px;
+    background-color: rgb(255, 244, 216);
+    z-index: -1; 
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+div.new-time > .white_block > div.title1{ 
+    width: 1200px;
+    margin: 0 auto;
+}
+.new-time > .white_block > .title1 > h1{
+    /* width: 160px; */
+    font-size: 40px;
+    /* border-bottom: 2px solid tomato; */
+    line-height: 1.5em;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(50px,50px);
+    
+}
+
+div.new-time > div.new{
+    font-size: 0;
+    max-width: 1200px;
+    margin: 0 auto;
+    /* border:1px solid red; */
+    z-index: 2;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+/*最新活動內容包含照片*/
+div.new-time > div.new div.content{
+    display: flex;
+    justify-content: space-between;
+    width: 1200px;
+    text-align: center;
+    /* border:1px solid red; */
+}
+div.new div.content div.item2-1 p.date,div.new div.content div.item2-2 p.date,div.new div.content div.item2-3 p.date{
+   font-size: 20px;
+   line-height: 1.5em;
+}
+
+div.new div.content div.item2-1 p.title,div.new div.content div.item2-2 p.title,div.new div.content div.item2-3 p.title{
+    font-size: 25px;
+    font-weight: bold;
+    line-height: 1.5em;
+}
+/*最新活動評價星星區域*/
+div.new div.content div.star{
+    font-size: 22px;
+    display: flex;
+    justify-content: center;
+    line-height: 1.5em;
+    align-items: baseline;
+    font-weight: bolder;
+}
+/*最新活動評價星星*/
+div.new div.content div.star i{
+    color: rgb(255, 197, 87);
+    font-size: 25px;
+    padding: 4px;
+    text-shadow: 1px 1px 1px rgb(180, 180, 180);
+} 
+
+/*熱門打卡景點*/
+div.hot{
+    font-size: 0;
+    width: 1200px;
+    margin: 0 auto;
+    /* border:1px solid rgb(98, 0, 255); */
+    margin-bottom: 100px; 
+    margin-top: 1200px;
+    }
+    /*撐開浮動元素高度*/
+    div.hot::after{
+        content: "";
+        display: block;
+        clear: both;
+      }
+
+    div.hot div.content div.item3-1,div.hot div.content div.item3-2{
+        display: flex;
+        margin-bottom: 85px;
+    }
+
+    /*綠底*/
+    div.block3-1_01{
+        width: 537px;
+        height: 537px;
+        background-color: rgb(232,244, 243);
+        margin-right: 85px;
+        position: relative;
+        box-shadow: 0px 3px 6px rgb(199, 199, 199);
+    }
+    div.block3-2_02{
+        width: 537px;
+        height: 537px;
+        background-color: rgb(232,244, 243);
+        position: relative;
+        box-shadow: 0px 3px 6px rgb(199, 199, 199);
+    }
+    /*白底*/
+    div.block3-1_02{
+        width: 537px;
+        height: 537px;
+        background-color: rgb(255, 255, 255);
+        position: relative;
+        box-shadow: 0px 3px 6px rgb(199, 199, 199);
+    }
+    div.block3-2_01{
+        width: 537px;
+        height: 537px;
+        margin-right: 85px;
+        background-color: rgb(255, 255, 255);
+        position: relative;
+        box-shadow: 0px 3px 6px rgb(199, 199, 199);
+    }
+
+    
+
+    
+    /*4張照片*/
+    .hot .content .item3-1 .block3-1_01 .item3-1_01 .img a > img ,.hot .content .item3-1 .block3-1_02 .item3-1_02 .img a > img,.hot .content .item3-2 .block3-2_01 .item3-2_01 .img a > img,.hot .content .item3-2 .block3-2_02 .item3-2_02 .img a > img{
+        /* border: 1px solid rgb(143, 11, 251); */
+        /* width: 537px;
+        height: 537px; */
+        max-width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform: translate(40px,40px);
+        box-shadow: 0px 3px 6px rgb(199, 199, 199);
+    }
+    div.hot div.content div.item3-1_01 div.img>img, div.hot div.content div.item3-1_02 div.img>img,div.hot div.content div.item3-2_01 div.img>img,div.hot div.content div.item3-2_02 div.img>img{
+        max-width: 100%;
+    }
+    div.hot div.content div.item3-1_01 div.text,div.hot div.content div.item3-1_02 div.text,div.hot div.content div.item3-2_01 div.text,div.hot div.content div.item3-2_02 div.text{
+        /* border: 1px solid green; */
+        height: 200px;
+        width: 537px;
+        background-color: rgba(0, 0, 0, 0.39);
+        display: flex;
+        justify-content: center;
+        justify-content: space-evenly;
+        align-items: center;
+        position: absolute;
+        top: 70.2%;
+        left:7.5%;
+        /* transform: translate(-50%,168.5%); */
+        opacity: 0; 
+        z-index: -1; 
+        /* 定位在後面，載入時才不會出現又消失 */
+        transition: opacity .6s;/*轉場效果*/
+        /* border: 1px solid red; */
+        
+    }
+    /*hover時會出現*/
+    div.hot > div.content > div.item3-1 > div.block3-1_01 > div.item3-1_01:hover div.text, div.hot > div.content > div.item3-1 > div.block3-1_02 > div.item3-1_02:hover div.text, div.hot > div.content > div.item3-2 > div.block3-2_01 > div.item3-2_01:hover div.text, div.hot > div.content > div.item3-2 > div.block3-2_02 > div.item3-2_02:hover div.text{
+        opacity: 1;  
+        z-index: 1; 
+    }
+
+    /*熱門打卡景點內容文字*/
+    div.hot div.content div.item3-1_01 div.text div.text_right,div.hot div.content div.item3-1_02 div.text div.text_right,div.hot div.content div.item3-2_01 div.text div.text_right,div.hot div.content div.item3-2_02 div.text div.text_right{
+        text-align: center;
+    }
+
+    /*日期圖片大小*/
+    div.hot div.content div.item3-1_01 img.date,div.hot div.content div.item3-1_02 img.date,div.hot div.content div.item3-2_01 img.date,div.hot div.content div.item3-2_02 img.date{
+        width: 120px;
+        height: 120px;
+        /* max-width: 100%; */
+        /* border:1px solid red;*/
+    }
+
+    div.hot div.content div.item3-1_01 div.text h3,div.hot div.content div.item3-1_02 div.text h3,div.hot div.content div.item3-2_01 div.text h3,div.hot div.content div.item3-2_02 div.text h3{
+        font-size: 40px;
+        line-height: 1.5em;
+        color: white;
+    }
+    div.hot div.content div.item3-1_01 div.text div.star p,div.hot div.content div.item3-1_02 div.text div.star p,div.hot div.content div.item3-2_01 div.text div.star p,div.hot div.content div.item3-2_02 div.text div.star p{
+        font-size: 29px;
+        color: white;
+    }
+    /*+more超連結*/
+
+    div.hot > a{
+        font-size: 20px;
+        /* border:1px solid red; */
+        color:rgb(17, 16, 16);
+        font-weight: bolder;
+        float: right;
+    }
+
+    div.article > a{
+        font-size: 20px;
+        /* border:1px solid red; */
+        color:rgb(17, 16, 16);
+        font-weight: bolder;
+        float: right; 
+        transform: translateY(-650%);
+    }
+
+    /*注目新文*/
+    div.article{
+        font-size: 0;
+        width: 1200px;
+        margin: 0 auto;
+        /* border:1px solid red; */
+        margin-bottom: 100px;
+        }
+    div.block_yellow{
+        width: 1200px;
+        height: 280px;
+        background-color: rgb(255, 244, 216);
+        margin-top:300px ;
+        z-index: -5;
+        /* border:1px solid rgb(45, 0, 245); */
+        /* position: relative; */
+    }
+    div.block_white{
+        width: 1200px;
+        height: 280px;
+        background-color: rgb(255, 255, 255);
+        margin-top:425px;
+        margin-bottom:400px;
+        z-index: -5;
+        /* margin-bottom: 300px;
+        border:1px solid rgb(246, 0, 185); */
+        /* position: relative; */
+    }
+    div.article > div.content >  div.block_yellow > div.item01,div.article > div.content >  div.block_white > div.item03{
+        display: flex;
+        /* border:1px solid rgb(22, 153, 28); */
+        align-items: flex-start;
+        /* position: absolute;
+        top: 0;
+        left: 0;
+        transform: translate(90px,-70%); */
+    }
+
+    div.article > div.content >  div.block_yellow > div.item02,div.article > div.content >  div.block_white > div.item04{
+        display: flex;
+        /* border:1px solid rgb(246, 131, 0); */
+        align-items: flex-start;
+        /* position: absolute;
+        top: 0;
+        left: 0;
+        transform: translate(760px,50%); */
+    }
+
+    div.article > div.content > div.block_yellow > div.item01 > img,div.article > div.content > div.block_white > div.item03 > img{
+        width: 350px;
+        height: 350px;
+        max-width: 100%;
+        transform: translate(20%,-70%);
+        
+    }
+
+    div.article > div.content > div.block_yellow > div.item02 > img, div.article > div.content > div.block_white > div.item04 > img{
+        width: 350px;
+        height: 350px;
+        max-width: 100%;
+        transform: translate(75%,-60%);
+        z-index: 0;
+    }
+
+    .article > .content > .block_yellow > .item01 > a ,.article > .content > .block_white > .item03 > a{
+        display: block;
+        font-size:30px ;
+        width: 520px;
+        background-color: rgba(255, 255, 255,.77);
+        /* border: solid 1px rgb(128, 0, 0); */
+        color: rgb(22, 20, 20);
+        line-height: 1.6em;
+        box-shadow: 0px 3px 6px rgb(199, 199, 199);
+        transform: translateY(-60%);
+        padding: 40px 18px 40px 18px;
+        text-align:justify;
+    }
+    .article > .content > .block_yellow > .item02 > a,.article > .content > .block_white > .item04 > a{
+        display: block;
+        font-size:30px ;
+        width: 520px;
+        /* height: 163px; */
+        background-color: rgba(255, 255, 255,.77);
+        color: rgb(22, 20, 20);
+        line-height: 1.6em;
+        box-shadow: 0px 3px 6px rgb(199, 199, 199);
+        /* border:1px solid rgb(0, 174, 255); */
+        transform: translate(65%,-100%);
+        z-index: 5;
+        padding: 40px 18px 40px 18px;
+        text-align:justify;
+        /*讓中英文混搭的文字，左右齊行，但必須是block*/
+    }
+
+    /*about me*/
+
+    .aboutme{
+        font-size: 0;
+        width: 1200px;
+        margin: 0 auto;
+        /* border:1px solid red; */
+        margin-bottom: 100px;
+    }
+    .aboutme .text >h4{
+        font-size: 30px;
+        text-align: center;
+        /* margin-bottom: 30px; */
+        background-color:rgb(247, 247, 247);
+        width: 150px;
+        margin: 0 auto;
+        position: relative;
+        top: 15px;
+        left: 0;
+        
+        
+    }
+    .aboutme .text > .line{
+        border:1px solid black;
+        width: 1000px;
+        height: 300px;      
+        padding-top:50px;
+        margin: 0 auto;
+        
+
+    }
+    .aboutme .text .line > p{
+        width: 873px;
+        height: 197px;
+        background-color: rgb(255, 244, 216);
+        /* border:1px solid rgb(34, 9, 255); */
+        margin: auto;
+        font-size: 30px;
+        line-height: 1.5em;
+        padding: 25px;
+        text-align: center;        
+    }
+    
+ 

@@ -1,0 +1,259 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: 'Noto Sans TC', sans-serif;
+}
+body{
+    background-color:rgb(247, 247, 247);
+}
+
+.container{
+  font-size: 0;
+  width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  /* border:1px solid green; */
+}
+
+div.breadcrumb{
+    margin-top: 170px;
+    /* border:3px solid red; */
+    font-size: 0;
+    padding-bottom: 50px;
+}
+.breadcrumb > ol{
+    font-size: 22px;
+    /* border:3px solid rgb(23, 10, 205); */
+    margin: 0 auto;
+    width: 1200px;
+    display: flex;
+}
+div.breadcrumb ol.breadcrumb_list{
+  /* margin: 0;
+  padding: 0; */
+  list-style: none;
+}
+div.breadcrumb ol.breadcrumb_list > li{
+  display: inline-block;
+  margin-right: 10px;
+}
+
+/* 利用 ::before 擬似元素，創造斜線做為分隔 */
+div.breadcrumb ol.breadcrumb_list > li::before{
+  content: ">";
+  font-size: 18px;
+  color: rgb(28, 26, 26);
+  margin-right: 12px;
+}
+/* 第一個 li 元素，將 ::before 設定回來需要的 */
+div.breadcrumb ol.breadcrumb_list > li:first-child::before{
+  content: "";
+  margin-right: 0;
+}
+
+/* 基本文字樣式 */
+div.breadcrumb ol.breadcrumb_list > li > a{
+  text-decoration: none;
+  display: inline-block;
+  color: #1d1d1d;
+  padding: 5px;
+}
+div.breadcrumb ol.breadcrumb_list > li:nth-child(2) a{
+    display: inline-block;
+    /* font-weight: bolder; */
+    color:rgb(255, 255, 255);
+    background-color: rgb(129, 191, 188);
+    /* text-shadow: 1px 1px 0px rgb(124, 124, 124); */
+}
+
+/* 滑動移過後文字增加陰影 */
+div.breadcrumb ol.breadcrumb_list > li > a:hover{
+  text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.467);
+}
+.profile{
+  /* border:1px solid rgb(10, 71, 238); */
+  width: 1200px;
+  display: flex;
+  /* align-items: baseline; */
+  margin: 0 auto;
+  margin-bottom:100px;
+  padding-left: 30px;
+}
+
+.selfphoto{
+  width:270px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.selfphoto > img{
+  width: 100%;
+  vertical-align: middle;
+} 
+
+.profile > .text{
+  /* border:1px solid pink; */
+  padding-left: 50px;
+  padding-top: 80px;
+}
+
+.profile > .text > p.name{
+  font-weight: bolder;
+  color: rgb(20, 20, 20);
+  line-height: 2em;
+  font-size: 35px;
+}
+
+.profile > .text > p{
+  color: rgb(51, 51, 51);
+  line-height: 1.3em;
+  font-weight: 300;
+  font-size: 30px;
+}
+
+.menu{
+  font-size: 30px;
+  width: 1200px;
+  /* border:1px solid red; */
+  margin: 0 auto;
+  margin-bottom:100px;
+
+}
+
+.menu ul{
+  display: flex;
+  margin: 0 auto;
+  /* border: 1px solid purple; */
+  width: 750px; 
+}
+
+.menu ul > li{
+  margin: 0 auto;
+}
+
+.menu ul > li > a{
+  display: inline-block;
+  padding: 10px 20px;
+  color: #1d1d1d;
+  /* margin:auto 20px; */
+  position: relative;
+}
+
+.menu ul > li > a::before{
+  content: '|';
+  position: absolute;
+  top: 8px;
+  left: -40px;
+}
+/* 第一個 li 元素，將 ::before 設定回來需要的 */
+.menu ul :nth-child(1) ::before{
+  content:'';
+}
+
+.article{
+  width: 1200px;
+  /* width: 100px; */
+  /* border:1px solid red; */
+  margin: 0 auto;
+  margin-bottom:100px;
+  display: flex;
+  justify-content:space-between;
+  flex-wrap: wrap;
+}
+.article > .item{
+  /* border:1px solid blue; */
+  margin-bottom: 120px;
+  width: 380px;
+  height: 534px;
+  position: relative;
+}
+
+/*分隔線*/
+.article > .item:nth-child(3n+3)::before{
+  content: '';
+  background-color: rgba(0, 0, 0, 0.4);
+  width: 1200px;
+  height: 2px;
+  position: absolute;
+  bottom: -62px;
+  left: -820px;
+
+  
+}
+
+.article > .item:nth-child(1),.article > .item:nth-child(2){
+  margin-right: 20px;
+}
+
+.article > .item > .pic{
+  /* width: 380px; */
+  width: 100%;
+} 
+.article > .item > .pic > img{
+  max-width:100%;
+}
+.article > .item > a.title{
+  display: block;
+  width: 380px;
+  font-size: 25px;
+  color:rgba(29, 28, 28, 0.8);
+  font-weight: 500;
+  padding-top: 5px;
+  height: 110px;
+  /* padding-bottom:31px ; */
+}
+
+.article > .item > .text{
+  display: flex;
+  justify-content:space-between;
+  padding-bottom: 4px;
+
+}
+
+.article > .item > .text > p.date{
+  font-size: 22px;
+}
+.article > .item > .text > button{
+  font-size: 22px;
+}
+
+/* 頁碼開始 */
+.pagenum{
+  font-size: 20px;
+  margin-bottom:100px;
+}
+.pagenum > ul{
+  display: flex;
+  margin: auto;
+  justify-content: center;
+  
+}
+
+.pagenum > ul > li{
+  border:1px solid rgba(0, 0, 0, 0.5);
+  margin: 0 8px;
+  background-color: rgb(255, 255, 255);
+  width: 40px;
+  height: 40px;
+  line-height: 2em;
+  text-align: center;
+}
+
+.pagenum > ul > li > a{
+  padding: 10px;
+  color: #1d1d1d;
+
+}
+
+.pagenum > ul > li:first-child,.pagenum > ul > li:last-child{
+  border: none;
+  background-color:rgb(247, 247, 247);
+  width: 100px;
+  height: 40px;
+  /* border:1px solid rgba(0, 0, 0, 0.589); */
+
+}
+/* 頁碼結束 */

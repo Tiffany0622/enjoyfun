@@ -1,0 +1,167 @@
+/* RWD開始 */
+@media screen and (min-width: 992px) and (max-width: 1199px){
+    header {
+       min-width: 900px;
+    }
+ }
+
+   @media screen and (min-width: 790px) and (max-width: 991px){
+        header {
+            min-width: 720px;
+        }
+    }
+
+
+    @media screen and (min-width:470px) and (max-width:789px){
+        header .list{
+            display:none;
+        }
+        
+        header .head {
+            width: 100%;
+            background-color: rgb(217, 113, 255);
+        }
+
+        .header2{
+            position: fixed;
+            top: 23px;
+            right: 0;
+        }
+        .hamburger{
+            display: block;
+        }
+
+        .wrap {
+            position: absolute;
+            top: 60%;
+            left: 50%;
+            transform: translate(-50%, -250%);
+            z-index: 1;
+            outline: none;
+            /*搜尋框位移的位子*/
+        }
+        .search-bar {
+            padding: 20px 150px 20px 30px;
+            
+            font-size: 20px;
+            border: 0 solid transparent;
+            /*自定義邊框*/
+            border-radius: 50px;
+            position: relative;
+            
+        }
+
+        /* 漢堡選單 */    
+        nav.main_nav {
+            border: 1px solid rgb(255, 255, 255); 
+            display: none;
+            position: absolute;
+            top:75px;
+            right: 0;
+            z-index:90;
+        }
+        nav.main_nav ul.nav_list li {
+            display:inline-block;
+            list-style: none;
+            font-size: 25px;
+            border-bottom: 1px solid rgb(255, 255, 255);
+            width: 180px;
+            background-color: rgb(129, 191, 188);
+            margin: 0 auto;
+        }
+        nav.main_nav ul.nav_list li:last-child{
+        border-bottom:none;
+
+        }
+        nav.main_nav ul.nav_list li > a{
+            color:rgb(255, 255, 255);
+            line-height:1.5em;
+            padding: 15px 0 0 10px;
+            text-shadow: 1px 1px 1px rgb(99, 99, 99);
+            letter-spacing:1.2px;
+            width: 100%;
+            display:inline-block;
+        }
+}
+
+
+/* @media screen and (min-width:416px) and (max-width:549px){
+
+    } */
+
+    @media screen and (max-width:469px){
+        header .list{
+            display:none;
+        }
+        
+        header .head {
+            width: 100%;
+            background-color: rgb(255, 242, 66);
+            position: fixed;
+            top: 0;
+            left:0;
+        }
+
+        .header2{
+            position: fixed;
+            top: 23px;
+            right: 0;
+        }
+        .hamburger{
+            display: block;
+        }
+
+
+        
+        .search-bar {
+            padding: 15px 60px 15px 30px;
+            
+            font-size: 20px;
+            border: 0 solid transparent;
+            /*自定義邊框*/
+            border-radius: 50px;
+            position: relative;
+            
+        }
+        .search-btn{
+            background-size:contain;
+            width: 90px;
+            height: 45px;
+            position: absolute;
+            top:4.5px;
+            right: 3px;
+        }
+
+        /* 漢堡選單 */
+        nav.main_nav {
+            border: 1px solid rgb(255, 255, 255); 
+            display: none;
+            position: absolute;
+            top:75px;
+            right: 0;
+            z-index:90;
+        }
+        nav.main_nav ul.nav_list li {
+            /* border: 1px solid blue; */
+            display:inline-block;
+            list-style: none;
+            font-size: 25px;
+            border-bottom: 1px solid rgb(255, 255, 255);
+            width: 180px;
+            background-color: rgb(129, 191, 188);
+            margin: 0 auto;
+        }
+        nav.main_nav ul.nav_list li:last-child{
+        border-bottom:none;
+
+        }
+        nav.main_nav ul.nav_list li > a{
+            color:rgb(255, 255, 255);
+            line-height:1.5em;
+            padding: 15px 0 0 10px;
+            text-shadow: 1px 1px 1px rgb(99, 99, 99);
+            letter-spacing:1.2px;
+            width: 100%;
+            display:inline-block;
+        }
+}

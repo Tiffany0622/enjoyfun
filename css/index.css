@@ -5,7 +5,7 @@
     text-decoration: none;
     box-sizing: border-box;
     font-family:'Noto Sans TC', sans-serif;
-    /* outline:1px solid red; */
+    outline:1px solid blue                                                                              ;
 }
 body{
     background-color:rgb(247, 247, 247);
@@ -28,13 +28,6 @@ div.week h1, div.article h1{
     margin-bottom:80px;
     color:rgb(46, 46, 46);
     /* border-bottom: 2px solid tomato; */
-}
-/*讓第一個文字變大*/
-div.week h1::first-letter{
-    font-size: 45px;
-    float: left;
-    /* margin: .1em; */
-    line-height:0.9;
 }
 
 div.hot h1{

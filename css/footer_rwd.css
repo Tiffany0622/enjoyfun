@@ -1,0 +1,170 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family:'Noto Sans TC', sans-serif;
+}
+
+div.footer{
+    /* border: 1px solid red; */
+    background-color: rgb(198, 229, 225);
+    text-align: center;
+    font-size: 0;
+    width: 100%;
+    /* max-width: 1200px; */
+    margin: 0 auto;
+    
+}
+
+div.mainfooter{
+    width: 100%;
+    max-width: 1200px;
+    font-size: 18px;
+    margin: 0 auto;
+}
+div.mainfooter p{
+    padding-top:63px ;
+    padding-bottom:27px ;
+    font-weight: 700;
+}
+
+.mainfooter > p.contact{
+    font-size: 22px;
+}
+
+
+div.social  {
+    padding-bottom: 40px;
+}
+
+div.social a {
+    margin: 58px;
+    display: inline-block;
+}
+
+div.social a img{
+    width: 40px;
+    height: 40px;
+}
+div.mainfooter hr{
+    width: 781px;
+    margin: 0 auto;
+    background-color: rgb(49, 42, 42);
+    height: 2px;
+    border: none;
+    
+}
+
+@media screen and (min-width: 905px) and (max-width: 1199px){
+
+  
+        
+    div.mainfooter p{
+        padding-top:40px !important ;
+        padding-bottom:20px !important ;
+    }
+
+    div.social  {
+        padding-bottom: 10px !important;
+    }
+
+    div.social a {
+        margin: 45px;
+        display: inline-block;
+    }
+
+    div.social a img{
+        width: 40px;
+        height: 40px;
+    }
+    div.mainfooter hr{
+        width: 80%;
+        margin: 0 auto;
+        background-color: rgb(49, 42, 42);
+        height: 2px;
+        border: none;
+        
+    }
+    .mainfooter > p.contact{
+        font-size: 18px;
+    }
+
+}
+@media screen and (min-width: 556px) and (max-width: 904px){
+
+
+    div.mainfooter p{
+        padding-top:30px !important ;
+        padding-bottom:20px !important ;
+        font-size: 15px;
+    }
+
+    div.social  {
+        padding-bottom: 10px !important;
+    }
+
+    div.social a {
+        margin: 30px;
+        display: inline-block;
+    }
+
+    div.social a img{
+        width: 40px;
+        height: 40px;
+
+    }
+    div.mainfooter hr{
+        width: 80%;
+        margin: 0 auto;
+        background-color: rgb(49, 42, 42);
+        height: 2px;
+        border: none;
+        
+    }
+    .mainfooter > p.contact{
+        font-size: 18px;
+    }
+
+
+
+
+}
+
+@media screen and (max-width: 556px){
+
+    div.mainfooter p{
+        padding-top:30px !important ;
+        padding-bottom:10px !important ;
+        font-size: 15px;
+
+    }
+
+    div.social  {
+        padding-bottom: 10px !important;
+    }
+
+    div.social a {
+        margin: 25px;
+        display: inline-block;
+    }
+
+    div.social a img{
+        width: 30px;
+        height: 30px;
+
+    }
+    div.mainfooter hr{
+        width: 80%;
+        margin: 0 auto;
+        background-color: rgb(49, 42, 42);
+        height: 1.5px;
+        border: none;
+        
+    }
+    .mainfooter > p.contact{
+        font-size: 17px;
+    }
+
+}

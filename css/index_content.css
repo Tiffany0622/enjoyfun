@@ -1270,7 +1270,7 @@ margin-top: 3px;
     .item2-1,.item2-2,.item2-3{
         /* border:1px solid red; */
         max-width: 100%;
-        margin-bottom: 50px;
+        margin-bottom: 60px !important;
         margin: 0 auto;
     }
     

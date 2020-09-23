@@ -210,3 +210,13 @@
         }
 
 }
+
+@media screen and (max-width:400px){
+    .head .logo a {
+    display: inline-block;
+    width: 80%;
+}
+.head .logo a img {
+    max-width: 100%;
+}
+}

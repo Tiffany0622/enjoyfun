@@ -275,6 +275,7 @@ div.new div.content div.star i{
     margin-bottom: 120px;
     display: inline-block;
     transform: translateX(800px);
+    font-weight: 700;
 }
 /* 最新活動結束*/
 
@@ -677,7 +678,8 @@ div.article > div.content > div.block_yellow > div.item02 > a.img > img, div.art
         } 
 
         .new p.more{
-            margin-top:30px;
+            font-size: 20px;
+            margin-top:60px;
             margin-bottom: 80px;
             display: inline-block;
             transform: translateX(650px);
@@ -937,8 +939,8 @@ div.article > div.content > div.block_yellow > div.item02 > a.img > img, div.art
     } 
 
     .new p.more{
-        margin-top:10px;
-        margin-bottom: 10px;
+        margin-top:0px;
+        margin-bottom: 50px;
         display: inline-block;
         transform: translateX(180px);
         font-weight: 700;
@@ -952,17 +954,28 @@ div.article > div.content > div.block_yellow > div.item02 > a.img > img, div.art
         margin-bottom: 0px;
     }
 
+    .block3-1_01{
+        /* margin-left:5px; */
+        width: 500px;
+       height: 500px;
+       margin: 0px auto !important;
+       /* margin-bottom: 80px; */
+   }
+
+
     .block3-1_01,.block3-1_02,.block3-2_01{
-        margin-bottom: 80px;
-         margin-left:5px;
+         /* margin-left:5px; */
          width: 500px;
         height: 500px;
+        margin: 50px auto !important;
+        /* margin-bottom: 80px; */
     }
     
     .block3-2_02{
-         margin-left:5px;
+         /* margin-left:5px; */
          width: 500px;
         height: 500px;
+        margin: 0 auto;
     }
 
      /*+more超連結*/
@@ -1171,7 +1184,7 @@ div.article > div.content > div.block_yellow > div.item02 > a.img > img, div.art
        background-color: rgb(255, 255, 255);
        border:1px solid rgba(0, 0, 0, 0.459);
        font-size: 13px;
-       margin: 15px 10px 10px 0px;
+       margin: 0px 10px 10px 40px;
        text-align: center;
        letter-spacing: 3px;
        font-weight: 700;
@@ -1290,7 +1303,7 @@ margin-top: 3px;
         margin-top:10px;
         margin-bottom: 10px;
         display: inline-block;
-        transform: translateX(100px);
+        transform: translateX(150px);
         font-weight: 700;
         font-size: 18px;
     }
@@ -1348,6 +1361,7 @@ margin-top: 3px;
      .hot > p > a{
         margin-left: 80px;
         margin-top: 50px;
+        font-size: 18px;
     }
 
 
@@ -1488,11 +1502,11 @@ div.article > div.content > div.block_yellow > div.item02 > a.img > img, div.art
 }
 
 .article p.more{
-    font-size: 20px;
+    font-size: 18px;
     margin-top:0px;
     margin-bottom: 0px;
     display: inline-block;
-    transform: translateX(130px);
+    transform: translateX(100px);
     /* border: 1px solid red; */
     font-weight: 700;
     }
@@ -1508,7 +1522,7 @@ div.article > div.content > div.block_yellow > div.item02 > a.img > img, div.art
     }
     .aboutme .text .line > p{
         width: 90%;
-        font-size: 13.5px;
+        font-size: 13px;
         line-height: 2em;
         padding: 20px;
         height: 120px;

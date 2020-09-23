@@ -133,7 +133,7 @@
 
         
         .search-bar {
-            padding: 15px 60px 15px 30px;
+            padding: 15px 60px 15px 20px;
             
             font-size: 20px;
             border: 0 solid transparent;
@@ -144,11 +144,11 @@
         }
         .search-btn{
             background-size:contain;
-            width: 90px;
+            width: 80px;
             height: 45px;
             position: absolute;
-            top:4.5px;
-            right: 3px;
+            top:6.5px;
+            right: 7px;
         }
 
         /* 漢堡選單 */
@@ -204,4 +204,9 @@
             left: 50%;
             transform: translate(-50%, 30%);
         }
+
+        .banner ul#light-slider li p br{
+            display: none;
+        }
+
 }

@@ -24,7 +24,7 @@ body {
     border: 1px solid rgb(10, 71, 238);
     width: 1200px;
     display: flex;
-    align-items:center;
+    align-items: center;
     margin: 0 auto;
     margin-bottom: 100px;
     padding-left: 30px;
@@ -42,7 +42,7 @@ body {
 }
 
 .profile>.text {
-    border:1px solid pink;
+    border: 1px solid pink;
     padding-left: 100px;
 }
 
@@ -60,35 +60,30 @@ body {
     font-size: 30px;
 }
 
+/* 可切換頁籤 */
 .menu {
     font-size: 25px;
-    /* border:1px solid red; */
-    /* margin: 0 auto; */
+    border: 1px solid red;
+    margin: 0 auto;
     margin-bottom: 100px;
-
-
+    width: 1200px;
 }
 
 .menu ul {
     display: flex;
     margin: 0 auto;
     /* border: 1px solid purple; */
-    /* border:1px solid red; */
     width: 550px;
-    /* border:1px solid red; */
-
-
 }
 
 .menu ul>li {
     margin: 0 auto;
     /* border:1px solid red; */
-
 }
 
 .menu ul>li>a {
     display: inline-block;
-    padding: 10px 20px;
+    padding: 8px 20px;
     color: #1d1d1d;
     /* margin:auto 20px; */
     position: relative;
@@ -97,8 +92,9 @@ body {
 .menu ul>li>a::after {
     content: '|';
     position: absolute;
-    top: 8px;
-    left: -18px;
+    top: 0;
+    left: 0;
+    transform: translate(-13px, -2px);
 }
 
 /* 第一個 li 元素，將 ::before 設定回來需要的 */
@@ -106,39 +102,13 @@ body {
     content: '';
 }
 
-/* 碰到換色 */
+/* 摸到換色 */
 li.list a:hover {
-    background-color: rgb(207, 12, 12);
-    color: rgb(255, 255, 255);
+    background-color: #C6E5E1;
     border-radius: 50px;
 }
 
-/*摸到a標籤連結，後面底線出現*/
-li.list a:hover::before {
-    width: 100%;
-    height: 100%;
-
-}
-
-ul a:hover {
-    color: rgb(129, 191, 188);
-    transition: .1s;
-    text-shadow: 1px 1px 0px rgba(58, 58, 58, 0.493);
-}
-
-
-
-.menu ul>li>a:hover::after {
-    color: #1d1d1d;
-    text-shadow: none;
-}
-
-.menu>ul.tab_list>li.list>a.-on::after {
-    color: #1d1d1d;
-    text-shadow: none;
-}
-
-/* 問學姊 */
+/* 目前頁面 */
 /* 被選到的li */
 .menu>ul.tab_list>li.list>a.-on {
     display: inline-block;
@@ -148,11 +118,12 @@ ul a:hover {
     border-radius: 50px;
 }
 
-
-
+/* 解決頁籤分隔線摸到會變色的問題 */
 .menu>ul.tab_list li.list>a.-on:hover::before {
     width: 0%;
 }
+
+/* 可切換頁籤 結束*/
 
 
 
@@ -284,10 +255,15 @@ ul a:hover {
 /* RWD開始 */
 @media screen and (min-width: 905px) and (max-width: 1199px) {
 
-    .profile {
-        border: 1px solid rgb(238, 10, 135);
+    .profile,
+    .menu {
         max-width: 95%;
         width: 100%;
+    }
+
+    .profile {
+        border: 1px solid rgb(238, 10, 135);
+
     }
 
     .selfphoto {
@@ -297,77 +273,131 @@ ul a:hover {
     .profile>.text>p.name {
         font-size: 30px;
     }
+
     /* 內文 */
     .profile>.text>p {
         font-size: 26px;
     }
+
 }
-@media screen and (min-width: 556px) and (max-width: 904px){
-    .profile {
-        border: 1px solid rgb(10, 238, 59);
+
+@media screen and (min-width: 556px) and (max-width: 904px) {
+
+    .profile,
+    .menu {
         max-width: 95%;
         width: 100%;
+    }
+
+    .profile {
+        border: 1px solid rgb(10, 238, 59);
         flex-direction: column;
-        padding-left:0px;
-      
+        padding-left: 0px;
+        margin-bottom: 50px;
     }
 
     .selfphoto {
         width: 250px;
         margin-bottom: 10px;
     }
+
     .profile>.text {
-        border:1px solid pink;
-        padding-left:0px;
+        border: 1px solid pink;
+        padding-left: 0px;
         text-align: center;
     }
-    
+
     .profile>.text>p.name {
         font-weight: bolder;
         color: rgb(20, 20, 20);
         line-height: 2.2em;
         font-size: 32px;
     }
-    
+
     .profile>.text>p {
         color: rgb(51, 51, 51);
         line-height: 1.3em;
         font-weight: 300;
         font-size: 25px;
     }
+
+    /* 可切換頁籤 */
+    .menu {
+        font-size: 20px;
+        border: 1px solid rgb(38, 0, 255);
+        margin-bottom: 50px;
+    }
+
+    .menu ul {
+        width: 96%;
+    }
+
+    .menu ul>li>a {
+        padding: 8px 10px;
+    }
+
+    .menu ul>li>a::after {
+        transform: translate(-25px, -4px);
+    }
 }
 
-@media screen and (max-width: 556px){
-    .profile {
-        border: 1px solid rgb(238, 139, 10);
+@media screen and (max-width: 556px) {
+
+    .profile,
+    .menu {
         max-width: 95%;
         width: 100%;
+    }
+
+    .profile {
+        border: 1px solid rgb(238, 139, 10);
         flex-direction: column;
-        padding-left:0px;
-      
+        padding-left: 0px;
+        margin-bottom: 30px;
+
     }
 
     .selfphoto {
         width: 230px;
         margin-bottom: 10px;
     }
+
     .profile>.text {
-        border:1px solid pink;
-        padding-left:0px;
+        border: 1px solid pink;
+        padding-left: 0px;
         text-align: center;
     }
-    
+
     .profile>.text>p.name {
         font-weight: bolder;
         color: rgb(20, 20, 20);
         line-height: 2.2em;
         font-size: 28px;
     }
-    
+
     .profile>.text>p {
         color: rgb(51, 51, 51);
         line-height: 1.5em;
         font-weight: 300;
         font-size: 18px;
+    }
+
+    /* 可切換頁籤 */
+    .menu {
+        font-size: 16px;
+        border: 1px solid rgb(0, 26, 255);
+        margin-bottom: 50px;
+    }
+
+    .menu ul {
+        width: 96%;
+    }
+
+    .menu ul>li>a {
+        padding: 5px 4px;
+    }
+
+    .menu ul>li>a::after {
+        content: '';
     }
 }

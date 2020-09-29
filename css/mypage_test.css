@@ -126,11 +126,11 @@ li.list a:hover {
 /* 可切換頁籤 結束*/
 
 
-
+/* 文章內容開始 */
 .article {
     width: 1200px;
     /* width: 100px; */
-    /* border:1px solid red; */
+    border: 1px solid red;
     margin: 0 auto;
     margin-bottom: 100px;
     display: flex;
@@ -139,10 +139,10 @@ li.list a:hover {
 }
 
 .article>.item {
-    /* border:1px solid blue; */
+    border: 1px solid blue;
     margin-bottom: 120px;
     width: 380px;
-    height: 534px;
+    height: 536px;
     position: relative;
 }
 
@@ -151,12 +151,17 @@ li.list a:hover {
     content: '';
     background-color: rgba(0, 0, 0, 0.4);
     width: 1200px;
-    height: 2px;
+    text-align: center;
+    height: 1px;
     position: absolute;
-    bottom: -62px;
-    left: -820px;
+    bottom: 0;
+    right: 0;
+    transform: translate(3px, 60px);
+}
 
-
+/* 取消最後一條分隔線 */
+.article>.item:nth-child(18)::before {
+    height: 0px;
 }
 
 .article>.item:nth-child(1),
@@ -169,8 +174,10 @@ li.list a:hover {
     width: 100%;
 }
 
-.article>.item>.pic a>img {
+.container>.article>.item>.pic a>img {
     max-width: 100%;
+    border-radius: 0px;
+    /* 解決衝突的圓角 */
 }
 
 .article>.item>a.title {
@@ -178,55 +185,80 @@ li.list a:hover {
     width: 380px;
     font-size: 25px;
     color: rgba(29, 28, 28, 0.8);
-    font-weight: 500;
+    font-weight: 700;
     padding-top: 5px;
     height: 110px;
-    /* padding-bottom:31px ; */
+    line-height: 1.5em;
+    border: 1px solid rgb(0, 255, 170);
+    margin-bottom: 10px;
 }
 
 .article>.item>.text {
     display: flex;
     justify-content: space-between;
-    padding-bottom: 4px;
-
+    /* border:1px solid rgb(255, 0, 0); */
+    align-items: center;
 }
 
 .article>.item>.text>p.date {
-    font-size: 22px;
+    font-size: 20px;
+    font-weight: lighter;
+    border: 1px solid rgb(187, 255, 0);
+    color: #1d1d1d;
+    /* font-family: 'Noto Sans TC'; */
 }
 
 .article>.item>.text>button {
     font-size: 22px;
+    background-color: #76C5BB;
+    color: aliceblue;
+    padding: 5px 10px;
+    text-shadow: 1px 1px 0px rgba(177, 177, 177, 0.514);
+    border-radius: 5px;
+    border: none;
+}
+
+.article>.item>.text>button:hover {
+    color: #1d1d1d;
 }
 
 /* 頁碼開始 */
 .pagenum {
+    margin: 0 auto;
     font-size: 20px;
     margin-bottom: 100px;
+    border: 1px solid rgb(255, 166, 0);
+    width: 1200px;
 }
 
 .pagenum>ul {
     display: flex;
     margin: auto;
     justify-content: center;
+    border: 1px solid rgb(0, 255, 64);
 
 }
 
 .pagenum>ul>li {
-    border: 1px solid rgba(0, 0, 0, 0.5);
-    margin: 0 8px;
+    border: 1px solid rgba(145, 143, 143, 0.5);
+    margin: auto 8px;
     background-color: rgb(255, 255, 255);
     width: 40px;
     height: 40px;
-    line-height: 2em;
     text-align: center;
+    /* border:1px solid rgb(0, 47, 255); */
+    border-radius: 20px;
+
 }
 
 .pagenum>ul>li>a {
-    padding: 10px;
-    color: #1d1d1d;
-
+    color: #444343;
+    display: inline-block;
+    width: 100%;
+    border-radius: 20px;
+    padding-top: 6PX;
 }
+
 
 .pagenum>ul>li:first-child,
 .pagenum>ul>li:last-child {
@@ -234,9 +266,20 @@ li.list a:hover {
     background-color: rgb(247, 247, 247);
     width: 100px;
     height: 40px;
+    border-radius: 0px;
     /* border:1px solid rgba(0, 0, 0, 0.589); */
-
 }
+
+
+.pagenum>ul>li:hover {
+    background-color: #C6E5E1;
+}
+
+.pagenum>ul>li:first-child,
+.pagenum>ul>li:last-child:hover {
+    background-color: rgb(247, 247, 247);
+}
+
 
 /* 頁碼結束 */
 
@@ -256,7 +299,9 @@ li.list a:hover {
 @media screen and (min-width: 905px) and (max-width: 1199px) {
 
     .profile,
-    .menu {
+    .menu,
+    .article,
+    .pagenum {
         max-width: 95%;
         width: 100%;
     }
@@ -279,12 +324,50 @@ li.list a:hover {
         font-size: 26px;
     }
 
+    /* 喜歡的文章 */
+    .article {
+        justify-content: space-evenly;
+    }
+
+    /*分隔線*/
+    .article>.item:nth-child(3n+3)::before {
+        content: '';
+        height: 0px !important;
+
+    }
+
+    .article>.item:nth-child(2n+2)::before {
+        content: '';
+        background-color: rgba(20, 196, 43, 0.4);
+        width: 220%;
+        text-align: center;
+        height: 1px !important;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        transform: translate(20px, 60px);
+    }
+
+
+
+    /* 取消最後一條分隔線 */
+    .article>.item:nth-child(18)::before {
+        height: 0px !important;
+    }
+
+    .article>.item:nth-child(1),
+    .article>.item:nth-child(2) {
+        margin-right: 0px;
+    }
+
 }
 
 @media screen and (min-width: 556px) and (max-width: 904px) {
 
     .profile,
-    .menu {
+    .menu,
+    .article,
+    .pagenum {
         max-width: 95%;
         width: 100%;
     }
@@ -338,6 +421,37 @@ li.list a:hover {
 
     .menu ul>li>a::after {
         transform: translate(-25px, -4px);
+    }
+
+    /*分隔線*/
+    .article>.item:nth-child(3n+3)::before {
+        content: '';
+        height: 0px !important;
+
+    }
+
+    .article>.item:nth-child(2n+2)::before {
+        content: '';
+        background-color: rgba(230, 0, 0, 0.4);
+        width: 190%;
+        text-align: center;
+        height: 1px;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        transform: translate(-5%, 60px);
+    }
+
+
+
+    /* 取消最後一條分隔線 */
+    .article>.item:nth-child(18)::before {
+        height: 0px !important;
+    }
+
+    .article>.item:nth-child(1),
+    .article>.item:nth-child(2) {
+        margin-right: 0px;
     }
 }
 

@@ -17,7 +17,7 @@ header {
     position: sticky;
     top: 0;
     left:50%;
-    z-index: 99;
+    z-index: 96;
     box-shadow: 1px 1px 1px rgb(199, 199, 199);
 }
 .head {
@@ -31,7 +31,9 @@ header {
 
 .head .logo {
     background-color: rgb(255, 255, 255);
-    width:130px;
+    width:100px;
+    margin: 11px 0px;
+    margin-left: 15px;
 }
 .head .logo a {
     display: inline-block;
@@ -124,7 +126,7 @@ ul.list > li > a:hover::after{
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translateX(-50%);
+    transform: translate(-50%, -180%);
     z-index: 1;
     outline: none;
     /*搜尋框位移的位子*/
@@ -177,9 +179,4 @@ input:focus {
 }
 
 
-      .test{
-          margin-top: 900px;
-          height: 1000px;
-          background-color: rgb(88, 249, 255);
-      }
 

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="./css/articleall_test.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css"
+        integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js"></script>
+    <script src="./vendors/JS/jquery-3.5.1.js"></script>
+</head>
+
+<body>
+    <div class="item">
+        <div class="text">
+            <p class="date">August 07, 2020</p>
+            <i class="fas fa-heart"></i>
+            <div class="heart">
+                <i class="fas fa-heart"></i>
+                <p class="num">300</p>
+            </div>
+
+            <a href="./articlepage.html">
+                <h4>新手也能爬的避暑高山步道TOP3，高山草原、枯木湖泊，躲到山裡涼爽一下！</h4>
+            </a>
+            <div class="heart">
+                <i class="fas fa-heart"></i>
+                <i class="fas fa-heart"></i>
+                <i class="fas fa-heart"></i>
+                <i class="fas fa-heart"></i>
+                <i class="fas fa-heart"></i>
+                <i class="fas fa-heart"></i>
+                <i class="fas fa-heart"></i>
+                <p class="num">300</p>
+            </div>
+        </div>
+        <div class="pic">
+            <a href="./articlepage.html"><img src="./picture/articleall/02.jpg" alt=""></a>
+        </div>
+    </div>
+    <script>
+        var heart = document.getElementsByClassName("fas");
+        console.log(heart);
+        //在Html裡，找出所有的愛心icn的class
+
+        for (let i = 0; i < heart.length; i++) {
+            heart[i].addEventListener("click", function () {
+                // heart[i]，有多個所以要用陣列
+                console.log("hi");
+                var item = heart[i].closest(".heart");
+                //先找到愛心標籤，最近的父元素heart class
+                var num = item.querySelector("p.num");
+                //在往內層找，有num class的p標籤
+                //console.log(num);
+                let num300 = parseInt(num.innerText);
+                //innerText 取得HTML上的資料內容
+                //parseInt，將字串轉成數值
+                //console.log(num300);
+
+                //判斷heart有沒有active這個class
+                if (heart[i].classList.contains("active")) {
+                    //有就移除active這個class
+                    heart[i].classList.remove("active");
+                    num.innerText = num300 - 1;
+                } else {
+                    //沒有就增加active這個class
+                    heart[i].classList.add("active");
+                    num.innerText = num300 + 1;
+                }
+            });
+        }
+    </script>
+    <!-- <script>
+        $(document).ready(function () {
+
+            $('i').click(function () {
+                $(this).toggleClass('.is-active');
+            })
+
+        })
+    </script> -->
+</body>
+
+</html>

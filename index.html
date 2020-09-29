@@ -1,20 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Enjoy Fun 享趣</title>
     <link rel="stylesheet" href="./css/normalize.css">
     <link rel="stylesheet" href="./css/hb.css">
-    <link rel="stylesheet" href="./css/nav_test.css">
-    <link rel="stylesheet" href="./css/nav_test_rwd.css">
-    <link rel="stylesheet" href="./css/index_content.css">
-    <link rel="stylesheet" href="./vendors/lightSlider/lightslider.css">
+    <link rel="stylesheet" href="./css/nav_rwd_main.css">
     <link rel="stylesheet" href="./css/footer_rwd.css">
+    <link rel="stylesheet" href="./css/lightbox.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./vendors/lightSlider/lightslider.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css"
         integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
-    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js"></script>
+    <script src="./vendors/JS/jquery-3.5.1.js"></script>
 </head>
+
 <body>
     <!-- header -->
     <header>
@@ -34,8 +37,8 @@
                 <li>
                     <a class="button-hover" href="./mypage.html">我的頁面</a>
                 </li>
-                <li>
-                    <a class="button-hover" href="./logoin.html">登入</a>
+                <li class="testlogin">
+                    <a class="button-hover">登入</a>
                 </li>
             </ul>
         </div>
@@ -56,54 +59,47 @@
                     <li>
                         <a href="./mypage.html">我的頁面</a>
                     </li>
-                    <li>
-                        <a href="./logoin.html">登入</a>
+                    <li class="testlogin">
+                        <a class="login">登入</a>
                     </li>
                 </ul>
             </nav>
         </div>
-
-         
     </header>
-     <!-- header -->
-      <!-- banner -->
-        <div class="banner" id="banner">
-            <ul id="light-slider">
-                <li>
-                    <a href="">
-                        <img src="./picture/main/banner03.jpg" alt="">
-                        <p>Enjoy Fun 提供全臺最新展覽及景點資訊<br>安排週末小旅行so easy</p>
-                    </a>
-                </li>
-                <li>
-                    <a href="">
-                        <img src="./picture/main/banner01.jpg" alt="">
-                        <p>防疫期間不能出國<br>
+    <!-- header -->
+    <!-- banner -->
+    <div class="banner" id="banner">
+        <ul id="light-slider">
+            <li>
+                <a href="">
+                    <img src="./picture/main/banner03.jpg" alt="">
+                    <p>Enjoy Fun 提供全臺最新展覽及景點資訊<br>安排週末小旅行so easy</p>
+                </a>
+            </li>
+            <li>
+                <a href="">
+                    <img src="./picture/main/banner01.jpg" alt="">
+                    <p>防疫期間不能出國<br>
                         還在煩惱不知道去哪裡玩嗎?</p>
-                    </a>
-                </li>
-                <li>
-                    <a href="">
-                        <img src="./picture/main/banner02.jpg" alt="">
-                        <p>全臺展覽及景點體驗分享都在這<br>讓你盡情享受活動趣味，不再踩雷</p>
-                    </a>
-                </li>
-            </ul>
-           
-            <div class="wrap">
-                <div class="search">
-                    <input
-                        class="search-bar"
-                        type="text"
-                        name="search"
-                        id="search"
-                        placeholder="今天你享趣哪玩?">
-                    <button class="search-btn"></button>
-                </div>
+                </a>
+            </li>
+            <li>
+                <a href="">
+                    <img src="./picture/main/banner02.jpg" alt="">
+                    <p>全臺展覽及景點體驗分享都在這<br>讓你盡情享受活動趣味，不再踩雷</p>
+                </a>
+            </li>
+        </ul>
+
+        <div class="wrap">
+            <div class="search">
+                <input class="search-bar" type="text" name="search" id="search" placeholder="今天你享趣哪玩?">
+                <button class="search-btn"></button>
             </div>
         </div>
-   <!-- banner -->
-   <!-- content -->
+    </div>
+    <!-- banner -->
+    <!-- content -->
     <!-- content -->
     <div class="week">
         <h1>本週主打</h1>
@@ -145,7 +141,7 @@
                             <a href="#">
                                 +more
                             </a>
-                            </p>
+                        </p>
                     </div>
                 </div>
                 <div class="bottom">
@@ -202,58 +198,58 @@
             </div>
         </div>
     </div>
-     <!-- 最新活動 -->
-        <div class="new">
-            <div class="title1">
-                <h1>最新活動</h1>
-            </div>
-            <!-- 最新活動 -->
-            <div class="content">
-                <div class="item2-1">
-                    <a href="#"><img src="./picture/main/new01.jpg" alt=""></a>
-                    <!-- <img src="./picture/main/new01.jpg" alt=""> -->
-                    <p class="date">2020 . 08 . 15 - 2020 . 12 . 31</p>
-                    <p class="title">纖維工藝博物館年度特展</p>
-                    <div class="star">
-                        <p>5.0</p>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
-                </div>
-                <div class="item2-2">
-                    <a href="#"><img src="./picture/main/new02.jpg" alt=""></a>
-                    <!-- <img src="./picture/main/new02.jpg" alt=""> -->
-                    <p class="date">2020 . 08 . 15 - 2020 . 12 . 31</p>
-                    <p class="title">奇美博物館 影子魔幻特展</p>
-                    <div class="star">
-                        <p>5.0</p>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
-                </div>
-                <div class="item2-3">
-                    <a href=""><img src="./picture/main/new03.jpg" alt=""></a>
-                    <!-- <img src="./picture/main/new03.jpg" alt=""> -->
-                    <p class="date">2020 . 08 . 15 - 2020 . 12 . 31</p>
-                    <p class="title">愛麗絲夢遊奇境體驗展</p>
-                    <div class="star">
-                        <p>5.0</p>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
-                </div>
-            </div>
-            <p class="more"><a  href="#">+more</a></p>
+    <!-- 最新活動 -->
+    <div class="new">
+        <div class="title1">
+            <h1>最新活動</h1>
         </div>
+        <!-- 最新活動 -->
+        <div class="content">
+            <div class="item2-1">
+                <a href="#"><img src="./picture/main/new01.jpg" alt=""></a>
+                <!-- <img src="./picture/main/new01.jpg" alt=""> -->
+                <p class="date">2020 . 08 . 15 - 2020 . 12 . 31</p>
+                <p class="title">纖維工藝博物館年度特展</p>
+                <div class="star">
+                    <p>5.0</p>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+            </div>
+            <div class="item2-2">
+                <a href="#"><img src="./picture/main/new02.jpg" alt=""></a>
+                <!-- <img src="./picture/main/new02.jpg" alt=""> -->
+                <p class="date">2020 . 08 . 15 - 2020 . 12 . 31</p>
+                <p class="title">奇美博物館 影子魔幻特展</p>
+                <div class="star">
+                    <p>5.0</p>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+            </div>
+            <div class="item2-3">
+                <a href=""><img src="./picture/main/new03.jpg" alt=""></a>
+                <!-- <img src="./picture/main/new03.jpg" alt=""> -->
+                <p class="date">2020 . 08 . 15 - 2020 . 12 . 31</p>
+                <p class="title">愛麗絲夢遊奇境體驗展</p>
+                <div class="star">
+                    <p>5.0</p>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+            </div>
+        </div>
+        <p class="more"><a href="#">+more</a></p>
+    </div>
     </div>
     <!-- 最新活動結束 -->
     <div class="hot">
@@ -355,114 +351,140 @@
         </div>
         <p class="more"><a href="#">+more</a></p>
     </div>
-   <!-- content -->
-   <div class="article">
-    <h1>注目新文</h1>
-    <div class="content">
-        <div class="block_yellow">
-            <div class="item01">
-                <a class="img" href="">
-                    <img src="./picture/main/article01.jpg" alt="">
-                </a>
-                <a class="block" href="#">
-                    運動風才能穿？穿搭高手都用球鞋來完勝，各式穿搭重點快筆記！
-                </a>
+    <!-- content -->
+    <div class="article">
+        <h1>注目新文</h1>
+        <div class="content">
+            <div class="block_yellow">
+                <div class="item01">
+                    <a class="img" href="">
+                        <img src="./picture/main/article01.jpg" alt="">
+                    </a>
+                    <a class="block" href="#">
+                        運動風才能穿？穿搭高手都用球鞋來完勝，各式穿搭重點快筆記！
+                    </a>
+                </div>
+                <div class="item02">
+                    <a class="block" href="#">
+                        網紅私藏的心機pose！8個拍照小技巧，拍出絕美爆Like照！
+                    </a>
+                    <a class="img" href="">
+                        <img src="./picture/main/article02.jpg" alt="">
+                    </a>
+                </div>
             </div>
-            <div class="item02">
-                <a class="block" href="#">
-                    網紅私藏的心機pose！8個拍照小技巧，拍出絕美爆Like照！
-                </a>
-                <a class="img" href="">
-                    <img src="./picture/main/article02.jpg" alt="">
-                </a>
+            <div class="block_white">
+                <div class="item03">
+                    <a class="img" href="">
+                        <img src="./picture/main/article03.jpg" alt="">
+                    </a>
+                    <a class="block" href="#">韓國IG超紅「爆笑POSE第三彈」想不到拍照姿勢嗎？叫你朋友看這篇！</a>
+                </div>
+                <div class="item04">
+                    <a class="block" href="#">網美不能說的秘密~<br>IG美照濾鏡，調色秘訣大公開！</a>
+                    <a class="img" href="">
+                        <img src="./picture/main/article04.jpg" alt="">
+                    </a>
+                </div>
             </div>
         </div>
-        <div class="block_white">
-            <div class="item03">
-                <a class="img" href="">
-                    <img src="./picture/main/article03.jpg" alt="">
-                </a>
-                <a class="block" href="#">韓國IG超紅「爆笑POSE第三彈」想不到拍照姿勢嗎？叫你朋友看這篇！</a>
-            </div>
-            <div class="item04">
-                <a class="block" href="#">網美不能說的秘密~<br>IG美照濾鏡，調色秘訣大公開！</a>
-                <a class="img" href="">
-                    <img src="./picture/main/article04.jpg" alt="">
-                </a>
+        <p class="more"><a href="#">+more</a></p>
+    </div>
+    <div class="aboutme">
+        <div class="text">
+            <h4>About</h4>
+            <div class="line">
+                <p>Enjoy Fun提供全臺展覽活動體驗分享<br>透過活動評價系統及照片，幫您進一步了解活動內容及資訊<br>讓您盡情享受活動趣味，不再踩雷！</p>
             </div>
         </div>
     </div>
-    <p class="more"><a href="#">+more</a></p>
-</div>
-<div class="aboutme">
-    <div class="text">
-        <h4>About</h4>
-        <div class="line">
-            <p>Enjoy Fun提供全臺展覽活動體驗分享<br>透過活動評價系統及照片，幫您進一步了解活動內容及資訊<br>讓您盡情享受活動趣味，不再踩雷！</p>
+    <!-- content -->
+
+    <!-- footer -->
+
+    <div class="footer">
+        <div class="mainfooter">
+            <p class="contact">聯絡我們</p>
+            <div class="social">
+                <a href=""><img src="./Iconfacebook.png" alt=""></a>
+                <a href=""><img src="./IconIinstagram.png" alt=""></a>
+                <a href=""><img src="./Iconline.png" alt=""></a>
+                <a href=""><img src="./Icontwitter.png" alt=""></a>
+            </div>
+            <hr>
+            <p>&copy;2020 enjoyfun.net</p>
         </div>
     </div>
-</div>
-<!-- content -->
 
-<!-- footer -->
+    <!-- footer -->
 
-<div class="footer">
-    <div class="mainfooter">
-        <p  class="contact">聯絡我們</p>
-        <div class="social">
-            <a href=""><img src="./Iconfacebook.png" alt=""></a>
-            <a href=""><img src="./IconIinstagram.png" alt=""></a>
-            <a href=""><img src="./Iconline.png" alt=""></a>
-            <a href=""><img src="./Icontwitter.png" alt=""></a>
-        </div>
-        <hr>
-        <p>&copy;2020 enjoyfun.net</p>
+    <!-- 燈箱 HTML-->
+    <div class="overlay">
+        <article>
+            <button type="button" class="btn_modal_close">&#10006</button>
+
+            <div class="container">
+                <div class="pic">
+                    <img src="./picture/login/01-1.jpg" alt="">
+                </div>
+                <div class="global-cont">
+                    <div class="inner-cont">
+                        <div class="sign">
+                            <span class="active sign-in">帳號登入</span>
+                            <span class="sign-up">註冊帳號</span>
+                        </div>
+                        <div class="sign-in-up">
+                            <form class="sign-in-form active">
+                                <input type="text" placeholder="帳號或 E-mail">
+                                <input type="password" placeholder="密碼">
+                                <span>
+                                    <input type="checkbox"> <label>記住我</label>
+                                </span>
+                                <a href="#">忘記密碼</a>
+                                <input type="submit" value="Sign In">
+                            </form>
+                            <form class="sign-up-form">
+                                <input type="text" placeholder="E-mail">
+                                <input type="password" placeholder="密碼">
+                                <input type="password" placeholder="再次確認密碼">
+                                <input type="submit" value="Sign Up">
+                            </form>
+                            <div class="divider">
+                                <span>快速登入</span>
+                            </div>
+                            <div class="social-login">
+                                <button class="facebook">
+                                    <i class="fab fa-facebook-f"></i>
+                                </button>
+                                <button class="google">
+                                    <img src="./picture/main/Google_Logo.png" alt="">
+                                </button>
+                                <button class="Line">
+                                    <img src="/picture/main/Line_Logo.png" alt="">
+                                </button>
+                                <button class="Twitter">
+                                    <i class="fab fa-twitter"></i>
+                                </button>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
     </div>
-</div>
-
-<!-- footer -->
-
-   <!-- 載入Jquery-->
-   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-   <!-- 載入輪播JS -->
-   <script src="./vendors/lightSlider/lightslider.js"></script>
-   <script>
-       $(document).ready(function() {
-    $('#light-slider').lightSlider({
-        adaptiveHeight:true,
-        item:1,
-        slideMargin:1,
-        loop: true,
-        slideMove: 1,
-        loop:true,
-        speed: 500, //ms'
-        auto: true,
-        slideEndAnimation: true,
-        pause: 5000
-        });
-});
-   </script>
-  
-   <!-- 點擊後顯示選單 -->
-   <script>
-       $(function () {
-           // 點擊按鈕，選單縮放
-           $("button.btn_switch").on("click", function () {
-               $("nav.main_nav").slideToggle();
-           });
-
-       });
-   </script>
-   <!-- 控制漢堡button變化 -->
-   <script>
-       $(function () {
-
-           // hamburger icon 的切換
-           $("button.hamburger").on("click", function () {
-               $(this).toggleClass("is-active");
-           });
-
-       });
-   </script>
+    <!-- 燈箱 -->
+    <button type="button" id="go_top">↑</button>
+    <!-- 燈箱 -->
+    <!-- 載入Jquery-->
+    <script src="./css/login.js"></script>
+    <!-- 載入輪播JS -->
+    <script src="./vendors/lightSlider/lightslider.js"></script>
+    <script src="./js_all/slider.js"></script>
+    <!-- 載入漢堡選單 -->
+    <script src="./js_all/hamburger.js"></script>
+    <!-- gotop 、燈箱、登入註冊、搜尋框focus-->
+    <script src="./js_all/all.js"></script>
 </body>
+
 </html>

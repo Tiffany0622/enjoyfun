@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js"></script>
+    <script src="./vendors/JS/jquery-3.5.1.js"></script>
+</head>
+<style>
+    * {
+  box-sizing: border-box;
+}
+/* 整個頁籤及內容最外層區塊 */
+div.tab_container{
+  
+}
+
+/* 頁籤區塊 */
+div.tab_container div.tab_list_block{
+  /* padding-left: 20px; */
+  /* border: 1px solid red; */
+  
+  width: 80%;
+  margin: 0 auto;
+  margin-bottom: 10px;
+}
+
+div.tab_container div.tab_list_block ul.tab_list > li{
+    padding-right:20px ;
+}
+
+
+
+/* 頁籤列表 */
+div.tab_container div.tab_list_block ul.tab_list{
+  /* list-style: none; */
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  /* border: 1px solid rgb(8, 38, 206); */
+}
+div.tab_container div.tab_list_block ul.tab_list > li{
+  display: inline-block;
+  /* border: 1px solid rgb(8, 38, 206); */
+}
+
+/* 頁籤按鈕 */
+div.tab_container div.tab_list_block ul.tab_list > li > a{
+  text-decoration: none;
+  display: inline-block;
+  border: 1px solid #ccc;
+
+  padding: 2px 20px;
+  border-radius: 5px 5px 0 0;
+  cursor: pointer;
+  color: #ccc;
+  position: relative;
+  top: 1px;
+}
+
+
+/* 頁籤按鈕 */
+div.tab_container div.tab_list_block ul.tab_list > li > a.-on{
+  border: 1px solid black;
+  /* border: 1px solid rgb(8, 38, 206); */
+  color: black;
+}
+
+
+
+/* 頁籤內容區塊 */
+div.tab_container div.tab_contents{
+  border: 1px solid black;
+  width: 80%;
+  margin: 0 auto;
+}
+div.tab_container div.tab_contents div.tab{
+  padding: 10px;
+  display: none;
+}
+div.tab_container div.tab_contents div.tab.-on{
+  display: block;
+}
+</style>
+<body>
+    <div class="tab_container">
+  
+        <div class="tab_list_block">
+          <ul class="tab_list">
+            <li><a href="#" data-target="tab1" class="tab -on">頁籤一</a></li>
+            <li><a href="#" data-target="tab2" class="tab">頁籤二</a></li>
+            <li><a href="#" data-target="tab3" class="tab">頁籤三</a></li>
+          </ul>
+        </div>
+        
+        <div class="tab_contents">
+          
+          <div class="tab tab1 -on">
+            頁籤一的內容<br>
+            內容
+          </div>
+          
+          <div class="tab tab2">
+            頁籤二的內容
+          </div>
+          
+          <div class="tab tab3">
+            頁籤三的內容<br>
+            內容
+          </div>
+        </div>
+        
+      </div>
+</body>
+
+<script>
+    $(function(){
+  $("a.tab").on("click", function(e){
+    e.preventDefault();
+    
+    /* 將頁籤列表移除所有 -on，再將指定的加上 -on */
+    $(this).closest("ul").find("a.tab").removeClass("-on");
+    $(this).addClass("-on");
+    
+    /* 找到對應的頁籤內容，加上 -on 來顯示 */
+    $("div.tab").removeClass("-on");
+    $("div.tab." + $(this).attr("data-target")).addClass("-on");
+  });
+});
+</script>
+
+</html>

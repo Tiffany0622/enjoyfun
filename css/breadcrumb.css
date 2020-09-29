@@ -1,0 +1,65 @@
+
+
+
+/* 麵包屑 */
+.breadcrumb {
+    margin-top: 170px;
+    /* border:3px solid red; */
+    font-size: 0;
+    padding-bottom: 50px;
+}
+
+.breadcrumb>ol {
+    font-size: 22px;
+    /* border:3px solid rgb(23, 10, 205); */
+    margin: 0 auto;
+    width: 1200px;
+    display: flex;
+}
+
+.breadcrumb ol.breadcrumb_list {
+    /* margin: 0;
+  padding: 0; */
+    list-style: none;
+}
+
+.breadcrumb ol.breadcrumb_list>li {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+/* 利用 ::before 擬似元素，創造斜線做為分隔 */
+.breadcrumb ol.breadcrumb_list>li::before {
+    content: ">";
+    font-size: 18px;
+    color: rgb(28, 26, 26);
+    margin-right: 12px;
+}
+
+/* 第一個 li 元素，將 ::before 設定回來需要的 */
+.breadcrumb ol.breadcrumb_list>li:first-child::before {
+    content: "";
+    margin-right: 0;
+}
+
+/* 基本文字樣式 */
+.breadcrumb ol.breadcrumb_list>li>a {
+    text-decoration: none;
+    display: inline-block;
+    color: #1d1d1d;
+    padding: 5px;
+}
+
+.breadcrumb ol.breadcrumb_list>li:nth-child(2) a {
+    display: inline-block;
+    /* font-weight: bolder; */
+    color: rgb(255, 255, 255);
+    background-color: rgb(129, 191, 188);
+    /* text-shadow: 1px 1px 0px rgb(124, 124, 124); */
+}
+
+/* 滑動移過後文字增加陰影 */
+.breadcrumb ol.breadcrumb_list>li>a:hover {
+    text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.467);
+}
+/* 麵包屑 */

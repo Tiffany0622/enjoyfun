@@ -1,0 +1,646 @@
+ /* 共用CSS*/
+ /*往上跑的按鈕、header、漢堡按鈕 */
+
+
+ * {
+     margin: 0;
+     padding: 0;
+     list-style: none;
+     text-decoration: none;
+     box-sizing: border-box;
+     font-family: 'Noto Sans TC', sans-serif;
+     /* outline: 1px solid red; */
+ }
+
+ /* 往上跑的按鈕 */
+ #go_top {
+     width: 40px;
+     height: 40px;
+     background: none;
+     position: fixed;
+     right: 20px;
+     bottom: 30px;
+     color: rgb(255, 255, 255);
+     background-color: #76C5BB;
+     border-radius: 50%;
+     font-size: 20px;
+     line-height: 1;
+     outline: none;
+     cursor: pointer;
+     border-width: 0px;
+     text-shadow: 3px 1px 1px rgba(43, 43, 43, 0.349);
+     box-shadow: 3px 1px 1px rgba(43, 43, 43, 0.349);
+     ;
+ }
+
+ /* Nav導覽 */
+
+ header {
+     display: flex;
+     font-size: 0;
+     background-color: rgb(255, 255, 255);
+     margin: 0 auto;
+     width: 100%;
+     position: sticky;
+     top: 0;
+     left: 50%;
+     z-index: 96;
+     box-shadow: 1px 1px 1px rgb(199, 199, 199);
+ }
+
+ .head {
+     display: flex;
+     margin: 0 auto;
+     width: 100%;
+     max-width: 1200px;
+     background-color: rgb(255, 255, 255);
+     justify-content: space-between;
+ }
+
+ .head .logo {
+     background-color: rgb(255, 255, 255);
+     width: 100px;
+     margin: 11px 0px;
+     margin-left: 15px;
+ }
+
+ .head .logo a {
+     display: inline-block;
+     width: 100%;
+ }
+
+ .head .logo a img {
+     max-width: 100%;
+ }
+
+ ul.list {
+     display: flex;
+     background-color: rgb(255, 255, 255);
+     /* line-height: 1em; */
+     /* align-items: center; */
+     /*文字垂直置中*/
+ }
+
+
+ ul.list>li>a {
+     width: 100%;
+     font-size: 25px;
+     color: rgba(55, 55, 55, 0.8);
+     text-shadow: 1px 1px 0px rgb(216, 216, 216);
+     position: relative;
+     display: inline-block;
+     cursor: pointer;
+     /*鼠標樣式*/
+     transition: color 0.4s ease;
+     padding: 25px 30px;
+ }
+
+ /*a標籤連結 後面加底線，預設寬0*/
+ li>a::after {
+     content: '';
+     display: block;
+     width: 0%;
+     height: 3px;
+     background-color: rgb(129, 191, 188);
+     transition: width .3s .1s;
+     /*線延展的時間,線延遲出現的時間*/
+     margin: auto;
+     /*線重中間展開*/
+     margin-top: 10px;
+ }
+
+ /*摸到a標籤連結，後面底線出現*/
+ ul.list>li>a:hover::after {
+     width: 100%;
+ }
+
+ /* 漢堡按鈕 */
+
+ .hamburger,
+ nav.main_nav,
+ nav.main_nav ul.nav_list li a {
+     display: none;
+ }
+
+ /* navtop，麵包屑及搜尋框 */
+
+ .navtop {
+     display: flex;
+     max-width: 1200px;
+     justify-content: space-between;
+     align-items: center;
+     margin: 0 auto;
+     margin-top: 90px;
+     margin-bottom: 90px;
+     /* border:3px solid rgb(0, 26, 255); */
+ }
+
+ .wrap {
+     margin: auto 0;
+     /* border: 1px solid red; */
+     /* display: flex; */
+     /* transform: translateX(280px); */
+     /*搜尋框位移的位子*/
+     order: 1;
+     /* margin-right: 30px; */
+ }
+
+ .search {
+     position: relative;
+     /* border: 1px solid red; */
+ }
+
+ .search-bar {
+     width: 440px;
+     font-size: 20px;
+     border: .5px solid rgb(129, 191, 188);
+     /*自定義邊框*/
+     border-radius: 50px;
+     padding: 15px;
+ }
+
+ /*控制搜尋框的顏色*/
+ ::placeholder {
+     color: rgb(129, 191, 188);
+ }
+
+ /*控制搜尋框外面的 focus*/
+ input:focus {
+     outline: 0;
+ }
+
+ /*搜尋的按鈕*/
+
+ .search-btn a img {
+     width: 80px;
+     height: 40px;
+ }
+
+ .search-btn {
+     width: 80px;
+     height: 40px;
+     outline: none;
+     border: 0 solid transparent;
+     /*自定義邊框*/
+     cursor: pointer;
+     /*碰到按鈕鼠標會變手*/
+     border-radius: 50px;
+     /* background-image: url("../search_button.png"); */
+     background-size: cover;
+     background-repeat: no-repeat;
+     position: absolute;
+     top: 0;
+     left: 0;
+     transform: translate(350px, 7px);
+ }
+
+
+
+
+ /* 麵包屑 */
+ .breadcrumb {
+     /* border:3px solid red; */
+     font-size: 0;
+     /* width: 50%; */
+     /* margin-left: 30px; */
+ }
+
+ .breadcrumb>ol {
+     /* font-size: 22px; */
+     /* border:3px solid rgb(23, 10, 205); */
+     margin: 0 auto;
+     display: flex;
+ }
+
+ .breadcrumb ol.breadcrumb_list {
+     list-style: none;
+ }
+
+ .breadcrumb ol.breadcrumb_list>li {
+     display: inline-block;
+     /* margin-right: 10px; */
+ }
+
+ /* 利用 ::before 擬似元素，創造斜線做為分隔 */
+ .breadcrumb ol.breadcrumb_list>li::before {
+     content: "＞";
+     font-weight: 500;
+     font-size: 25px;
+     color: rgb(28, 26, 26);
+     margin-left: 10px;
+     margin-right: 13px;
+ }
+
+ /* 第一個 li 元素，將 ::before 設定回來需要的 */
+ .breadcrumb ol.breadcrumb_list>li:first-child::before {
+     content: "";
+     margin-right: 0;
+ }
+
+ /* 基本文字樣式 */
+ .breadcrumb ol.breadcrumb_list>li>a {
+     text-decoration: none;
+     display: inline-block;
+     color: #1d1d1d;
+     padding: 8px;
+     margin: auto 0;
+     font-size: 22px;
+     /* border:3px solid rgb(23, 10, 205); */
+
+
+ }
+
+ /* 位於哪頁 */
+
+ .breadcrumb ol.breadcrumb_list>li:nth-child(2) a {
+     display: inline-block;
+     border-radius: 20px;
+     /* color: rgb(255, 255, 255); */
+     background-color: #C6E5E1;
+     /* text-shadow: 1px 1px 0px rgb(124, 124, 124); */
+ }
+
+ /* 滑動移過後文字增加陰影 */
+ .breadcrumb ol.breadcrumb_list>li a:hover {
+     /* text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.467); */
+     font-weight: 800;
+ }
+
+ /* 因Nav選單css衝突 */
+ .breadcrumb>ol.breadcrumb_list>li>a::after {
+     margin-top: 0px;
+     height: 0px;
+ }
+
+ /* 麵包屑 */
+
+
+
+
+
+
+ /* RWD開始 */
+ @media screen and (min-width: 992px) and (max-width: 1199px) {
+     header {
+         /* min-width: 900px; */
+     }
+
+     .navtop {
+         display: flex;
+         width: 96%;
+         justify-content: space-between;
+         align-items: center;
+         margin: 0 auto;
+         margin-top: 80px;
+         margin-bottom: 80px;
+         /* border:3px solid rgb(0, 26, 255); */
+     }
+
+ }
+
+ @media screen and (min-width: 790px) and (max-width: 991px) {
+     header {
+         /* min-width: 720px; */
+     }
+
+     .navtop {
+         display: flex;
+         width: 96%;
+         justify-content: space-between;
+         align-items: flex-start;
+         margin: 0 auto;
+         margin-top: 50px;
+         margin-bottom: 80px;
+         /* border: 3px solid rgb(0, 26, 255); */
+         flex-direction: column;
+     }
+
+     .wrap {
+         margin: auto 0;
+         /* border: 1px solid red; */
+         order: 0;
+         align-self: flex-end;
+         margin-bottom: 20px;
+     }
+
+     .search-bar {
+         width: 400px;
+     }
+
+     .search-btn {
+         transform: translate(310px, 7px);
+     }
+
+ }
+
+
+ @media screen and (min-width:588px) and (max-width:789px) {
+     header .list {
+         display: none;
+     }
+
+     header .head {
+         width: 100%;
+         background-color: rgb(255, 255, 255);
+     }
+
+     .header2 {
+         position: fixed;
+         top: 23px;
+         right: 0;
+     }
+
+     .hamburger {
+         display: block;
+     }
+
+     /* 漢堡選單 */
+     nav.main_nav {
+         border: 1px solid rgb(255, 255, 255);
+         display: none;
+         position: absolute;
+         top: 73px;
+         right: 0;
+         z-index: 90;
+         width: 100vw;
+     }
+
+     nav.main_nav ul.nav_list li {
+         display: inline-block;
+         list-style: none;
+         font-size: 25px;
+         border-bottom: 1px solid rgb(255, 255, 255);
+         background-color: rgb(129, 191, 188);
+         margin: 0 auto;
+         width: 100%;
+     }
+
+     nav.main_nav ul.nav_list li:last-child {
+         border-bottom: none;
+
+     }
+
+     nav.main_nav ul.nav_list li>a {
+         color: rgb(255, 255, 255);
+         line-height: 1.5em;
+         padding: 15px 0px 0px 30px;
+         text-shadow: 1px 1px 1px rgb(99, 99, 99);
+         letter-spacing: 1.2px;
+         width: 100%;
+         display: inline-block;
+     }
+
+     /* 漢堡Nav hover換色 */
+     nav.main_nav ul.nav_list li:hover {
+         background-color: #C6E5E1;
+     }
+
+     nav.main_nav ul.nav_list li>a:hover {
+         color: black;
+         text-shadow: none
+     }
+
+     /* NavTop麵包屑搜尋框 */
+     .navtop {
+         display: flex;
+         width: 96%;
+         justify-content: space-between;
+         align-items: flex-start;
+         margin: 0 auto;
+         margin-top: 50px;
+         margin-bottom: 80px;
+         /* border: 3px solid rgb(0, 26, 255); */
+         flex-direction: column;
+     }
+
+     .wrap {
+         margin: auto 0;
+         /* border: 1px solid red; */
+         order: 0;
+         align-self: flex-end;
+         margin-bottom: 50px;
+     }
+
+     .search-bar {
+        width: 400px;
+    }
+
+    .search-btn {
+        transform: translate(310px, 7px);
+    }
+
+ }
+
+
+ /* @media screen and (min-width:416px) and (max-width:549px){
+
+    } */
+
+ @media screen and (min-width:385px) and (max-width:587px) {
+     header .list {
+         display: none;
+     }
+
+     header .head {
+         width: 100%;
+         background-color: rgb(255, 255, 255);
+         position: fixed;
+         top: 0;
+         left: 0;
+     }
+
+     .header2 {
+         position: fixed;
+         top: 23px;
+         right: 0;
+     }
+
+     .hamburger {
+         display: block;
+     }
+
+     /* 漢堡選單 */
+
+     nav.main_nav {
+         border: 1px solid rgb(255, 255, 255);
+         display: none;
+         position: absolute;
+         top: 73px;
+         right: 0;
+         z-index: 90;
+         width: 100vw;
+     }
+
+     nav.main_nav ul.nav_list li {
+         /* border: 1px solid blue; */
+         display: inline-block;
+         list-style: none;
+         font-size: 25px;
+         border-bottom: 1px solid rgb(255, 255, 255);
+         width: 100%;
+         background-color: rgb(129, 191, 188);
+         margin: 0 auto;
+         /* border: 1px solid red; */
+     }
+
+     nav.main_nav ul.nav_list li:last-child {
+         border-bottom: none;
+
+     }
+
+     nav.main_nav ul.nav_list li>a {
+         color: rgb(255, 255, 255);
+         line-height: 1.5em;
+         padding: 15px 0px 0px 30px;
+         text-shadow: 1px 1px 1px rgb(99, 99, 99);
+         letter-spacing: 1.2px;
+         width: 100%;
+         display: inline-block;
+     }
+
+     /* 漢堡Nav hover換色 */
+     nav.main_nav ul.nav_list li:hover {
+         background-color: #C6E5E1;
+     }
+
+     nav.main_nav ul.nav_list li>a:hover {
+         color: black;
+         text-shadow: none
+     }
+
+     .navtop {
+         display: flex;
+         width: 96%;
+         justify-content: space-between;
+         align-items: flex-start;
+         margin: 0 auto;
+         margin-top: 130px;
+         margin-bottom: 80px;
+         /* border: 3px solid rgb(255, 0, 0); */
+         flex-direction: column;
+     }
+
+     .wrap {
+         margin: auto 0;
+         /* border: 1px solid red; */
+         order: 0;
+         align-self: flex-end;
+         margin-bottom: 50px;
+     }
+
+     .search-bar {
+        width: 300px;
+    }
+
+    .search-btn {
+        transform: translate(210px, 7px);
+    }
+
+
+
+ }
+
+ @media screen and (max-width: 384px){
+    header .list {
+        display: none;
+    }
+
+    header .head {
+        width: 100%;
+        background-color: rgb(255, 255, 255);
+        position: fixed;
+        top: 0;
+        left: 0;
+    }
+
+    .header2 {
+        position: fixed;
+        top: 23px;
+        right: 0;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    /* 漢堡選單 */
+
+    nav.main_nav {
+        border: 1px solid rgb(255, 255, 255);
+        display: none;
+        position: absolute;
+        top: 73px;
+        right: 0;
+        z-index: 90;
+        width: 100vw;
+    }
+
+    nav.main_nav ul.nav_list li {
+        /* border: 1px solid blue; */
+        display: inline-block;
+        list-style: none;
+        font-size: 25px;
+        border-bottom: 1px solid rgb(255, 255, 255);
+        width: 100%;
+        background-color: rgb(129, 191, 188);
+        margin: 0 auto;
+        /* border: 1px solid red; */
+    }
+
+    nav.main_nav ul.nav_list li:last-child {
+        border-bottom: none;
+
+    }
+
+    nav.main_nav ul.nav_list li>a {
+        color: rgb(255, 255, 255);
+        line-height: 1.5em;
+        padding: 15px 0px 0px 30px;
+        text-shadow: 1px 1px 1px rgb(99, 99, 99);
+        letter-spacing: 1.2px;
+        width: 100%;
+        display: inline-block;
+    }
+
+    /* 漢堡Nav hover換色 */
+    nav.main_nav ul.nav_list li:hover {
+        background-color: #C6E5E1;
+    }
+
+    nav.main_nav ul.nav_list li>a:hover {
+        color: black;
+        text-shadow: none
+    }
+
+    .navtop {
+        display: flex;
+        width: 96%;
+        justify-content: center;
+        margin: 0 auto;
+        margin-top: 130px;
+        margin-bottom: 80px;
+        /* border: 1px solid rgb(255, 0, 0); */
+        flex-direction: column;
+    }
+
+    .wrap {
+        margin: auto 0;
+        border: 1px solid red;
+        order: 0;
+        align-self: flex-end;
+        margin-bottom: 50px;
+    }
+
+    .search-bar {
+       width:270px;
+       font-size: 18px;
+   }
+
+   .search-btn {
+       transform: translate(180px, 6px);
+   }
+   .breadcrumb{
+    align-self: flex-start;
+   }
+
+ }

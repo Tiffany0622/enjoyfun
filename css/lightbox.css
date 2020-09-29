@@ -1,0 +1,393 @@
+/* 燈箱、登入、註冊 */
+
+
+/* 燈箱 */
+button{
+    cursor: pointer;
+  }
+
+button.btn_modal_close{
+    outline: none; 
+    border-width: 0;
+    text-align: center;
+    width: 30px;
+    height: 30px;
+    float: right;
+    background-color: #fff;
+    position: absolute;
+    top: 10px;
+    right: 5px;
+    border-radius: 20px;
+    font-weight: 100;
+}
+
+
+  div.overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: hsla(0, 0%, 0%, .5);
+    
+    
+    /* 預設：完全透明；設定 z-index: -1 會在整個頁面的後方，看不到，才不會擋到頁面元素。 */
+    opacity: 0;
+    z-index: -1;
+    transition: opacity 1s;
+  }
+  div.overlay.-on{
+    
+    /* 加上 -on 之後，Modal 漸漸出現，因為有設定 transition */
+    opacity: 1;
+    z-index: 1;
+    
+  }
+  
+  div.overlay.-opacity-zero{
+    /* 關閉 Modal 時，先讓 opacity設定0，就會慢慢變成完全透明，但這時會擋到後面的元素，所以要再移除 -on 及 -opacity-zero 這兩個 class */
+    opacity: 0;
+  }
+  
+  /* 元素 article 置中及基本樣式 */
+  div.overlay > article{
+    
+    /* width: 90%; */
+    /* max-width: 800px; */
+    border-radius: 20px;
+    box-shadow: 0 0 1px #ddd;
+    /* padding: 10px; */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color:rgb(255, 255, 255);
+  }
+
+  /* 登入&註冊 */
+  
+.clearfix {
+  clear: both
+}
+
+article.container {
+  /* margin: 15px auto; */
+  overflow: hidden;
+  /* width: 460px; */
+  /* background-color: rgb(255, 255, 255); */
+  /* padding: 10px 10px 10px; */
+  /* border: 1px solid red; */
+  border-radius: 20px;
+}
+
+.container .pic {
+  width: 400px;
+  /* padding-bottom: 20px; */
+  margin: 0 auto;
+}
+
+.container .pic img {
+  max-width: 100%;
+  border-radius:10px 10px 0px 0px ;
+}
+
+.global-cont {
+  /* width: 420px; */
+  /* background-color: #FFF; */
+  margin: auto;
+  /* padding: 20px; */
+  /* border: 1px solid rgb(15, 91, 255); */
+  border-radius: 5%;
+}
+
+.inner-cont {
+  margin: auto;
+  overflow: hidden;
+  width: 400px;
+  /* background-color: #FFF; */
+  text-align: center;
+  /* border: 1px solid rgb(24, 255, 16); */
+  border-radius: 2%;
+ 
+}
+
+.inner-cont .sign {
+  overflow: hidden;
+  display: flex;
+}
+
+/* 帳號登入/註冊帳號 */
+.inner-cont .sign span {
+  /* float: left; */
+  width: 30%;
+  display: block;
+  padding: 8px 0;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  background-color: rgb(118,197,187);
+  color: #ffffff;
+  text-shadow:2px 1px 3px rgba(0,0,0,0.3);;
+  /* border: 1px solid red; */
+  border-radius: 15px 15px 0px 0px;
+}
+
+/* 帳號登入 */
+.inner-cont .sign span.active {
+  border-top: 2px solid rgb(118,197,187);
+  background-color: #FFF;
+  /* border:1px solid red; */
+  border-radius: 15px 15px 0px 0px;
+  color: rgb(118,197,187);
+  text-shadow:1px 1px 1px rgba(255, 255, 255, 0.15);
+  
+}
+
+.inner-cont .sign-in-up {
+  padding: 25px;
+  background-color: #FFF;
+  border-radius:0px 10px 0px 0px;
+  /* border: 1px solid red; */
+}
+
+
+.inner-cont .sign-in-up form {
+  overflow: hidden;
+  display: none;
+  /* border: 1px solid red; */
+}
+
+.inner-cont .sign-in-up form>span,
+.inner-cont .sign-in-up form>a {
+  float: left;
+  width: 50%;
+  font-size: 12px;
+}
+
+.inner-cont .sign-in-up form>span {
+  text-align: left;
+}
+
+/* 忘記密碼 */
+.inner-cont .sign-in-up form>a {
+  text-align: right;
+  text-decoration: none;
+  color: #070707;
+  font-weight: 600;
+}
+
+.inner-cont .sign-in-up form>a:hover {
+  text-decoration: underline;
+}
+
+.inner-cont .sign-in-up form input:not([type="checkbox"]) {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #C2C7D0;
+  border-radius: 20px;
+  box-sizing: border-box;
+  font-size: 16px;
+  color: red;
+  /* border:1px solid red; */
+}
+
+.sign-in-up form input:focus {
+  outline-color: rgb(118,197,187);
+}
+
+
+
+.inner-cont .sign-in-up form input[type="submit"] {
+  margin-top: 20px;
+  background-color: rgb(118,197,187);
+  color: rgb(255, 255, 255);
+  /* text-shadow: 1px 1px 1px rgb(0, 0, 0); */
+  ;
+  font-size: 18px !important;
+  font-weight: bold;
+  cursor: pointer;
+  transition: .3s;
+  margin-bottom: 20px;
+}
+
+.inner-cont .sign-in-up form.active {
+  display: block;
+}
+
+/* 快速登入 */
+.inner-cont .divider {
+  position: relative;
+  margin-bottom: 15px;
+}
+
+.inner-cont .divider::after {
+  content: "";
+  height: 1px;
+  width: 100%;
+  background-color: #C2C7D0;
+  position: absolute;
+  top: 9px;
+  left: 0;
+}
+
+.inner-cont .divider span {
+  padding: 0 10px;
+  background-color: #FFF;
+  z-index: 2;
+  position: relative;
+}
+
+.social-login {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+
+
+
+.social-login button {
+  /* padding: 5px; */
+  width: 50px;
+  height: 50px;
+  margin-bottom: 15px;
+  border: none;
+  border-radius: 5px;
+  color: #FFF;
+  font-weight: bold;
+  cursor: pointer;
+  transition: .3s;
+  /* font-size: 18px; */
+  /* line-height: 1.5em; */
+  text-align: center;
+  margin: 0 auto;
+  margin: 8px;
+}
+
+/* .social-login button.google,
+.social-login button.Twitter {
+  margin-left: 20px;
+} */
+
+.social-login button.facebook {
+  background-color: rgb(24, 119, 242)
+      /* text-align: center; */
+}
+
+.social-login button.facebook i {
+  background-color: rgb(24, 119, 242);
+}
+
+button.facebook>i {
+  font-size: 35px;
+  /* padding-right: 10px; */
+}
+
+.social-login button.google {
+  background-color: #ffffff;
+  border: 1px solid rgb(211, 211, 211);
+  width: 53px;
+  
+}
+
+.social-login button.google img {
+  max-width: 80%;
+  margin: 0 auto;
+  vertical-align: middle;
+}
+
+.social-login button.Line {
+  /* color: #00c300; */
+  /* border: 1px solid red; */
+  background-color: #ffffff;
+  width: 50px;
+  
+}
+
+.social-login button.Line img {
+  max-width: 100%;
+
+}
+
+.social-login button.Twitter {
+  background-color: #4ea2e7;
+}
+
+button.Twitter>i {
+  font-size: 35px;
+  /* padding-right: 10px; */
+}
+
+button:focus {
+  outline: 0;
+}
+
+
+.inner-cont .sign-in-up form input[type="submit"]:hover,
+.inner-cont .social-login button:hover {
+  opacity: .6
+}
+
+/* 登入 */
+
+button{
+  cursor: pointer;
+}
+
+button.btn_modal_close{
+  outline: none; 
+  border-width: 0;
+  text-align: center;
+  width: 30px;
+  height: 30px;
+  float: right;
+  background-color: #fff;
+  position: absolute;
+  top: 10px;
+  right: 5px;
+  border-radius: 20px;
+  font-weight: 100;
+}
+
+
+div.overlay{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: hsla(0, 0%, 0%, .5);
+  
+  
+  /* 預設：完全透明；設定 z-index: -1 會在整個頁面的後方，看不到，才不會擋到頁面元素。 */
+  opacity: 0;
+  z-index: -1;
+  transition: opacity 1s;
+}
+div.overlay.-on{
+  
+  /* 加上 -on 之後，Modal 漸漸出現，因為有設定 transition */
+  opacity: 1;
+  z-index: 99;
+  
+}
+
+div.overlay.-opacity-zero{
+  /* 關閉 Modal 時，先讓 opacity設定0，就會慢慢變成完全透明，但這時會擋到後面的元素，所以要再移除 -on 及 -opacity-zero 這兩個 class */
+  opacity: 0;
+}
+
+/* 元素 article 置中及基本樣式 */
+div.overlay > article{
+  
+  /* width: 90%; */
+  /* max-width: 800px; */
+  border-radius: 20px;
+  box-shadow: 0 0 1px #ddd;
+  /* padding: 10px; */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color:rgb(255, 255, 255);
+}

@@ -1,5 +1,5 @@
  /* 共用CSS*/
- /*往上跑的按鈕、header、漢堡按鈕 */
+ /*往上跑的按鈕、header、漢堡按鈕 、navtop(搜尋框、麵包屑)*/
 
 
  * {
@@ -422,12 +422,12 @@
      }
 
      .search-bar {
-        width: 400px;
-    }
+         width: 400px;
+     }
 
-    .search-btn {
-        transform: translate(310px, 7px);
-    }
+     .search-btn {
+         transform: translate(310px, 7px);
+     }
 
  }
 
@@ -529,118 +529,122 @@
      }
 
      .search-bar {
-        width: 300px;
-    }
+         width: 300px;
+     }
 
-    .search-btn {
-        transform: translate(210px, 7px);
-    }
+     .search-btn {
+         transform: translate(210px, 7px);
+     }
 
 
 
  }
 
- @media screen and (max-width: 384px){
-    header .list {
-        display: none;
-    }
+ @media screen and (max-width: 384px) {
+     header .list {
+         display: none;
+     }
 
-    header .head {
-        width: 100%;
-        background-color: rgb(255, 255, 255);
-        position: fixed;
-        top: 0;
-        left: 0;
-    }
+     header .head {
+         width: 100%;
+         background-color: rgb(255, 255, 255);
+         position: fixed;
+         top: 0;
+         left: 0;
+     }
 
-    .header2 {
-        position: fixed;
-        top: 23px;
-        right: 0;
-    }
+     .header2 {
+         position: fixed;
+         top: 23px;
+         right: 0;
+     }
 
-    .hamburger {
-        display: block;
-    }
+     .hamburger {
+         display: block;
+     }
 
-    /* 漢堡選單 */
+     /* 漢堡選單 */
 
-    nav.main_nav {
-        border: 1px solid rgb(255, 255, 255);
-        display: none;
-        position: absolute;
-        top: 73px;
-        right: 0;
-        z-index: 90;
-        width: 100vw;
-    }
+     nav.main_nav {
+         border: 1px solid rgb(255, 255, 255);
+         display: none;
+         position: absolute;
+         top: 73px;
+         right: 0;
+         z-index: 90;
+         width: 100vw;
+     }
 
-    nav.main_nav ul.nav_list li {
-        /* border: 1px solid blue; */
-        display: inline-block;
-        list-style: none;
-        font-size: 25px;
-        border-bottom: 1px solid rgb(255, 255, 255);
-        width: 100%;
-        background-color: rgb(129, 191, 188);
-        margin: 0 auto;
-        /* border: 1px solid red; */
-    }
+     nav.main_nav ul.nav_list li {
+         /* border: 1px solid blue; */
+         display: inline-block;
+         list-style: none;
+         font-size: 25px;
+         border-bottom: 1px solid rgb(255, 255, 255);
+         width: 100%;
+         background-color: rgb(129, 191, 188);
+         margin: 0 auto;
+         /* border: 1px solid red; */
+     }
 
-    nav.main_nav ul.nav_list li:last-child {
-        border-bottom: none;
+     nav.main_nav ul.nav_list li:last-child {
+         border-bottom: none;
 
-    }
+     }
 
-    nav.main_nav ul.nav_list li>a {
-        color: rgb(255, 255, 255);
-        line-height: 1.5em;
-        padding: 15px 0px 0px 30px;
-        text-shadow: 1px 1px 1px rgb(99, 99, 99);
-        letter-spacing: 1.2px;
-        width: 100%;
-        display: inline-block;
-    }
+     nav.main_nav ul.nav_list li>a {
+         color: rgb(255, 255, 255);
+         line-height: 1.5em;
+         padding: 15px 0px 0px 30px;
+         text-shadow: 1px 1px 1px rgb(99, 99, 99);
+         letter-spacing: 1.2px;
+         width: 100%;
+         display: inline-block;
+     }
 
-    /* 漢堡Nav hover換色 */
-    nav.main_nav ul.nav_list li:hover {
-        background-color: #C6E5E1;
-    }
+     /* 漢堡Nav hover換色 */
+     nav.main_nav ul.nav_list li:hover {
+         background-color: #C6E5E1;
+     }
 
-    nav.main_nav ul.nav_list li>a:hover {
-        color: black;
-        text-shadow: none
-    }
+     nav.main_nav ul.nav_list li>a:hover {
+         color: black;
+         text-shadow: none
+     }
 
-    .navtop {
-        display: flex;
-        width: 96%;
-        justify-content: center;
-        margin: 0 auto;
-        margin-top: 130px;
-        margin-bottom: 80px;
-        /* border: 1px solid rgb(255, 0, 0); */
-        flex-direction: column;
-    }
+     .navtop {
+         display: flex;
+         width: 96%;
+         justify-content: center;
+         margin: 0 auto;
+         margin-top: 130px;
+         margin-bottom: 30px;
+         /* border: 1px solid rgb(255, 0, 0); */
+         flex-direction: column;
+     }
 
-    .wrap {
-        margin: auto 0;
-        border: 1px solid red;
-        order: 0;
-        align-self: flex-end;
-        margin-bottom: 50px;
-    }
+     .wrap {
+         margin: auto 0;
+         border: 1px solid red;
+         order: 0;
+         align-self: flex-end;
+         margin-bottom: 30px;
+     }
 
-    .search-bar {
-       width:270px;
-       font-size: 18px;
-   }
+     .search-bar {
+         width: 270px;
+         font-size: 18px;
+     }
 
-   .search-btn {
-       transform: translate(180px, 6px);
-   }
-   .breadcrumb{
-    align-self: flex-start;
-   }
+     .search-btn {
+         transform: translate(180px, 6px);
+     }
 
+     .breadcrumb {
+         align-self: flex-start;
+     }
+
+     .breadcrumb ol.breadcrumb_list>li>a {
+         font-size: 16px;
+     }
  }

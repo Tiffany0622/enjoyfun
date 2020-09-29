@@ -16,15 +16,15 @@ body {
     width: 1200px;
     width: 100%;
     margin: 0 auto;
-    /* border:1px solid green; */
+    border: 1px solid green;
 }
 
 
 .profile {
-    /* border:1px solid rgb(10, 71, 238); */
+    border: 1px solid rgb(10, 71, 238);
     width: 1200px;
     display: flex;
-    /* align-items: baseline; */
+    align-items:center;
     margin: 0 auto;
     margin-bottom: 100px;
     padding-left: 30px;
@@ -42,9 +42,8 @@ body {
 }
 
 .profile>.text {
-    /* border:1px solid pink; */
-    padding-left: 50px;
-    padding-top: 80px;
+    border:1px solid pink;
+    padding-left: 100px;
 }
 
 .profile>.text>p.name {
@@ -133,6 +132,7 @@ ul a:hover {
     color: #1d1d1d;
     text-shadow: none;
 }
+
 .menu>ul.tab_list>li.list>a.-on::after {
     color: #1d1d1d;
     text-shadow: none;
@@ -278,4 +278,96 @@ ul a:hover {
 .tab.-on {
     display: flex;
 }
+
 /* 切換的CSS */
+
+/* RWD開始 */
+@media screen and (min-width: 905px) and (max-width: 1199px) {
+
+    .profile {
+        border: 1px solid rgb(238, 10, 135);
+        max-width: 95%;
+        width: 100%;
+    }
+
+    .selfphoto {
+        width: 250px;
+    }
+
+    .profile>.text>p.name {
+        font-size: 30px;
+    }
+    /* 內文 */
+    .profile>.text>p {
+        font-size: 26px;
+    }
+}
+@media screen and (min-width: 556px) and (max-width: 904px){
+    .profile {
+        border: 1px solid rgb(10, 238, 59);
+        max-width: 95%;
+        width: 100%;
+        flex-direction: column;
+        padding-left:0px;
+      
+    }
+
+    .selfphoto {
+        width: 250px;
+        margin-bottom: 10px;
+    }
+    .profile>.text {
+        border:1px solid pink;
+        padding-left:0px;
+        text-align: center;
+    }
+    
+    .profile>.text>p.name {
+        font-weight: bolder;
+        color: rgb(20, 20, 20);
+        line-height: 2.2em;
+        font-size: 32px;
+    }
+    
+    .profile>.text>p {
+        color: rgb(51, 51, 51);
+        line-height: 1.3em;
+        font-weight: 300;
+        font-size: 25px;
+    }
+}
+
+@media screen and (max-width: 556px){
+    .profile {
+        border: 1px solid rgb(238, 139, 10);
+        max-width: 95%;
+        width: 100%;
+        flex-direction: column;
+        padding-left:0px;
+      
+    }
+
+    .selfphoto {
+        width: 230px;
+        margin-bottom: 10px;
+    }
+    .profile>.text {
+        border:1px solid pink;
+        padding-left:0px;
+        text-align: center;
+    }
+    
+    .profile>.text>p.name {
+        font-weight: bolder;
+        color: rgb(20, 20, 20);
+        line-height: 2.2em;
+        font-size: 28px;
+    }
+    
+    .profile>.text>p {
+        color: rgb(51, 51, 51);
+        line-height: 1.5em;
+        font-weight: 300;
+        font-size: 18px;
+    }
+}

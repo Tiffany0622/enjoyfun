@@ -42,7 +42,7 @@ body {
 }
 
 .profile>.text {
-    border: 1px solid pink;
+    /* border: 1px solid pink; */
     padding-left: 100px;
 }
 
@@ -309,7 +309,7 @@ li.list a:hover {
     }
 
     .profile {
-        border: 1px solid rgb(238, 10, 135);
+        /* border: 1px solid rgb(238, 10, 135); */
         margin-bottom: 60px;
 
     }
@@ -329,7 +329,7 @@ li.list a:hover {
 
     /* 頁籤 */
     .menu {
-        border: 1px solid red;
+        /* border: 1px solid red; */
         margin-bottom: 60px;
 
     }
@@ -383,7 +383,7 @@ li.list a:hover {
     }
 
     .profile {
-        border: 1px solid rgb(10, 238, 59);
+        /* border: 1px solid rgb(10, 238, 59); */
         flex-direction: column;
         padding-left: 0px;
         margin-bottom: 50px;
@@ -417,7 +417,7 @@ li.list a:hover {
     /* 可切換頁籤 */
     .menu {
         font-size: 20px;
-        border: 1px solid rgb(38, 0, 255);
+        /* border: 1px solid rgb(38, 0, 255); */
         margin-bottom: 50px;
     }
 
@@ -435,7 +435,7 @@ li.list a:hover {
 
     .article>.item {
         margin-bottom: 80px;
-        border: 1px solid red;
+        /* border: 1px solid red; */
     }
 
     /*分隔線*/
@@ -473,7 +473,7 @@ li.list a:hover {
 @media screen and (min-width: 556px) and (max-width: 858px) {
     .article {
         /* width: 100px; */
-        border: 1px solid rgb(0, 255, 128);
+        /* border: 1px solid rgb(0, 255, 128); */
         margin: 0 auto;
         display: flex;
         justify-content: center;
@@ -484,7 +484,7 @@ li.list a:hover {
         width: 500px;
         height: 636px;
         margin-bottom: 80px;
-        border: 1px solid red;
+        /* border: 1px solid red; */
     }
 
     .article>.item>a.title {
@@ -537,7 +537,7 @@ li.list a:hover {
     }
 
     .profile {
-        border: 1px solid rgb(238, 139, 10);
+        /* border: 1px solid rgb(238, 139, 10); */
         flex-direction: column;
         padding-left: 0px;
         margin-bottom: 30px;
@@ -550,7 +550,7 @@ li.list a:hover {
     }
 
     .profile>.text {
-        border: 1px solid pink;
+        /* border: 1px solid pink; */
         padding-left: 0px;
         text-align: center;
     }
@@ -572,7 +572,7 @@ li.list a:hover {
     /* 可切換頁籤 */
     .menu {
         font-size: 16px;
-        border: 1px solid rgb(0, 26, 255);
+        /* border: 1px solid rgb(0, 26, 255); */
         margin-bottom: 50px;
     }
 
@@ -589,7 +589,7 @@ li.list a:hover {
     }
 
     .article {
-        border: 1px solid rgb(0, 255, 128);
+        /* border: 1px solid rgb(0, 255, 128); */
         margin: 0 auto;
         display: flex !important;
         justify-content: center;
@@ -600,7 +600,7 @@ li.list a:hover {
         width: 380px !important;
         height: 520px;
         margin-bottom: 50px;
-        border: 1px solid red;
+        /* border: 1px solid red; */
         /* margin: 0 auto; */
     }
 

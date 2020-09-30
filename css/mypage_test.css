@@ -16,12 +16,12 @@ body {
     width: 1200px;
     width: 100%;
     margin: 0 auto;
-    border: 1px solid green;
+    /* border: 1px solid green; */
 }
 
 
 .profile {
-    border: 1px solid rgb(10, 71, 238);
+    /* border: 1px solid rgb(10, 71, 238); */
     width: 1200px;
     display: flex;
     align-items: center;
@@ -63,7 +63,7 @@ body {
 /* 可切換頁籤 */
 .menu {
     font-size: 25px;
-    border: 1px solid red;
+    /* border: 1px solid red; */
     margin: 0 auto;
     margin-bottom: 100px;
     width: 1200px;
@@ -130,39 +130,39 @@ li.list a:hover {
 .article {
     width: 1200px;
     /* width: 100px; */
-    border: 1px solid red;
+    /* border: 1px solid red; */
     margin: 0 auto;
-    margin-bottom: 100px;
+    margin-bottom: 10px;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
 }
 
 .article>.item {
-    border: 1px solid blue;
-    margin-bottom: 120px;
+    /* border: 1px solid blue; */
+    margin-bottom: 80px;
     width: 380px;
     height: 536px;
     position: relative;
 }
 
 /*分隔線*/
-.article>.item:nth-child(3n+3)::before {
+/* .article>.item:nth-child(3n+3)::before {
     content: '';
     background-color: rgba(0, 0, 0, 0.4);
-    width: 1200px;
+    width: 0vw;
     text-align: center;
     height: 1px;
     position: absolute;
     bottom: 0;
-    right: 0;
+    right: 5vw;
     transform: translate(3px, 60px);
-}
+} */
 
 /* 取消最後一條分隔線 */
-.article>.item:nth-child(18)::before {
+/* .article>.item:nth-child(18)::before {
     height: 0px;
-}
+} */
 
 .article>.item:nth-child(1),
 .article>.item:nth-child(2) {
@@ -189,28 +189,30 @@ li.list a:hover {
     padding-top: 5px;
     height: 110px;
     line-height: 1.5em;
-    border: 1px solid rgb(0, 255, 170);
+    /* border: 1px solid rgb(0, 255, 170); */
     margin-bottom: 10px;
 }
 
 .article>.item>.text {
     display: flex;
     justify-content: space-between;
-    /* border:1px solid rgb(255, 0, 0); */
+    /* border-bottom:1px solid rgb(214, 214, 214); */
     align-items: center;
+    padding-bottom: 5px;
 }
 
 .article>.item>.text>p.date {
     font-size: 20px;
     font-weight: lighter;
-    border: 1px solid rgb(187, 255, 0);
+    /* border: 1px solid rgb(187, 255, 0); */
     color: #1d1d1d;
     /* font-family: 'Noto Sans TC'; */
 }
 
 .article>.item>.text>button {
     font-size: 22px;
-    background-color: #76C5BB;
+    /* background-color: #76C5BB; */
+    background-color: #C6E5E1;
     color: aliceblue;
     padding: 5px 10px;
     text-shadow: 1px 1px 0px rgba(177, 177, 177, 0.514);
@@ -227,7 +229,7 @@ li.list a:hover {
     margin: 0 auto;
     font-size: 20px;
     margin-bottom: 100px;
-    border: 1px solid rgb(255, 166, 0);
+    /* border: 1px solid rgb(255, 166, 0); */
     width: 1200px;
 }
 
@@ -235,7 +237,7 @@ li.list a:hover {
     display: flex;
     margin: auto;
     justify-content: center;
-    border: 1px solid rgb(0, 255, 64);
+    /* border: 1px solid rgb(0, 255, 64); */
 
 }
 
@@ -256,7 +258,7 @@ li.list a:hover {
     display: inline-block;
     width: 100%;
     border-radius: 20px;
-    padding-top: 6PX;
+    padding-top: 6px;
 }
 
 
@@ -308,6 +310,7 @@ li.list a:hover {
 
     .profile {
         border: 1px solid rgb(238, 10, 135);
+        margin-bottom: 60px;
 
     }
 
@@ -324,36 +327,43 @@ li.list a:hover {
         font-size: 26px;
     }
 
+    /* 頁籤 */
+    .menu {
+        border: 1px solid red;
+        margin-bottom: 60px;
+
+    }
+
     /* 喜歡的文章 */
     .article {
         justify-content: space-evenly;
     }
 
     /*分隔線*/
-    .article>.item:nth-child(3n+3)::before {
+    /* .article>.item:nth-child(3n+3)::before {
         content: '';
         height: 0px !important;
+    } */
 
-    }
-
-    .article>.item:nth-child(2n+2)::before {
+    /* 問老師問題 */
+    /* .article>.item:nth-child(2n+2)::before {
         content: '';
-        background-color: rgba(20, 196, 43, 0.4);
-        width: 220%;
+        background-color: rgba(196, 20, 117, 0.4);
+        width: 90vw;
         text-align: center;
         height: 1px !important;
         position: absolute;
         bottom: 0;
         right: 0;
-        transform: translate(20px, 60px);
-    }
+        transform: translate(0px, 60px);
+    } */
 
 
 
     /* 取消最後一條分隔線 */
-    .article>.item:nth-child(18)::before {
+    /* .article>.item:nth-child(18)::before {
         height: 0px !important;
-    }
+    } */
 
     .article>.item:nth-child(1),
     .article>.item:nth-child(2) {
@@ -423,8 +433,13 @@ li.list a:hover {
         transform: translate(-25px, -4px);
     }
 
+    .article>.item {
+        margin-bottom: 80px;
+        border: 1px solid red;
+    }
+
     /*分隔線*/
-    .article>.item:nth-child(3n+3)::before {
+    /* .article>.item:nth-child(3n+3)::before {
         content: '';
         height: 0px !important;
 
@@ -440,25 +455,83 @@ li.list a:hover {
         bottom: 0;
         right: 0;
         transform: translate(-5%, 60px);
-    }
+    } */
 
 
 
     /* 取消最後一條分隔線 */
-    .article>.item:nth-child(18)::before {
+    /* .article>.item:nth-child(18)::before {
         height: 0px !important;
     }
 
     .article>.item:nth-child(1),
     .article>.item:nth-child(2) {
         margin-right: 0px;
+    } */
+}
+
+@media screen and (min-width: 556px) and (max-width: 858px) {
+    .article {
+        /* width: 100px; */
+        border: 1px solid rgb(0, 255, 128);
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
     }
+
+    .article>.item {
+        width: 500px;
+        height: 636px;
+        margin-bottom: 80px;
+        border: 1px solid red;
+    }
+
+    .article>.item>a.title {
+        width: 100%;
+    }
+
+    /* 頁碼開始 */
+    .pagenum {
+        margin-bottom: 60px;
+    }
+
+    .pagenum>ul {
+        display: flex;
+        margin: auto;
+        justify-content: center;
+        /* border: 1px solid rgb(0, 255, 64); */
+
+    }
+
+    .pagenum>ul>li {
+        border: 1px solid rgba(145, 143, 143, 0.5);
+        margin: auto 8px;
+        background-color: rgb(255, 255, 255);
+        width: 40px;
+        height: 40px;
+        text-align: center;
+        /* border:1px solid rgb(0, 47, 255); */
+        border-radius: 20px;
+    }
+
+    .pagenum>ul>li:nth-child(7),
+    .pagenum>ul>li:nth-child(8),
+    .pagenum>ul>li:nth-child(9),
+    .pagenum>ul>li:nth-child(10),
+    .pagenum>ul>li:nth-child(11) {
+        display: none;
+    }
+
+    /* 頁碼結束 */
 }
 
 @media screen and (max-width: 556px) {
 
     .profile,
-    .menu {
+    .menu,
+    .article,
+    .pagenum {
         max-width: 95%;
         width: 100%;
     }
@@ -514,4 +587,86 @@ li.list a:hover {
     .menu ul>li>a::after {
         content: '';
     }
+
+    .article {
+        border: 1px solid rgb(0, 255, 128);
+        margin: 0 auto;
+        display: flex !important;
+        justify-content: center;
+        flex-wrap: wrap !important;
+    }
+
+    .article>.item {
+        width: 380px !important;
+        height: 520px;
+        margin-bottom: 50px;
+        border: 1px solid red;
+    }
+
+    .article>.item>a.title {
+        width: 100%;
+        font-size: 22px;
+    }
+
+    .article>.item>.text>p.date {
+        font-size: 18px;
+
+    }
+
+    /* 頁碼開始 */
+    .pagenum {
+        margin-bottom: 50px;
+        font-size: 12px;
+        border: 1px solid rgb(255, 115, 0);
+
+    }
+
+    .pagenum>ul {
+        display: flex;
+        margin: auto;
+        justify-content: center;
+        border: 1px solid rgb(0, 255, 64);
+
+    }
+
+    .pagenum>ul>li {
+        width: 30px;
+        height: 30px;
+        margin: auto 3px;
+
+    }
+
+    .pagenum>ul>li>a {
+        color: #444343;
+        display: inline-block;
+        width: 100%;
+        border-radius: 20px;
+        padding-top: 6px;
+    }
+
+    .pagenum>ul>li:first-child,
+    .pagenum>ul>li:last-child {
+        border: none;
+        width: 40px;
+        height: 40px;
+        border-radius: 0px;
+
+    }
+
+    .pagenum>ul>li:first-child a,
+    .pagenum>ul>li:last-child a {
+        color: red;
+        line-height: 30px;
+    }
+
+    .pagenum>ul>li:nth-child(7),
+    .pagenum>ul>li:nth-child(8),
+    .pagenum>ul>li:nth-child(9),
+    .pagenum>ul>li:nth-child(10),
+    .pagenum>ul>li:nth-child(11) {
+        display: none;
+    }
+
+    /* 頁碼結束 */
+
 }

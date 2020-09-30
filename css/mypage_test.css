@@ -613,6 +613,10 @@ li.list a:hover {
         font-size: 18px;
 
     }
+    .article>.item:nth-child(1),
+.article>.item:nth-child(2) {
+    margin-right: 0px;
+}
 
     /* 頁碼開始 */
     .pagenum {

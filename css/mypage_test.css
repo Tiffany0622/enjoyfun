@@ -601,6 +601,7 @@ li.list a:hover {
         height: 520px;
         margin-bottom: 50px;
         border: 1px solid red;
+        /* margin: 0 auto; */
     }
 
     .article>.item>a.title {
@@ -617,7 +618,7 @@ li.list a:hover {
     .pagenum {
         margin-bottom: 50px;
         font-size: 12px;
-        border: 1px solid rgb(255, 115, 0);
+        /* border: 1px solid rgb(255, 115, 0); */
 
     }
 
@@ -625,7 +626,7 @@ li.list a:hover {
         display: flex;
         margin: auto;
         justify-content: center;
-        border: 1px solid rgb(0, 255, 64);
+        /* border: 1px solid rgb(0, 255, 64); */
 
     }
 
@@ -655,7 +656,7 @@ li.list a:hover {
 
     .pagenum>ul>li:first-child a,
     .pagenum>ul>li:last-child a {
-        color: red;
+        /* color: red; */
         line-height: 30px;
     }
 

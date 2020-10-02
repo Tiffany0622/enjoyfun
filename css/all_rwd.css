@@ -1,0 +1,18 @@
+@media screen and (min-width: 905px) and (max-width: 1199px) {
+    /* max-width: 95%;
+        width: 100%; */
+}
+
+@media screen and (min-width: 556px) and (max-width: 904px) {
+    /* max-width: 95%;
+        width: 100%; */
+}
+
+@media screen and (min-width: 556px) and (max-width: 858px) {
+
+}
+
+@media screen and (max-width: 556px) {
+    /* max-width: 95%;
+    width: 100%; */
+}

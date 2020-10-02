@@ -1,19 +1,1195 @@
 * {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    text-decoration: none;
-    box-sizing: border-box;
-    font-family: 'Noto Sans TC', sans-serif;
-}
-body{
-    background-color:rgb(247, 247, 247);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+  font-family: 'Noto Sans TC', sans-serif;
+  /* outline: 1px solid red; */
 }
 
-.container{
+body {
+  background-color: rgb(247, 247, 247);
+}
+
+.container {
   font-size: 0;
-  width: 1200px;
+  max-width: 1200px;
   width: 100%;
   margin: 0 auto;
   /* border:1px solid green; */
+}
+
+/* 資料內容開始 */
+.maincontent {
+  /* border:1px solid rgb(4, 0, 223); */
+  max-width: 98%;
+  margin: 0 auto;
+  margin-top: 100px;
+  /* border: 1px solid red; */
+}
+
+.maincontent .top {
+  display: flex;
+  justify-content: space-between;
+  /* border: 1px solid rgb(17, 0, 255); */
+}
+
+/* 標題 */
+.maincontent .top .title h2 {
+  font-size: 35px;
+  font-weight: 600;
+}
+
+.maincontent .top .star {
+  display: flex;
+  text-align: start;
+  align-items: baseline;
+  font-weight: bolder;
+  margin-right: 10px;
+  /* border: 1px solid red; */
+}
+
+.maincontent .top .star p.score {
+  font-size: 35px;
+  font-weight: 400;
+  margin-right: 5px;
+  /* border: 1px solid rgb(0, 183, 255); */
+}
+
+/*總分星星*/
+.maincontent .top .star>i {
+  color: rgb(255, 197, 87);
+  font-size: 30px;
+  padding: 1px;
+  text-shadow: 1px 1px 1px rgb(180, 180, 180);
+  /* border:1px solid rgb(255, 145, 0); */
+  margin: 0 0 0 4px;
+}
+
+.maincontent .toptext {
+  font-size: 26px;
+  float: right;
+  margin: 50px 10px 20px 0;
+  /* border: 1px solid rgb(0, 183, 255); */
+
+}
+
+/*清空前面的浮動元素空間*/
+.topbtn {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+/* 上半部4顆按鈕 */
+.maincontent .topbtn {
+  /* border: 1px solid yellow; */
+  display: flex;
+  justify-content: flex-end;
+  margin: 5px 0 30px 0;
+}
+
+.maincontent .topbtn button {
+  font-size: 24px;
+  margin: auto 10px;
+  line-height: 40px;
+  letter-spacing: 1px;
+  padding: 0 10px 0 10px;
+  border-radius: 10px;
+  /* border: 1px solid rgb(255, 0, 76); */
+  box-shadow: 1px 1px 1px rgb(180, 180, 180);
+  height: 40px;
+  font-weight: 600;
+}
+
+.maincontent .topbtn button:hover {
+  opacity: .7;
+}
+
+
+.maincontent .topbtn button.fb,
+.maincontent .topbtn button.line,
+.maincontent .content .menu01 button.introd,
+.maincontent .content .menu02 button.allpic {
+  background-color: rgb(255, 255, 255);
+  /* border: .5px solid rgba(51, 50, 50, 0.5); */
+  border: 0px;
+  box-shadow: 1px 1px 1px rgb(180, 180, 180);
+  color: #1d1d1d;
+}
+
+.maincontent .topbtn button.like,
+.maincontent .topbtn button.write {
+  background-color: #76C5BB;
+  color: aliceblue;
+  text-shadow: 1px 1px 1px rgb(139, 139, 139);
+  border: 0px;
+}
+
+
+.maincontent .topbtn button.fb>i {
+  color: rgb(24, 119, 242);
+  font-size: 28px;
+  padding-left: 3px;
+  line-height: 40px;
+
+}
+
+.maincontent .topbtn button.line>i {
+  color: #00c300;
+  font-size: 28px;
+  padding-left: 3px;
+  line-height: 40px;
+
+}
+
+/* main_Photo */
+/* 圖片 */
+.maincontent .all_photo {
+  width: 100%;
+  /* border:1px solid red; */
+  display: flex;
+
+}
+
+.maincontent .main_Photo {
+  width: 82%;
+  /* border: 1px solid red; */
+  margin-right: 5px;
+}
+
+.maincontent .main_Photo img {
+  max-width: 100%;
+}
+
+.maincontent .other_Photo {
+  /* border:1px solid blue; */
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.maincontent .other_Photo .small {
+  border: .5px solid rgb(65, 65, 65);
+  cursor: pointer;
+
+}
+
+.maincontent .other_Photo .small img {
+  max-width: 100%;
+}
+
+.maincontent .content {
+  /* border: 1px solid pink; */
+
+}
+
+.maincontent .content .menu01 {
+  margin-top: 50px;
+  /* border: 1px solid pink; */
+}
+
+/* .maincontent .content .menu01 button.info,.maincontent .content .menu02 button.allcomment{
+background-color:rgb(129, 191, 188);
+color: white;
+text-shadow:1px 1px 0px rgb(124, 124, 124);
+padding: 5px;
+} */
+.maincontent .content .menu01 button.tab,
+.maincontent .content .menu02 button.tabb {
+  background-color: rgb(255, 255, 255);
+  color: #76C5BB;
+  margin-right: 10px;
+  font-size: 25px;
+  width: 155px;
+  /* border: .5px solid rgba(20, 20, 20, 0.5); */
+  border: 0px;
+  padding: 5px;
+  box-shadow: 1px 1px 1px rgb(180, 180, 180);
+  font-weight: 600;
+}
+
+/* 按鈕被按到的時候，變色 */
+.maincontent .content .menu01 button.-on,
+.maincontent .content .menu02 button.-on {
+  background-color: rgb(129, 191, 188);
+  color: white;
+  text-shadow: 1px 1px 0px rgb(124, 124, 124);
+  border: 0px;
+  padding: 5px;
+}
+
+.maincontent .content .menu01 button:hover,
+.maincontent .content .menu02 button:hover {
+  opacity: .7;
+}
+
+/* 頁籤01 */
+/* 活動資訊內容 */
+.maincontent .content .infotext {
+  font-size: 25px;
+  /* margin: auto 10px; */
+  padding: 20px 10px;
+  /* border: 3px solid rgb(128, 77, 0); */
+}
+
+.maincontent .content .infotext div.tab {
+  padding: 10px;
+  display: none;
+}
+
+.maincontent .content .infotext div.tab.-on {
+  display: block;
+}
+
+.maincontent .content .infotext .clearfix {
+  /* border: 1px solid rgb(255, 0, 157); */
+  overflow: auto;
+  height: 230px;
+  overflow: hidden;
+}
+
+.maincontent .content .infotext .tab1 .text {
+  width: 50%;
+  /* border: 1px solid orange; */
+  display: inline-block;
+}
+
+
+.maincontent .content .infotext .tab1 .map {
+  width: 50%;
+  height: 100%;
+  float: right;
+  /* border: 1px solid rgb(255, 0, 170); */
+}
+
+.maincontent .content .infotext p {
+  line-height: 2em;
+}
+
+.maincontent .content .infotext a {
+  color: blue;
+}
+
+.maincontent .content .infotext .tab p.introd{
+  text-align: justify;
+}
+
+/*分隔線*/
+/* .maincontent .content .infotext::after {
+  content: '';
+  display: block;
+  width: 1200px;
+  height: 1px;
+  background-color: rgba(39, 39, 39, 0.616);
+  margin: 40px auto;
+  margin-left: -11px;
+}
+
+.maincontent .content .menu02 {}
+
+.maincontent .content .menu02::after {
+  content: '';
+  display: block;
+  width: 1200px;
+  height: .5px;
+  background-color: rgba(39, 39, 39, 0.616);
+  margin-left: -1px;
+  margin-bottom: 1px;
+} */
+
+.maincontent .content .main_Content {
+  /* border: 1px solid green; */
+}
+
+.maincontent .content .main_Content div.tabb {
+  padding-top: 10px;
+  display: none;
+}
+
+.maincontent .content .main_Content div.tabb.-on {
+  display: block;
+}
+
+.maincontent .content .item {
+  display: flex;
+  margin-bottom: 30px;
+  /* border-bottom: .5px solid rgba(0, 0, 0, 0.5);   */
+
+}
+
+.maincontent .content .item .pic {
+  display: flex;
+  /* width: 600px; */
+  width: 50%;
+  height: 300px;
+  /* border: 1px solid red; */
+}
+
+.maincontent .content .item .pic img {
+  width: 300px;
+  max-width: 100%;
+}
+
+.maincontent .content .item .comment {
+  width: 50%;
+  display: flex;
+  width: 600px;
+  /* border: 1px solid #7500ac; */
+  align-items: flex-start;
+  background-color: rgb(255, 255, 255);
+}
+
+.maincontent .content .item .comment .selfphoto {
+  width: 100px;
+  border-radius: 50%;
+  overflow: hidden;
+  /* border: 1px solid rgb(10, 218, 79); */
+  margin: 20px 10px 0 20px;
+}
+
+.maincontent .content .item .comment .selfphoto img {
+  max-width: 100%;
+  vertical-align: middle;
+
+}
+
+.maincontent .content .item .comment .text {
+  width: 100%;
+  /* border: 1px solid peru; */
+  padding: 20px 50px 0 20px;
+}
+
+.maincontent .content .item .comment .text a.name {
+  font-size: 25px;
+  font-weight: 600;
+  display: inline-block;
+  padding-bottom: 20px;
+  color: #1d1d1d;
+}
+
+.maincontent .content .item .comment .text .link {
+  font-size: 25px;
+  display: flex;
+  padding-bottom: 10px;
+  /* border:1px solid red; */
+  position: relative;
+
+
+}
+
+.maincontent .content .item .comment .text .link a {
+  color: #1d1d1d;
+  position: relative;
+  margin-right: 20px;
+  display: inline-block;
+  padding-bottom: 10px;
+}
+
+.maincontent .content .item .comment .text .link a:first-child::before {
+  content: '|';
+  display: inline-block;
+  color: #1d1d1d;
+  position: absolute;
+  top: -1px;
+  left: 110px;
+  pointer-events: none;
+
+}
+
+.maincontent .content .item .comment .text .star {
+  color: rgb(255, 197, 87);
+  font-size: 25px;
+  text-shadow: 1px 1px 1px rgb(180, 180, 180);
+  /* border:1px solid rgb(255, 145, 0); */
+  padding-bottom: 20px;
+  display: inline-block;
+}
+
+.maincontent .content .item .comment .text .textcomment {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.5em;
+  text-align: justify;
+  /* 讓文字可以對齊 */
+}
+
+/* 頁籤2 所有相片 */
+.tabb4 {
+  /* border: 1px solid red; */
+}
+
+.tabb4 .all_Pic {
+  /* border: 1px solid rgb(0, 17, 255); */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+}
+
+.tabb4 .all_Pic .pic {
+  width: 24%;
+  margin-bottom: 1%;
+}
+
+.tabb4 .all_Pic .pic img {
+  max-width: 100%;
+}
+
+
+
+/* 資料內容結束 */
+
+/* 頁碼 開始*/
+.pagenum {
+  margin: 0 auto;
+  font-size: 20px;
+  margin-bottom: 100px;
+  /* border: 1px solid rgb(255, 166, 0); */
+  max-width: 1200px;
+
+}
+
+.pagenum>ul {
+  display: flex;
+  margin: auto;
+  justify-content: center;
+  /* border: 1px solid rgb(0, 255, 64); */
+
+}
+
+.pagenum>ul>li {
+  border: 1px solid rgba(145, 143, 143, 0.5);
+  margin: auto 8px;
+  background-color: rgb(255, 255, 255);
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  /* border:1px solid rgb(0, 47, 255); */
+  border-radius: 20px;
+
+}
+
+.pagenum>ul>li>a {
+  color: #444343;
+  display: inline-block;
+  width: 100%;
+  border-radius: 20px;
+  padding-top: 6px;
+}
+
+
+.pagenum>ul>li:first-child,
+.pagenum>ul>li:last-child {
+  border: none;
+  background-color: rgb(247, 247, 247);
+  width: 100px;
+  height: 40px;
+  border-radius: 0px;
+  /* border:1px solid rgba(0, 0, 0, 0.589); */
+}
+
+
+.pagenum>ul>li:hover {
+  background-color: #C6E5E1;
+}
+
+.pagenum>ul>li:first-child,
+.pagenum>ul>li:last-child:hover {
+  background-color: rgb(247, 247, 247);
+}
+
+
+/* 頁碼結束 */
+
+/* RWD開始 */
+@media screen and (min-width: 905px) and (max-width: 1199px) {
+
+  .maincontent,
+  .maincontent>.all_Photo,
+  .pagenum {
+    max-width: 95%;
+    width: 100%;
+    /* border: 1px solid purple; */
+  }
+
+  /* 標題 */
+  .maincontent .top .title h2 {
+    font-size: 32px;
+  }
+
+  .maincontent .top .star p.score {
+    font-size: 30px;
+  }
+
+  /* 按鈕 */
+  .maincontent .topbtn button {
+    font-size: 20px;
+    margin: auto 10px;
+    line-height: 2em;
+    letter-spacing: 1px;
+    padding: 0 10px 0 10px;
+    border-radius: 10px;
+    /* border: 1px solid rgb(255, 0, 76); */
+    box-shadow: 1px 1px 1px rgb(180, 180, 180);
+  }
+
+
+  /* 活動資訊內容 */
+  .maincontent .content .infotext {
+    font-size: 20px;
+    padding: 20px 5px;
+  }
+
+  .maincontent .content .infotext .clearfix {
+    /* border: 1px solid rgb(255, 0, 157); */
+    overflow: auto;
+    height: 200px;
+    overflow: hidden;
+  }
+
+  .maincontent .content .item {
+    justify-content: center;
+  }
+
+  .maincontent .content .item .pic {
+    display: flex;
+    width: 500px;
+    /* width: 50%; */
+    height: 250px;
+    justify-content: flex-start;
+    /* border: 1px solid red; */
+  }
+
+  .maincontent .content .item .pic img {
+    width: 250px;
+    max-width: 100%;
+
+  }
+
+  .maincontent .content .item .comment {
+    height: 250px;
+    width: 400px;
+    /* border: 1px solid #7500ac; */
+  }
+
+  .maincontent .content .item .comment .text {
+    width: 100%;
+    /* border: 1px solid peru; */
+    padding: 10px 20px 0 20px;
+  }
+
+  .maincontent .content .item .comment .text a.name {
+    font-size: 23px;
+    font-weight: 600;
+    display: inline-block;
+    padding-bottom: 10px;
+    color: #1d1d1d;
+  }
+
+  .maincontent .content .item .comment .text .link {
+    font-size: 18px;
+    display: flex;
+    padding-bottom: 10px;
+    /* border:1px solid red; */
+    position: relative;
+  }
+
+  .maincontent .content .item .comment .text .link a {
+    color: #1d1d1d;
+    position: relative;
+    margin-right: 20px;
+    display: inline-block;
+    /* border:1px solid red; */
+  }
+
+  .maincontent .content .item .comment .text .link a:first-child::before {
+    content: '|';
+    display: inline-block;
+    color: #1d1d1d;
+    position: absolute;
+    top: -3px;
+    left: 83px;
+    pointer-events: none;
+  }
+
+  .maincontent .content .item .comment .text .star {
+    color: rgb(255, 197, 87);
+    font-size: 20px;
+    text-shadow: 1px 1px 1px rgb(180, 180, 180);
+    /* border:1px solid rgb(255, 145, 0); */
+    padding-bottom: 10px;
+    display: inline-block;
+  }
+
+  .maincontent .content .item .comment .text .textcomment {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.7em;
+    text-align: justify;
+    /* 讓文字可以對齊 */
+  }
+
+}
+
+@media screen and (min-width: 556px) and (max-width: 904px) {
+
+  .maincontent,
+  .maincontent>.all_Photo,
+  .pagenum {
+    max-width: 95%;
+    width: 100%;
+    margin: 0 auto;
+    /* border: 1px solid purple; */
+  }
+
+  .maincontent {
+    margin-top: 50px;
+  }
+
+  /* 標題 */
+  .maincontent .top {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* border: 1px solid rgb(17, 0, 255); */
+  }
+
+  .maincontent .top .title h2 {
+    font-size: 26px;
+    margin-bottom: 20px;
+  }
+
+  .maincontent .top .star {
+    align-self: flex-end;
+  }
+
+  .maincontent .top .star p.score {
+    font-size: 25px;
+  }
+
+  .maincontent .top .star>i {
+    font-size: 25px;
+  }
+
+  .maincontent .toptext {
+    font-size: 23px;
+    margin: 30px 10px 20px 0;
+
+  }
+
+  /* 上半部4顆按鈕 */
+  .maincontent .topbtn {
+    /* border: 1px solid yellow; */
+    display: flex;
+    justify-content: flex-end;
+    margin: 5px 0 30px 0;
+  }
+
+  /* 按鈕 */
+  .maincontent .topbtn button {
+    font-size: 18px;
+    margin: auto 8px;
+    line-height: 2em;
+    letter-spacing: 0px;
+    padding: 0 8px 0 8px;
+    border-radius: 10px;
+    /* border: 1px solid rgb(255, 0, 76); */
+    box-shadow: 1px 1px 1px rgb(180, 180, 180);
+  }
+
+  .maincontent .topbtn button.fb>i {
+    font-size: 24px;
+  }
+
+  .maincontent .topbtn button.line>i {
+    font-size: 24px;
+  }
+
+  .maincontent .content .menu01 button.tab,
+  .maincontent .content .menu02 button.tabb {
+    margin-right: 10px;
+    font-size: 20px;
+    width: 110px;
+  }
+
+  .maincontent .content .infotext {
+    font-size: 18px;
+    /* border: 1px solid red; */
+  }
+
+  .maincontent .content .infotext .tab1 .text {
+    width: 100%;
+    /* border: 1px solid orange; */
+
+  }
+
+  .maincontent .content .infotext .clearfix {
+    display: block;
+    /* border: 1px solid rgb(255, 0, 170); */
+    height: 100%;
+  }
+
+  .maincontent .content .infotext .tab1 .map {
+    width: 100%;
+    height: 200px;
+    float: none;
+    /* border: 1px solid rgb(255, 0, 170); */
+  }
+
+  .maincontent .content .main_Content div.tabb {
+    padding-top: 50px;
+
+  }
+
+  .maincontent .content .item {
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 0px;
+
+  }
+
+  .maincontent .content .item .pic {
+    order: 2;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .maincontent .content .item .comment {
+    order: 1;
+    width: 500px;
+    /* border: 1px solid green; */
+    align-self: center;
+  }
+
+  .maincontent .content .item .pic img {
+    width: 250px;
+    height: 250px;
+    max-width: 100%;
+  }
+
+  .maincontent .content .item .comment .text a.name {
+    font-size: 23px;
+    font-weight: 600;
+    display: inline-block;
+    padding-bottom: 10px;
+    color: #1d1d1d;
+    margin-right: 20px;
+  }
+
+  .maincontent .content .item .comment .text .link {
+    font-size: 18px;
+    display: inline-block;
+    margin-bottom: 10px;
+    padding-bottom: 0px;
+    /* border:1px solid red; */
+    position: relative;
+
+  }
+
+  .maincontent .content .item .comment .text .link a {
+    color: #1d1d1d;
+    position: relative;
+    /* margin-right: 20px; */
+    display: inline-block;
+    /* border:1px solid red; */
+    padding-bottom: 0px;
+  }
+
+  .maincontent .content .item .comment .text .link a:first-child::before {
+    content: '|';
+    display: inline-block;
+    color: #1d1d1d;
+    position: absolute;
+    top: -3px;
+    left: 83px;
+    pointer-events: none;
+  }
+
+  .maincontent .content .item .comment .text .star {
+    color: rgb(255, 197, 87);
+    font-size: 20px;
+    text-shadow: 1px 1px 1px rgb(180, 180, 180);
+    /* border:1px solid rgb(255, 145, 0); */
+    padding-bottom: 10px;
+    display: inline-block;
+  }
+
+  .maincontent .content .item .comment .text .textcomment {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.7em;
+    text-align: justify;
+    margin-bottom: 10px;
+    /* 讓文字可以對齊 */
+  }
+
+  /* 頁籤2 所有相片 */
+.tabb4 .all_Pic .pic {
+  width: 32%;
+  margin-bottom:1.5%;
+}
+
+}
+
+@media screen and (min-width: 556px) and (max-width: 858px) {
+
+  /* 頁碼開始 */
+  .pagenum {
+      margin-bottom: 60px;
+  }
+
+  .pagenum>ul {
+      display: flex;
+      margin: auto;
+      justify-content: center;
+      /* border: 1px solid rgb(0, 255, 64); */
+
+  }
+
+  .pagenum>ul>li {
+      /* border: 1px solid rgba(145, 143, 143, 0.5); */
+      margin: auto 8px;
+      background-color: rgb(255, 255, 255);
+      width: 40px;
+      height: 40px;
+      text-align: center;
+      /* border:1px solid rgb(0, 47, 255); */
+      border-radius: 20px;
+  }
+
+  .pagenum>ul>li:nth-child(7),
+  .pagenum>ul>li:nth-child(8),
+  .pagenum>ul>li:nth-child(9),
+  .pagenum>ul>li:nth-child(10),
+  .pagenum>ul>li:nth-child(11) {
+      display: none;
+  }
+
+  /* 頁碼結束 */
+}
+
+
+@media screen and (max-width: 556px) {
+  .maincontent,
+  .maincontent>.all_Photo,
+  .pagenum{
+   max-width: 97%;
+   width: 100%;
+   margin: 0 auto;
+ }
+ .maincontent {
+  margin-top: 30px;
+}
+
+  /* 標題 */
+  .maincontent .top {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* border: 1px solid rgb(17, 0, 255); */
+  }
+
+  .maincontent .top .title h2 {
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+
+  .maincontent .top .star {
+    align-self: flex-end;
+  }
+
+  .maincontent .top .star p.score {
+    font-size: 16px;
+  margin-right: 3px;
+  }
+
+  .maincontent .top .star>i {
+    font-size: 16px;
+  margin: 0 0 0 1px;
+  }
+
+  .maincontent .toptext {
+    font-size: 16px;
+    margin: 15px 10px 20px 0;
+  }
+  .maincontent .topbtn {
+    /* border: 1px solid yellow; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-between;
+    margin: 5px 0 30px 0;
+  }
+  .maincontent .topbtn button {
+    font-size: 16px;
+    margin: auto 0px;
+    line-height: 16px;
+    letter-spacing: 1px;
+    padding: 0 10px 0 10px;
+    border-radius: 10px;
+    /* border: 1px solid rgb(255, 0, 76); */
+    box-shadow: 1px 1px 1px rgb(180, 180, 180);
+    height: 40px;
+    font-weight: 600;
+    width: 48%;
+    margin-bottom: 15px;
+  }
+  .maincontent .topbtn button.fb>i,.maincontent .topbtn button.line>i {
+    font-size: 24px;
+    padding-left: 5px;
+    line-height: 16px;
+  }
+  .maincontent .topbtn button.like,
+.maincontent .topbtn button.write {
+ font-size: 18px;
+}
+
+/* main_Photo */
+/* 圖片 */
+.maincontent .all_photo {
+  width: 100%;
+  /* border:1px solid red; */
+  display: flex;
+  flex-direction: column;
+
+}
+
+.maincontent .main_Photo {
+  width: 100%;
+  /* border: 1px solid red; */
+  margin-right: 0px;
+  margin-bottom: 3px;
+}
+
+.maincontent .main_Photo img {
+  max-width: 100%;
+}
+
+.maincontent .other_Photo {
+  /* border:1px solid blue; */
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.maincontent .other_Photo .small {
+  border: .5px solid rgb(180, 180, 180);
+  cursor: pointer;
+  width: 100%;
+}
+
+.maincontent .other_Photo .small img {
+  max-width: 100%;
+}
+.maincontent .content .menu01 {
+  margin-top: 30px;
+
+}
+
+.maincontent .content .menu01 button.tab,
+.maincontent .content .menu02 button.tabb {
+  margin-right: 10px;
+  font-size: 20px;
+  width: 100px;
+  /* border: .5px solid rgba(20, 20, 20, 0.5); */
+}
+.maincontent .content .infotext {
+  font-size: 15px;
+  /* border: 1px solid red; */
+  padding: 10px 10px 20px 10px;
+
+
+}
+.maincontent .content .infotext p{
+  line-height: 1.8em;
+}
+.maincontent .content .infotext div.tab{
+  padding: 0;
+}
+
+
+.maincontent .content .infotext .tab1 .text {
+  width: 100%;
+  /* border: 1px solid orange; */
+
+}
+
+.maincontent .content .infotext .clearfix {
+  display: block;
+  /* border: 1px solid rgb(255, 0, 170); */
+  height: 100%;
+}
+
+.maincontent .content .infotext .tab1 .map {
+  width: 100%;
+  height: 200px;
+  float: none;
+  /* border: 1px solid rgb(255, 0, 170); */
+}
+
+.maincontent .content .main_Content div.tabb {
+  padding-top: 0px;
+
+}
+
+.maincontent .content .item {
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+  width: 100%;
+
+}
+
+.maincontent .content .item .pic {
+  order: 2;
+  width: 100%;
+  justify-content: center;
+}
+
+.maincontent .content .item .comment {
+  order: 1;
+  width:100%;
+  height: 100%;
+  /* border: 1px solid green; */
+  align-self: center;
+}
+
+.maincontent .content .item .pic {
+  order: 2;
+  width: 100%;
+  height: 100%;
+  justify-content: space-between;
+}
+.maincontent .content .item .pic img {
+  /* width: 250px; */
+  /* height:50%; */
+  width: 49%;
+  margin-bottom:1px;
+}
+
+.maincontent .content .item .comment .text a.name {
+  font-size: 20px;
+  font-weight: 600;
+  display: inline-block;
+  padding-bottom: 10px;
+  color: #1d1d1d;
+  margin-right: 20px;
+}
+
+.maincontent .content .item .comment .text .link {
+  font-size: 15px;
+  display: inline-block;
+  margin-bottom: 10px;
+  padding-bottom: 0px;
+  /* border:1px solid red; */
+  position: relative;
+
+}
+
+.maincontent .content .item .comment .text .link a {
+  color: #1d1d1d;
+  position: relative;
+  /* margin-right: 20px; */
+  display: inline-block;
+  /* border:1px solid red; */
+  padding-bottom: 0px;
+}
+
+.maincontent .content .item .comment .text .link a:first-child::before {
+  content: '|';
+  display: inline-block;
+  color: #1d1d1d;
+  position: absolute;
+  top: -3px;
+  left: 70px;
+  pointer-events: none;
+}
+
+.maincontent .content .item .comment .text .star {
+  font-size: 16px;
+  padding-bottom: 10px;
+
+}
+.maincontent .content .item .comment .text{
+  padding: 20px 10px 0px 10px;
+  /* border: 1px solid green; */
+}
+.maincontent .content .item .comment .text .textcomment {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5em;
+  text-align: justify;
+  margin-bottom: 5px;
+  /* border:1px solid red; */
+
+  /* 讓文字可以對齊 */
+}
+
+/* 頁籤2 所有相片 */
+.tabb4 .all_Pic .pic {
+width: 49%;
+margin-bottom:1.5%;
+}
+
+/* 頁碼開始 */
+.pagenum {
+  margin-bottom: 50px;
+  font-size: 12px;
+  /* border: 1px solid rgb(255, 115, 0); */
+
+}
+
+.pagenum>ul {
+  display: flex;
+  margin: auto;
+  justify-content: center;
+  /* border: 1px solid rgb(0, 255, 64); */
+
+}
+
+.pagenum>ul>li {
+  width: 30px;
+  height: 30px;
+  margin: auto 3px;
+
+}
+
+.pagenum>ul>li>a {
+  color: #444343;
+  display: inline-block;
+  width: 100%;
+  border-radius: 20px;
+  padding-top: 6px;
+}
+
+.pagenum>ul>li:first-child,
+.pagenum>ul>li:last-child {
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 0px;
+
+}
+
+.pagenum>ul>li:first-child a,
+.pagenum>ul>li:last-child a {
+  /* color: red; */
+  line-height: 30px;
+}
+
+.pagenum>ul>li:nth-child(7),
+.pagenum>ul>li:nth-child(8),
+.pagenum>ul>li:nth-child(9),
+.pagenum>ul>li:nth-child(10),
+.pagenum>ul>li:nth-child(11) {
+  display: none;
+}
+
+/* 頁碼結束 */
+
+
 }

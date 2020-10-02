@@ -6,288 +6,627 @@
     box-sizing: border-box;
     font-family: 'Noto Sans TC', sans-serif;
 }
-body{
-    background-color:rgb(247, 247, 247);
+
+body {
+    background-color: rgb(247, 247, 247);
 }
 
-.container{
-  font-size: 0;
-  width: 1200px;
-  width: 100%;
-  margin: 0 auto;
-  /* border:1px solid green; */
-}
-
-div.breadcrumb{
-    margin-top: 170px;
-    /* border:3px solid red; */
+.container {
     font-size: 0;
-    padding-bottom: 50px;
-}
-.breadcrumb > ol{
-    font-size: 22px;
-    /* border:3px solid rgb(23, 10, 205); */
-    margin: 0 auto;
     width: 1200px;
-    display: flex;
-}
-div.breadcrumb ol.breadcrumb_list{
-  /* margin: 0;
-  padding: 0; */
-  list-style: none;
-}
-div.breadcrumb ol.breadcrumb_list > li{
-  display: inline-block;
-  margin-right: 10px;
+    width: 100%;
+    margin: 0 auto;
+    /* border: 1px solid green; */
 }
 
-/* 利用 ::before 擬似元素，創造斜線做為分隔 */
-div.breadcrumb ol.breadcrumb_list > li::before{
-  content: ">";
-  font-size: 18px;
-  color: rgb(28, 26, 26);
-  margin-right: 12px;
-}
-/* 第一個 li 元素，將 ::before 設定回來需要的 */
-div.breadcrumb ol.breadcrumb_list > li:first-child::before{
-  content: "";
-  margin-right: 0;
-}
+ /* 麵包屑位於哪頁 */
 
-/* 基本文字樣式 */
-div.breadcrumb ol.breadcrumb_list > li > a{
-  text-decoration: none;
-  display: inline-block;
-  color: #1d1d1d;
-  padding: 5px;
-}
-div.breadcrumb ol.breadcrumb_list > li:nth-child(2) a{
+ .breadcrumb ol.breadcrumb_list>li:nth-child(2) a {
     display: inline-block;
-    /* font-weight: bolder; */
-    color:rgb(255, 255, 255);
-    background-color: rgb(129, 191, 188);
+    border-radius: 50px;
+    /* color: rgb(255, 255, 255); */
+    background-color: #C6E5E1;
     /* text-shadow: 1px 1px 0px rgb(124, 124, 124); */
 }
 
-/* 滑動移過後文字增加陰影 */
-div.breadcrumb ol.breadcrumb_list > li > a:hover{
-  text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.467);
-}
-.profile{
-  /* border:1px solid rgb(10, 71, 238); */
-  width: 1200px;
-  display: flex;
-  /* align-items: baseline; */
-  margin: 0 auto;
-  margin-bottom:100px;
-  padding-left: 30px;
+
+.profile {
+    /* border: 1px solid rgb(10, 71, 238); */
+    width: 1200px;
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    margin-bottom: 100px;
+    padding-left: 30px;
 }
 
-.selfphoto{
-  width:270px;
-  border-radius: 50%;
-  overflow: hidden;
+.selfphoto {
+    width: 270px;
+    border-radius: 50%;
+    overflow: hidden;
 }
 
-.selfphoto > img{
-  width: 100%;
-  vertical-align: middle;
-} 
-
-.profile > .text{
-  /* border:1px solid pink; */
-  padding-left: 50px;
-  padding-top: 80px;
-}
-
-.profile > .text > p.name{
-  font-weight: bolder;
-  color: rgb(20, 20, 20);
-  line-height: 2em;
-  font-size: 35px;
-}
-
-.profile > .text > p{
-  color: rgb(51, 51, 51);
-  line-height: 1.3em;
-  font-weight: 300;
-  font-size: 30px;
-}
-
-.menu{
-  font-size: 30px;
-  width: 1200px;
-  /* border:1px solid red; */
-  margin: 0 auto;
-  margin-bottom:100px;
-
-}
-
-.menu ul{
-  display: flex;
-  margin: 0 auto;
-  /* border: 1px solid purple; */
-  width: 600px; 
-}
-
-.menu ul > li{
-  margin: 0 auto;
-}
-
-.menu ul > li > a{
-  display: inline-block;
-  padding: 10px 20px;
-  color: #1d1d1d;
-  /* margin:auto 20px; */
-  position: relative;
-}
-
-.menu ul > li > a::after{
-  content: '|';
-  position: absolute;
-  top: 8px;
-  left: -18px;
-}
-/* 第一個 li 元素，將 ::before 設定回來需要的 */
-.menu ul :nth-child(1) ::after{
-  content:'';
-}
-
- li.list a::before{
-    content:'';
-    display: block;
-    width: 0%;
-    height: 10px;
-    background-color: rgb(129, 191, 188);
-    transition: .1s .1s; /*線延展的時間,線延遲出現的時間*/
-    /* margin: auto; 線重中間展開 */
-    margin-top: 10px;
-    position: absolute;
-    top: 0; left: 0;
-    z-index: -1;
-    /* transform: translate(0px,-5px); */
-}
-/*摸到a標籤連結，後面底線出現*/
-li.list a:hover::before{
+.selfphoto>img {
     width: 100%;
-    height: 30px;
+    vertical-align: middle;
 }
 
- ul a:hover{
-    color:rgb(129, 191, 188);
-    transition: .1s ;
-     text-shadow: 1px 1px 0px rgba(58, 58, 58, 0.493);
-} 
-li.list a:hover{
-  color: rgb(255, 255, 255);
-}
-.menu ul > li > a:hover::after{
-  color:#1d1d1d;
-   text-shadow: none;
+.profile>.text {
+    /* border: 1px solid pink; */
+    padding-left: 100px;
 }
 
-
-.article{
-  width: 1200px;
-  /* width: 100px; */
-  /* border:1px solid red; */
-  margin: 0 auto;
-  margin-bottom:100px;
-  display: flex;
-  justify-content:space-between;
-  flex-wrap: wrap;
+.profile>.text>p.name {
+    font-weight: bolder;
+    color: rgb(20, 20, 20);
+    line-height: 2em;
+    font-size: 35px;
 }
-.article > .item{
-  /* border:1px solid blue; */
-  margin-bottom: 120px;
-  width: 380px;
-  height: 534px;
-  position: relative;
+
+.profile>.text>p {
+    color: rgb(51, 51, 51);
+    line-height: 1.3em;
+    font-weight: 300;
+    font-size: 30px;
+}
+
+/* 可切換頁籤 */
+.menu {
+    font-size: 25px;
+    /* border: 1px solid red; */
+    margin: 0 auto;
+    margin-bottom: 100px;
+    width: 1200px;
+}
+
+.menu ul {
+    display: flex;
+    margin: 0 auto;
+    /* border: 1px solid purple; */
+    width: 550px;
+}
+
+.menu ul>li {
+    margin: 0 auto;
+    /* border:1px solid red; */
+}
+
+.menu ul>li>a {
+    display: inline-block;
+    padding: 8px 20px;
+    color: #1d1d1d;
+    /* margin:auto 20px; */
+    position: relative;
+}
+
+.menu ul>li>a::after {
+    content: '|';
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(-13px, -2px);
+}
+
+/* 第一個 li 元素，將 ::before 設定回來需要的 */
+.menu ul :nth-child(1) ::after {
+    content: '';
+}
+
+/* 摸到換色 */
+li.list a:hover {
+    background-color: #C6E5E1;
+    border-radius: 50px;
+}
+
+/* 目前頁面 */
+/* 被選到的li */
+.menu>ul.tab_list>li.list>a.-on {
+    display: inline-block;
+    background-color: rgb(129, 191, 188);
+    color: aliceblue;
+    text-shadow: 1px 1px 0px rgba(58, 58, 58, 0.493);
+    border-radius: 50px;
+}
+
+/* 解決頁籤分隔線摸到會變色的問題 */
+.menu>ul.tab_list li.list>a.-on:hover::before {
+    width: 0%;
+}
+
+/* 可切換頁籤 結束*/
+
+
+/* 文章內容開始 */
+.article {
+    width: 1200px;
+    /* width: 100px; */
+    /* border: 1px solid red; */
+    margin: 0 auto;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.article>.item {
+    /* border: 1px solid blue; */
+    margin-bottom: 80px;
+    width: 380px;
+    height: 536px;
+    position: relative;
 }
 
 /*分隔線*/
-.article > .item:nth-child(3n+3)::before{
-  content: '';
-  background-color: rgba(0, 0, 0, 0.4);
-  width: 1200px;
-  height: 2px;
-  position: absolute;
-  bottom: -62px;
-  left: -820px;
+/* .article>.item:nth-child(3n+3)::before {
+    content: '';
+    background-color: rgba(0, 0, 0, 0.4);
+    width: 0vw;
+    text-align: center;
+    height: 1px;
+    position: absolute;
+    bottom: 0;
+    right: 5vw;
+    transform: translate(3px, 60px);
+} */
 
-  
+/* 取消最後一條分隔線 */
+/* .article>.item:nth-child(18)::before {
+    height: 0px;
+} */
+
+.article>.item:nth-child(1),
+.article>.item:nth-child(2) {
+    margin-right: 20px;
 }
 
-.article > .item:nth-child(1),.article > .item:nth-child(2){
-  margin-right: 20px;
+.article>.item>.pic {
+    /* width: 380px; */
+    width: 100%;
 }
 
-.article > .item > .pic{
-  /* width: 380px; */
-  width: 100%;
-} 
-.article > .item > .pic a > img{
-  max-width:100%;
-}
-.article > .item > a.title{
-  display: block;
-  width: 380px;
-  font-size: 25px;
-  color:rgba(29, 28, 28, 0.8);
-  font-weight: 500;
-  padding-top: 5px;
-  height: 110px;
-  /* padding-bottom:31px ; */
+.container>.article>.item>.pic a>img {
+    max-width: 100%;
+    border-radius: 0px;
+    /* 解決衝突的圓角 */
 }
 
-.article > .item > .text{
-  display: flex;
-  justify-content:space-between;
-  padding-bottom: 4px;
-
+.article>.item>a.title {
+    display: block;
+    width: 380px;
+    font-size: 25px;
+    color: rgba(29, 28, 28, 0.8);
+    font-weight: 700;
+    padding-top: 5px;
+    height: 110px;
+    line-height: 1.5em;
+    /* border: 1px solid rgb(0, 255, 170); */
+    margin-bottom: 10px;
 }
 
-.article > .item > .text > p.date{
-  font-size: 22px;
+.article>.item>.text {
+    display: flex;
+    justify-content: space-between;
+    /* border-bottom:1px solid rgb(214, 214, 214); */
+    align-items: center;
+    padding-bottom: 5px;
 }
-.article > .item > .text > button{
-  font-size: 22px;
+
+.article>.item>.text>p.date {
+    font-size: 20px;
+    font-weight: lighter;
+    /* border: 1px solid rgb(187, 255, 0); */
+    color: #1d1d1d;
+    /* font-family: 'Noto Sans TC'; */
+}
+
+.article>.item>.text>button {
+    font-size: 22px;
+    /* background-color: #76C5BB; */
+    background-color: #C6E5E1;
+    color: aliceblue;
+    padding: 5px 10px;
+    text-shadow: 1px 1px 0px rgba(177, 177, 177, 0.514);
+    border-radius: 5px;
+    border: none;
+}
+
+.article>.item>.text>button:hover {
+    color: #1d1d1d;
 }
 
 /* 頁碼開始 */
-.pagenum{
-  font-size: 20px;
-  margin-bottom:100px;
-}
-.pagenum > ul{
-  display: flex;
-  margin: auto;
-  justify-content: center;
-  
+.pagenum {
+    margin: 0 auto;
+    font-size: 20px;
+    margin-bottom: 100px;
+    /* border: 1px solid rgb(255, 166, 0); */
+    width: 1200px;
 }
 
-.pagenum > ul > li{
-  border:1px solid rgba(0, 0, 0, 0.5);
-  margin: 0 8px;
-  background-color: rgb(255, 255, 255);
-  width: 40px;
-  height: 40px;
-  line-height: 2em;
-  text-align: center;
-}
-
-.pagenum > ul > li > a{
-  padding: 10px;
-  color: #1d1d1d;
+.pagenum>ul {
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    /* border: 1px solid rgb(0, 255, 64); */
 
 }
 
-.pagenum > ul > li:first-child,.pagenum > ul > li:last-child{
-  border: none;
-  background-color:rgb(247, 247, 247);
-  width: 100px;
-  height: 40px;
-  /* border:1px solid rgba(0, 0, 0, 0.589); */
+.pagenum>ul>li {
+    border: 1px solid rgba(145, 143, 143, 0.5);
+    margin: auto 8px;
+    background-color: rgb(255, 255, 255);
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    /* border:1px solid rgb(0, 47, 255); */
+    border-radius: 20px;
 
 }
+
+.pagenum>ul>li>a {
+    color: #444343;
+    display: inline-block;
+    width: 100%;
+    border-radius: 20px;
+    padding-top: 6px;
+}
+
+
+.pagenum>ul>li:first-child,
+.pagenum>ul>li:last-child {
+    border: none;
+    background-color: rgb(247, 247, 247);
+    width: 100px;
+    height: 40px;
+    border-radius: 0px;
+    /* border:1px solid rgba(0, 0, 0, 0.589); */
+}
+
+
+.pagenum>ul>li:hover {
+    background-color: #C6E5E1;
+}
+
+.pagenum>ul>li:first-child,
+.pagenum>ul>li:last-child:hover {
+    background-color: rgb(247, 247, 247);
+}
+
+
 /* 頁碼結束 */
+
+
+/* 切換的CSS */
+.tab {
+    display: none;
+}
+
+.tab.-on {
+    display: flex;
+}
+
+/* 切換的CSS */
+
+/* RWD開始 */
+@media screen and (min-width: 905px) and (max-width: 1199px) {
+
+    .profile,
+    .menu,
+    .article,
+    .pagenum {
+        max-width: 95%;
+        width: 100%;
+    }
+
+    .profile {
+        /* border: 1px solid rgb(238, 10, 135); */
+        margin-bottom: 60px;
+
+    }
+
+    .selfphoto {
+        width: 250px;
+    }
+
+    .profile>.text>p.name {
+        font-size: 30px;
+    }
+
+    /* 內文 */
+    .profile>.text>p {
+        font-size: 26px;
+    }
+
+    /* 頁籤 */
+    .menu {
+        /* border: 1px solid red; */
+        margin-bottom: 60px;
+
+    }
+
+    /* 喜歡的文章 */
+    .article {
+        justify-content: space-evenly;
+    }
+
+
+    .article>.item:nth-child(1),
+    .article>.item:nth-child(2) {
+        margin-right: 0px;
+    }
+
+}
+
+@media screen and (min-width: 556px) and (max-width: 904px) {
+
+    .profile,
+    .menu,
+    .article,
+    .pagenum {
+        max-width: 95%;
+        width: 100%;
+    }
+
+    .profile {
+        /* border: 1px solid rgb(10, 238, 59); */
+        flex-direction: column;
+        padding-left: 0px;
+        margin-bottom: 50px;
+    }
+
+    .selfphoto {
+        width: 250px;
+        margin-bottom: 10px;
+    }
+
+    .profile>.text {
+        /* border: 1px solid pink; */
+        padding-left: 0px;
+        text-align: center;
+    }
+
+    .profile>.text>p.name {
+        font-weight: bolder;
+        color: rgb(20, 20, 20);
+        line-height: 2.2em;
+        font-size: 32px;
+    }
+
+    .profile>.text>p {
+        color: rgb(51, 51, 51);
+        line-height: 1.3em;
+        font-weight: 300;
+        font-size: 25px;
+    }
+
+    /* 可切換頁籤 */
+    .menu {
+        font-size: 20px;
+        /* border: 1px solid rgb(38, 0, 255); */
+        margin-bottom: 50px;
+    }
+
+    .menu ul {
+        width: 96%;
+    }
+
+    .menu ul>li>a {
+        padding: 8px 10px;
+    }
+
+    .menu ul>li>a::after {
+        transform: translate(-25px, -4px);
+    }
+
+    .article>.item {
+        margin-bottom: 80px;
+        /* border: 1px solid red; */
+    }
+
+}
+
+@media screen and (min-width: 556px) and (max-width: 858px) {
+    .article {
+        /* width: 100px; */
+        /* border: 1px solid rgb(0, 255, 128); */
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .article>.item {
+        width: 500px;
+        height: 636px;
+        margin-bottom: 80px;
+        /* border: 1px solid red; */
+    }
+
+    .article>.item>a.title {
+        width: 100%;
+    }
+
+    /* 頁碼開始 */
+    .pagenum {
+        margin-bottom: 60px;
+    }
+
+    .pagenum>ul {
+        display: flex;
+        margin: auto;
+        justify-content: center;
+        /* border: 1px solid rgb(0, 255, 64); */
+
+    }
+
+    .pagenum>ul>li {
+        border: 1px solid rgba(145, 143, 143, 0.5);
+        margin: auto 8px;
+        background-color: rgb(255, 255, 255);
+        width: 40px;
+        height: 40px;
+        text-align: center;
+        /* border:1px solid rgb(0, 47, 255); */
+        border-radius: 20px;
+    }
+
+    .pagenum>ul>li:nth-child(7),
+    .pagenum>ul>li:nth-child(8),
+    .pagenum>ul>li:nth-child(9),
+    .pagenum>ul>li:nth-child(10),
+    .pagenum>ul>li:nth-child(11) {
+        display: none;
+    }
+
+    /* 頁碼結束 */
+}
+
+@media screen and (max-width: 556px) {
+
+    .profile,
+    .menu,
+    .article,
+    .pagenum {
+        max-width: 95%;
+        width: 100%;
+    }
+
+    .profile {
+        /* border: 1px solid rgb(238, 139, 10); */
+        flex-direction: column;
+        padding-left: 0px;
+        margin-bottom: 30px;
+
+    }
+
+    .selfphoto {
+        width: 230px;
+        margin-bottom: 10px;
+    }
+
+    .profile>.text {
+        /* border: 1px solid pink; */
+        padding-left: 0px;
+        text-align: center;
+    }
+
+    .profile>.text>p.name {
+        font-weight: bolder;
+        color: rgb(20, 20, 20);
+        line-height: 2.2em;
+        font-size: 28px;
+    }
+
+    .profile>.text>p {
+        color: rgb(51, 51, 51);
+        line-height: 1.5em;
+        font-weight: 300;
+        font-size: 18px;
+    }
+
+    /* 可切換頁籤 */
+    .menu {
+        font-size: 16px;
+        /* border: 1px solid rgb(0, 26, 255); */
+        margin-bottom: 50px;
+    }
+
+    .menu ul {
+        width: 96%;
+    }
+
+    .menu ul>li>a {
+        padding: 5px 4px;
+    }
+
+    .menu ul>li>a::after {
+        content: '';
+    }
+
+    .article {
+        /* border: 1px solid rgb(0, 255, 128); */
+        margin: 0 auto;
+        display: flex !important;
+        justify-content: center;
+        flex-wrap: wrap !important;
+    }
+
+    .article>.item {
+        width: 380px !important;
+        height: 520px;
+        margin-bottom: 50px;
+        /* border: 1px solid red; */
+        /* margin: 0 auto; */
+    }
+
+    .article>.item>a.title {
+        width: 100%;
+        font-size: 22px;
+    }
+
+    .article>.item>.text>p.date {
+        font-size: 18px;
+
+    }
+    .article>.item:nth-child(1),
+.article>.item:nth-child(2) {
+    margin-right: 0px;
+}
+
+    /* 頁碼開始 */
+    .pagenum {
+        margin-bottom: 50px;
+        font-size: 12px;
+        /* border: 1px solid rgb(255, 115, 0); */
+
+    }
+
+    .pagenum>ul {
+        display: flex;
+        margin: auto;
+        justify-content: center;
+        /* border: 1px solid rgb(0, 255, 64); */
+
+    }
+
+    .pagenum>ul>li {
+        width: 30px;
+        height: 30px;
+        margin: auto 3px;
+
+    }
+
+    .pagenum>ul>li>a {
+        color: #444343;
+        display: inline-block;
+        width: 100%;
+        border-radius: 20px;
+        padding-top: 6px;
+    }
+
+    .pagenum>ul>li:first-child,
+    .pagenum>ul>li:last-child {
+        border: none;
+        width: 40px;
+        height: 40px;
+        border-radius: 0px;
+
+    }
+
+    .pagenum>ul>li:first-child a,
+    .pagenum>ul>li:last-child a {
+        /* color: red; */
+        line-height: 30px;
+    }
+
+    .pagenum>ul>li:nth-child(7),
+    .pagenum>ul>li:nth-child(8),
+    .pagenum>ul>li:nth-child(9),
+    .pagenum>ul>li:nth-child(10),
+    .pagenum>ul>li:nth-child(11) {
+        display: none;
+    }
+
+    /* 頁碼結束 */
+
+}

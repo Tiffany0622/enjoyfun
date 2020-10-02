@@ -293,7 +293,7 @@
          margin: 0 auto;
          margin-top: 50px;
          margin-bottom: 80px;
-         border: 3px solid rgb(0, 26, 255);
+         /* border: 3px solid rgb(0, 26, 255); */
          flex-direction: column;
      }
 
@@ -302,7 +302,7 @@
          /* border: 1px solid red; */
          order: 0;
          align-self: flex-end;
-         margin-bottom: 20px;
+         margin-bottom: 40px;
      }
 
      .search-bar {
@@ -327,7 +327,7 @@
          margin: 0 auto;
          margin-top: 50px;
          margin-bottom: 80px;
-         border: 3px solid rgb(0, 26, 255);
+         /* border: 3px solid rgb(0, 26, 255); */
          flex-direction: column;
      }
 
@@ -336,7 +336,7 @@
          /* border: 1px solid red; */
          order: 0;
          align-self: flex-end;
-         margin-bottom: 20px;
+         margin-bottom: 50px;
      }
 
      .search-bar {
@@ -425,7 +425,7 @@
          margin: 0 auto;
          margin-top: 50px;
          margin-bottom: 80px;
-         border: 3px solid rgb(0, 26, 255);
+         /* border: 3px solid rgb(0, 26, 255); */
          flex-direction: column;
      }
 
@@ -445,9 +445,15 @@
          transform: translate(310px, 7px);
      }
 
+     .breadcrumb ol.breadcrumb_list>li>a {
+        font-size: 18px;
+        /* border: 1px solid blue; */
+        padding: 8px 4px;
+    }
+
  }
 
- @media screen and (min-width:385px) and (max-width:587px) {
+ @media screen and (min-width:385px) and (max-width:588px) {
      header .list {
          display: none;
      }
@@ -655,13 +661,13 @@
          margin: 0 auto;
          margin-top: 130px;
          margin-bottom: 30px;
-         border: 1px solid rgb(255, 0, 0);
+         /* border: 1px solid rgb(255, 0, 0); */
          flex-direction: column;
      }
 
      .wrap {
          margin: auto 0;
-         border: 1px solid red;
+         /* border: 1px solid red; */
          order: 0;
          align-self: flex-end;
          margin-bottom: 30px;
@@ -690,13 +696,13 @@
      }
 
      .breadcrumb {
-         border: 1px solid rgb(255, 0, 119);
+         /* border: 1px solid rgb(255, 0, 119); */
          align-self: flex-start;
      }
 
      .breadcrumb ol.breadcrumb_list>li>a {
          font-size: 12px;
-         border: 1px solid blue;
+         /* border: 1px solid blue; */
          padding: 8px 0px;
      }
 

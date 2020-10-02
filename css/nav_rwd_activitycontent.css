@@ -165,7 +165,7 @@
  }
 
  /*控制搜尋框的顏色*/
- ::placeholder {
+ .search input::placeholder {
      color: rgb(129, 191, 188);
  }
 
@@ -552,13 +552,6 @@
         transform: translate(260px, 7px);
     }
 
-    .search input::placeholder {
-        color: rgb(129, 191, 188);
-        padding-left: 0px;
-        letter-spacing: 1px;
-        line-height: 1.5em;
-    }
-
     .breadcrumb {
         /* border: 1px solid rgb(255, 0, 119); */
         align-self: flex-start;
@@ -690,7 +683,6 @@
      }
 
      .search input::placeholder {
-         color: rgb(129, 191, 188);
          font-size: 14px;
          padding-left: 0px;
          letter-spacing: 2px;

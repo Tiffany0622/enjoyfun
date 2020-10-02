@@ -526,13 +526,13 @@
         margin: 0 auto;
         margin-top: 130px;
         margin-bottom: 30px;
-        border: 1px solid rgb(255, 0, 0);
+        /* border: 1px solid rgb(255, 0, 0); */
         flex-direction: column;
     }
 
     .wrap {
         margin: auto 0;
-        border: 1px solid red;
+        /* border: 1px solid red; */
         order: 0;
         align-self: flex-end;
         margin-bottom: 30px;
@@ -545,27 +545,28 @@
 
     .search-btn a img {
         width: 80px;
-        height: 45px;
+        height: 40px;
     }
 
     .search-btn {
-        transform: translate(265px, 5px);
+        transform: translate(260px, 7px);
     }
 
     .search input::placeholder {
         color: rgb(129, 191, 188);
         padding-left: 0px;
         letter-spacing: 1px;
+        line-height: 1.5em;
     }
 
     .breadcrumb {
-        border: 1px solid rgb(255, 0, 119);
+        /* border: 1px solid rgb(255, 0, 119); */
         align-self: flex-start;
     }
 
     .breadcrumb ol.breadcrumb_list>li>a {
         font-size: 16px;
-        border: 1px solid blue;
+        /* border: 1px solid blue; */
         padding: 8px 0px;
     }
 

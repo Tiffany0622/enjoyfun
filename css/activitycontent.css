@@ -1041,15 +1041,7 @@ padding: 5px;
   flex-wrap: wrap;
   margin-bottom: 30px;
   width: 100%;
-
 }
-
-.maincontent .content .item .pic {
-  order: 2;
-  width: 100%;
-  justify-content: center;
-}
-
 .maincontent .content .item .comment {
   order: 1;
   width:100%;
@@ -1068,6 +1060,7 @@ padding: 5px;
   /* width: 250px; */
   /* height:50%; */
   width: 49%;
+  height: 50%;
   margin-bottom:1px;
 }
 

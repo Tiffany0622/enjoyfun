@@ -10,6 +10,16 @@
         }, 750);
     });
 
+    $(window).scroll(function(){
+        var scrollTop = $(window).scrollTop();
+
+        if(scrollTop > 0){
+            $("#go_top").addClass('-onScroll');
+        }else{
+            $("#go_top").removeClass('-onScroll');
+        }
+    });
+
 });
 
 // 燈箱切換
@@ -93,3 +103,4 @@ $(function () {
         $("div.tab." + $(this).attr("data-target")).addClass("-on");
     });
 });
+

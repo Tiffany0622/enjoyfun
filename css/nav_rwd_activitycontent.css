@@ -30,13 +30,13 @@
      border-width: 0px;
      text-shadow: 3px 1px 1px rgba(43, 43, 43, 0.349);
      box-shadow: 3px 1px 1px rgba(43, 43, 43, 0.349);
-     opacity:0;
-     transition:opacity .8s ;
+     opacity: 0;
+     transition: opacity .8s;
  }
- 
- button.-onScroll{
+
+ button.-onScroll {
      opacity: 1;
-     transition:opacity .8s ;
+     transition: opacity .8s;
  }
 
  /* Nav導覽 */
@@ -129,7 +129,6 @@
  }
 
  /* navtop，麵包屑及搜尋框 */
-
  .navtop {
      display: flex;
      max-width: 1200px;
@@ -138,7 +137,7 @@
      margin: 0 auto;
      margin-top: 90px;
      margin-bottom: 90px;
-     border:3px solid rgb(0, 26, 255);
+     /* border:3px solid rgb(0, 26, 255); */
  }
 
  .wrap {
@@ -221,7 +220,7 @@
  }
 
  .breadcrumb ol.breadcrumb_list>li {
-     display: inline-block;
+     /* display: inline-block; */
      /* margin-right: 10px; */
  }
 
@@ -241,6 +240,15 @@
      margin-right: 0;
  }
 
+ /* 麵包屑位於哪頁 */
+ .breadcrumb ol.breadcrumb_list>li:nth-child(3) a {
+     display: inline-block;
+     border-radius: 50px;
+     /* color: rgb(255, 255, 255); */
+     background-color: #C6E5E1;
+     /* text-shadow: 1px 1px 0px rgb(124, 124, 124); */
+ }
+
  /* 基本文字樣式 */
  .breadcrumb ol.breadcrumb_list>li>a {
      text-decoration: none;
@@ -250,11 +258,7 @@
      margin: auto 0;
      font-size: 22px;
      /* border:3px solid rgb(23, 10, 205); */
-
-
  }
-
-
 
  /* 滑動移過後文字增加陰影 */
  .breadcrumb ol.breadcrumb_list>li a:hover {
@@ -280,17 +284,34 @@
      header {
          /* min-width: 900px; */
      }
+
      .navtop {
          display: flex;
-         width: 90%;
+         width: 96%;
          justify-content: space-between;
-         align-items: center;
+         align-items: flex-start;
          margin: 0 auto;
-         margin-top: 80px;
+         margin-top: 50px;
          margin-bottom: 80px;
-         border:3px solid rgb(0, 201, 43);
+         border: 3px solid rgb(0, 26, 255);
+         flex-direction: column;
      }
 
+     .wrap {
+         margin: auto 0;
+         /* border: 1px solid red; */
+         order: 0;
+         align-self: flex-end;
+         margin-bottom: 20px;
+     }
+
+     .search-bar {
+         width: 400px;
+     }
+
+     .search-btn {
+         transform: translate(310px, 7px);
+     }
  }
 
  @media screen and (min-width: 790px) and (max-width: 991px) {
@@ -426,11 +447,6 @@
 
  }
 
-
- /* @media screen and (min-width:416px) and (max-width:549px){
-
-    } */
-
  @media screen and (min-width:385px) and (max-width:587px) {
      header .list {
          display: none;
@@ -504,41 +520,65 @@
      }
 
      .navtop {
-         display: flex;
-         width: 96%;
-         justify-content: space-between;
-         align-items: flex-start;
-         margin: 0 auto;
-         margin-top: 130px;
-         margin-bottom: 50px;
-         border: 3px solid rgb(255, 0, 0);
-         flex-direction: column;
-     }
-
-     .wrap {
-         margin: auto 0;
-         /* border: 1px solid red; */
-         order: 0;
-         align-self: flex-end;
-         margin-bottom: 50px;
-     }
-
-     .search-bar {
-         width: 300px;
-         font-size: 16px;
-     }
-
-     .search-btn {
-         transform: translate(210px, 7px);
-     }
-     .breadcrumb ol.breadcrumb_list>li>a {
-        font-size: 16px;
+        display: flex;
+        width: 96%;
+        justify-content: center;
+        margin: 0 auto;
+        margin-top: 130px;
+        margin-bottom: 30px;
+        border: 1px solid rgb(255, 0, 0);
+        flex-direction: column;
     }
+
+    .wrap {
+        margin: auto 0;
+        border: 1px solid red;
+        order: 0;
+        align-self: flex-end;
+        margin-bottom: 30px;
+    }
+
+    .search-bar {
+        width: 350px;
+        /* border: 1px solid red; */
+    }
+
+    .search-btn a img {
+        width: 80px;
+        height: 45px;
+    }
+
+    .search-btn {
+        transform: translate(265px, 5px);
+    }
+
+    .search input::placeholder {
+        color: rgb(129, 191, 188);
+        padding-left: 0px;
+        letter-spacing: 1px;
+    }
+
+    .breadcrumb {
+        border: 1px solid rgb(255, 0, 119);
+        align-self: flex-start;
+    }
+
+    .breadcrumb ol.breadcrumb_list>li>a {
+        font-size: 16px;
+        border: 1px solid blue;
+        padding: 8px 0px;
+    }
+
+    .breadcrumb ol.breadcrumb_list>li:nth-child(3) a {
+        padding: 8px;
+    }
+
     .breadcrumb ol.breadcrumb_list>li::before {
         content: ">";
-        font-size: 16px;
+        font-weight: 500;
+        font-size: 10px;
+        margin-right: 6px;
     }
-
 
  }
 
@@ -634,25 +674,48 @@
      }
 
      .search-bar {
-         width: 270px;
-         font-size: 16px;
+         width: 250px;
+         font-size: 14px;
          /* border: 1px solid red; */
+     }
 
+     .search-btn a img {
+         width: 70px;
+         height: 35px;
      }
 
      .search-btn {
-         transform: translate(180px, 6px);
+         transform: translate(175px, 7px);
+     }
+
+     .search input::placeholder {
+         color: rgb(129, 191, 188);
+         font-size: 14px;
+         padding-left: 0px;
+         letter-spacing: 2px;
+
      }
 
      .breadcrumb {
+         border: 1px solid rgb(255, 0, 119);
          align-self: flex-start;
      }
 
      .breadcrumb ol.breadcrumb_list>li>a {
-         font-size: 16px;
+         font-size: 12px;
+         border: 1px solid blue;
+         padding: 8px 0px;
      }
+
+     .breadcrumb ol.breadcrumb_list>li:nth-child(3) a {
+         padding: 8px 4px 8px 4px;
+     }
+
      .breadcrumb ol.breadcrumb_list>li::before {
-        content: ">";
-        font-size: 16px;
-    }
+         content: ">";
+         font-weight: 500;
+         font-size: 5px;
+         margin-right: 4px;
+     }
+
  }

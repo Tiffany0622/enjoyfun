@@ -70,7 +70,7 @@ button.btn_modal_close{
   clear: both
 }
 
-article.container {
+article.container01 {
   /* margin: 15px auto; */
   overflow: hidden;
   /* width: 460px; */
@@ -80,13 +80,13 @@ article.container {
   border-radius: 20px;
 }
 
-.container .pic {
+.container01 .pic {
   width: 400px;
   /* padding-bottom: 20px; */
   margin: 0 auto;
 }
 
-.container .pic img {
+.container01 .pic img {
   max-width: 100%;
   border-radius:10px 10px 0px 0px ;
 }
@@ -130,6 +130,7 @@ article.container {
   text-shadow:2px 1px 3px rgba(0,0,0,0.3);;
   /* border: 1px solid red; */
   border-radius: 15px 15px 0px 0px;
+  
 }
 
 /* 帳號登入 */
@@ -155,6 +156,9 @@ article.container {
   overflow: hidden;
   display: none;
   /* border: 1px solid red; */
+  /* 滑鼠游標caret */
+  caret-color: rgb(118,197,187);
+  color: #070707;
 }
 
 .inner-cont .sign-in-up form>span,
@@ -188,7 +192,7 @@ article.container {
   border-radius: 20px;
   box-sizing: border-box;
   font-size: 16px;
-  color: red;
+  color: rgb(66, 66, 66);
   /* border:1px solid red; */
 }
 

@@ -3,440 +3,470 @@
 
 
  * {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    text-decoration: none;
-    box-sizing: border-box;
-    font-family: 'Noto Sans TC', sans-serif;
-    /* outline: 1px solid red; */
-}
+     margin: 0;
+     padding: 0;
+     list-style: none;
+     text-decoration: none;
+     box-sizing: border-box;
+     font-family: 'Noto Sans TC', sans-serif;
+     /* outline: 1px solid red; */
+ }
 
  /* 往上跑的按鈕 */
-#go_top{
-    width: 40px;
-    height: 40px;
-    background: none;
-    position: fixed;
-    right: 20px;
-    bottom: 30px;
-    color: rgb(255, 255, 255);
-    background-color: #76C5BB;
-    border-radius: 50%;
-    font-size: 20px;
-    line-height: 1;
-    outline: none;
-    cursor: pointer;
-    border-width: 0px;
-    text-shadow: 3px 1px 1px rgba(43, 43, 43, 0.349);
-    box-shadow:3px 1px 1px rgba(43, 43, 43, 0.349); ;
-  }
+ #go_top {
+     width: 40px;
+     height: 40px;
+     background: none;
+     position: fixed;
+     right: 20px;
+     bottom: 30px;
+     color: rgb(255, 255, 255);
+     background-color: #76C5BB;
+     border-radius: 50%;
+     font-size: 20px;
+     line-height: 1;
+     outline: none;
+     cursor: pointer;
+     border-width: 0px;
+     text-shadow: 3px 1px 1px rgba(43, 43, 43, 0.349);
+     box-shadow: 3px 1px 1px rgba(43, 43, 43, 0.349);
+     opacity: 0;
+     transition: opacity .8s;
+ }
 
-  /* Nav導覽 */
+ button.-onScroll {
+     opacity: 1 !important;
+     transition: opacity .8s !important;
+ }
 
-header {
-    display: flex;
-    font-size: 0;
-    background-color: rgb(255, 255, 255);
-    margin: 0 auto;
-    width: 100%;
-    position: sticky;
-    top: 0;
-    left:50%;
-    z-index: 96;
-    box-shadow: 1px 1px 1px rgb(199, 199, 199);
-}
-.head {
-    display: flex;
-    margin: 0 auto;
-    width: 100%;
-    max-width: 1200px;
-    background-color: rgb(255, 255, 255);
-    justify-content: space-between;
-}
+ /* Nav導覽 */
 
-.head .logo {
-    background-color: rgb(255, 255, 255);
-    width:100px;
-    margin: 11px 0px;
-    margin-left: 15px;
-}
-.head .logo a {
-    display: inline-block;
-    width: 100%;
-}
-.head .logo a img {
-    max-width: 100%;
-}
+ header {
+     display: flex;
+     font-size: 0;
+     background-color: rgb(255, 255, 255);
+     margin: 0 auto;
+     width: 100%;
+     position: sticky;
+     top: 0;
+     left: 50%;
+     z-index: 96;
+     box-shadow: 1px 1px 1px rgb(199, 199, 199);
+ }
 
-ul.list {
-    display: flex;
-    background-color: rgb(255, 255, 255);
-    /* line-height: 1em; */
-    /* align-items: center; */
-    /*文字垂直置中*/
-}
+ .head {
+     display: flex;
+     margin: 0 auto;
+     width: 100%;
+     max-width: 1200px;
+     background-color: rgb(255, 255, 255);
+     justify-content: space-between;
+ }
 
+ .head .logo {
+     background-color: rgb(255, 255, 255);
+     width: 100px;
+     margin: 11px 0px;
+     margin-left: 15px;
+ }
 
-ul.list > li > a {
-    width: 100%;
-    font-size:25px;
-    color: rgba(55, 55, 55, 0.8);
-    text-shadow: 1px 1px 0px rgb(216, 216, 216);
-    position: relative;
-    display: inline-block;
-    cursor: pointer;
-    /*鼠標樣式*/
-    transition: color 0.4s ease;
-    padding: 25px 30px;
-}
-/*a標籤連結 後面加底線，預設寬0*/
-li >a::after{
-    content:'';
-    display: block;
-    width: 0%;
-    height: 3px;
-    background-color: rgb(129, 191, 188);
-    transition: width .3s .1s; /*線延展的時間,線延遲出現的時間*/
-    margin: auto; /*線重中間展開*/
-    margin-top: 10px;
-}
-/*摸到a標籤連結，後面底線出現*/
-ul.list > li > a:hover::after{
-    width: 100%;
-}
+ .head .logo a {
+     display: inline-block;
+     width: 100%;
+ }
 
-/*橫幅Banner*/
-.banner{
-    font-size:0 ;
-    position: relative;
-    text-align: center;
-}
-.banner ul#light-slider{
-    /* border:3px solid blue; */
-    width:100%;
-}
-.banner ul#light-slider li a{
-    max-width:100%;
-    display: inline-block;
-    position: relative;
-  }
+ .head .logo a img {
+     max-width: 100%;
+ }
 
-  .banner ul#light-slider li p{
-    font-size: 35px;
-    background-color: rgba(255, 255, 255, 0.582);
-    width: 700px;
-    color: rgb(255, 255, 255);
-    text-align: center;
-    border-radius:30px;
-    padding:15px ;
-    text-shadow: rgba(0, 0, 0, 0.76) 0.1em 0.1em 0.1em;
-    font-weight:700;
-    line-height: 1.5em;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, 30%);
-    letter-spacing:1.5px;
-  }
-
-.banner ul#light-slider li img{
-    max-width:100%;
-    height:100%;
-    object-fit: cover;
-  }
-
-  /*橫幅Banner*/
-
-  /* Banner上的搜尋框 */
-.wrap {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -180%);
-    z-index: 1;
-    outline: none;
-    /*搜尋框位移的位子*/
-}
-
-.search-bar {
-    padding: 20px 250px 20px 30px;
-    
-    font-size: 20px;
-    border: 0 solid transparent;
-    /*自定義邊框*/
-    border-radius: 50px;
-    position: relative;
-    
-}
-
-/*控制搜尋框的顏色*/
-::placeholder {
-    color: rgb(129, 191, 188);
-
-}
-
-/*控制搜尋框外面的 focus*/
-input:focus {
-    outline: 0;
-}
-
-/*搜尋的按鈕*/
-.search-btn {
-    width: 100px;
-    height: 50px;
-    outline: none;
-    border: 0 solid transparent;
-    /*自定義邊框*/
-    cursor: pointer;
-    /*碰到按鈕鼠標會變手*/
-    border-radius: 50px;
-    background-image: url("../search_button.png");
-    background-size: cover;
-    background-repeat: no-repeat;
-    position: absolute;
-    top:7px;
-    right: 10px;
-}
-
-/* 漢堡按鈕 */
-
-.hamburger,nav.main_nav,nav.main_nav ul.nav_list li a{
-    display: none;
-}
+ ul.list {
+     display: flex;
+     background-color: rgb(255, 255, 255);
+     /* line-height: 1em; */
+     /* align-items: center; */
+     /*文字垂直置中*/
+ }
 
 
-/* RWD開始 */
-@media screen and (min-width: 992px) and (max-width: 1199px){
-    header {
-       /* min-width: 900px; */
-    }
+ ul.list>li>a {
+     width: 100%;
+     font-size: 25px;
+     color: rgba(55, 55, 55, 0.8);
+     text-shadow: 1px 1px 0px rgb(216, 216, 216);
+     position: relative;
+     display: inline-block;
+     cursor: pointer;
+     /*鼠標樣式*/
+     transition: color 0.4s ease;
+     padding: 25px 30px;
+ }
+
+ /*a標籤連結 後面加底線，預設寬0*/
+ li>a::after {
+     content: '';
+     display: block;
+     width: 0%;
+     height: 3px;
+     background-color: rgb(129, 191, 188);
+     transition: width .3s .1s;
+     /*線延展的時間,線延遲出現的時間*/
+     margin: auto;
+     /*線重中間展開*/
+     margin-top: 10px;
+ }
+
+ /*摸到a標籤連結，後面底線出現*/
+ ul.list>li>a:hover::after {
+     width: 100%;
+ }
+
+ /*橫幅Banner*/
+ .banner {
+     font-size: 0;
+     position: relative;
+     text-align: center;
+ }
+
+ .banner ul#light-slider {
+     /* border:3px solid blue; */
+     width: 100%;
+ }
+
+ .banner ul#light-slider li a {
+     max-width: 100%;
+     display: inline-block;
+     position: relative;
+ }
+
+ .banner ul#light-slider li p {
+     font-size: 35px;
+     background-color: rgba(255, 255, 255, 0.582);
+     width: 700px;
+     color: rgb(255, 255, 255);
+     text-align: center;
+     border-radius: 30px;
+     padding: 15px;
+     text-shadow: rgba(0, 0, 0, 0.76) 0.1em 0.1em 0.1em;
+     font-weight: 700;
+     line-height: 1.5em;
+     position: absolute;
+     top: 50%;
+     left: 50%;
+     transform: translate(-50%, 30%);
+     letter-spacing: 1.5px;
+ }
+
+ .banner ul#light-slider li img {
+     max-width: 100%;
+     height: 100%;
+     object-fit: cover;
+ }
+
+ /*橫幅Banner*/
+
+ /* Banner上的搜尋框 */
+ .wrap {
+     position: absolute;
+     top: 50%;
+     left: 50%;
+     transform: translate(-50%, -180%);
+     z-index: 1;
+     outline: none;
+     /*搜尋框位移的位子*/
+ }
+
+ .search-bar {
+     padding: 20px 250px 20px 30px;
+
+     font-size: 20px;
+     border: 0 solid transparent;
+     /*自定義邊框*/
+     border-radius: 50px;
+     position: relative;
 
  }
 
-   @media screen and (min-width: 790px) and (max-width: 991px){
-        header {
-            /* min-width: 720px; */
-        }
-    }
+ /*控制搜尋框的顏色*/
+ ::placeholder {
+     color: rgb(129, 191, 188);
+
+ }
+
+ /*控制搜尋框外面的 focus*/
+ input:focus {
+     outline: 0;
+ }
+
+ /*搜尋的按鈕*/
+ .search-btn {
+     width: 100px;
+     height: 50px;
+     outline: none;
+     border: 0 solid transparent;
+     /*自定義邊框*/
+     cursor: pointer;
+     /*碰到按鈕鼠標會變手*/
+     border-radius: 50px;
+     background-image: url("../search_button.png");
+     background-size: cover;
+     background-repeat: no-repeat;
+     position: absolute;
+     top: 7px;
+     right: 10px;
+ }
+
+ /* 漢堡按鈕 */
+
+ .hamburger,
+ nav.main_nav,
+ nav.main_nav ul.nav_list li a {
+     display: none;
+ }
 
 
-    @media screen and (min-width:585px) and (max-width:789px){
-        header .list{
-            display:none;
-        }
-        
-        header .head {
-            width: 100%;
-            background-color: rgb(255, 255, 255);
-        }
+ /* RWD開始 */
+ @media screen and (min-width: 992px) and (max-width: 1199px) {
+     header {
+         /* min-width: 900px; */
+     }
 
-        .header2{
-            position: fixed;
-            top: 23px;
-            right: 0;
-        }
-        .hamburger{
-            display: block;
-        }
+ }
 
-        .wrap {
-            position: absolute;
-            top: 60%;
-            left: 50%;
-            transform: translate(-50%, -250%);
-            z-index: 1;
-            outline: none;
-            /*搜尋框位移的位子*/
-        }
-        .search-bar {
-            padding: 20px 150px 20px 30px;
-            
-            font-size: 20px;
-            border: 0 solid transparent;
-            /*自定義邊框*/
-            border-radius: 50px;
-            position: relative;
-            
-        }
-
-        /* 漢堡選單 */    
-        nav.main_nav {
-            border: 1px solid rgb(255, 255, 255); 
-            display: none;
-            position: absolute;
-            top:73px;
-            right: 0;
-            z-index:90;
-            width: 100vw;
-        }
-        nav.main_nav ul.nav_list li {
-            display:inline-block;
-            list-style: none;
-            font-size: 25px;
-            border-bottom: 1px solid rgb(255, 255, 255);
-            background-color: rgb(129, 191, 188);
-            margin: 0 auto;
-            width: 100%;
-        }
-        nav.main_nav ul.nav_list li:last-child{
-        border-bottom:none;
-
-        }
-        nav.main_nav ul.nav_list li > a{
-            color:rgb(255, 255, 255);
-            line-height:1.5em;
-            padding: 15px 0px 0px 30px;
-            text-shadow: 1px 1px 1px rgb(99, 99, 99);
-            letter-spacing:1.2px;
-            width: 100%;
-            display:inline-block;
-        }
-
-        /* 漢堡Nav hover換色 */
-        nav.main_nav ul.nav_list li:hover{
-            background-color: #C6E5E1;
-         }
-         nav.main_nav ul.nav_list li > a:hover{
-             color: black;
-             text-shadow:none
-         }
-
-        .banner ul#light-slider li p{
-            font-size: 28px;
-            background-color: rgba(255, 255, 255, 0.582);
-            width: 550px;
-            color: rgb(255, 255, 255);
-            text-align: center;
-            border-radius:30px;
-            padding:10px 3px 10px 3px ;
-            text-shadow: rgba(0, 0, 0, 0.76) 0.1em 0.1em 0.1em;
-            font-weight:600;
-            line-height: 1.5em;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, 30%);
-            
-        }
-}
+ @media screen and (min-width: 790px) and (max-width: 991px) {
+     header {
+         /* min-width: 720px; */
+     }
+ }
 
 
-/* @media screen and (min-width:416px) and (max-width:549px){
+ @media screen and (min-width:585px) and (max-width:789px) {
+     header .list {
+         display: none;
+     }
+
+     header .head {
+         width: 100%;
+         background-color: rgb(255, 255, 255);
+     }
+
+     .header2 {
+         position: fixed;
+         top: 23px;
+         right: 0;
+     }
+
+     .hamburger {
+         display: block;
+     }
+
+     .wrap {
+         position: absolute;
+         top: 60%;
+         left: 50%;
+         transform: translate(-50%, -250%);
+         z-index: 1;
+         outline: none;
+         /*搜尋框位移的位子*/
+     }
+
+     .search-bar {
+         padding: 20px 150px 20px 30px;
+
+         font-size: 20px;
+         border: 0 solid transparent;
+         /*自定義邊框*/
+         border-radius: 50px;
+         position: relative;
+
+     }
+
+     /* 漢堡選單 */
+     nav.main_nav {
+         border: 1px solid rgb(255, 255, 255);
+         display: none;
+         position: absolute;
+         top: 73px;
+         right: 0;
+         z-index: 90;
+         width: 100vw;
+     }
+
+     nav.main_nav ul.nav_list li {
+         display: inline-block;
+         list-style: none;
+         font-size: 25px;
+         border-bottom: 1px solid rgb(255, 255, 255);
+         background-color: rgb(129, 191, 188);
+         margin: 0 auto;
+         width: 100%;
+     }
+
+     nav.main_nav ul.nav_list li:last-child {
+         border-bottom: none;
+
+     }
+
+     nav.main_nav ul.nav_list li>a {
+         color: rgb(255, 255, 255);
+         line-height: 1.5em;
+         padding: 15px 0px 0px 30px;
+         text-shadow: 1px 1px 1px rgb(99, 99, 99);
+         letter-spacing: 1.2px;
+         width: 100%;
+         display: inline-block;
+     }
+
+     /* 漢堡Nav hover換色 */
+     nav.main_nav ul.nav_list li:hover {
+         background-color: #C6E5E1;
+     }
+
+     nav.main_nav ul.nav_list li>a:hover {
+         color: black;
+         text-shadow: none
+     }
+
+     .banner ul#light-slider li p {
+         font-size: 28px;
+         background-color: rgba(255, 255, 255, 0.582);
+         width: 550px;
+         color: rgb(255, 255, 255);
+         text-align: center;
+         border-radius: 30px;
+         padding: 10px 3px 10px 3px;
+         text-shadow: rgba(0, 0, 0, 0.76) 0.1em 0.1em 0.1em;
+         font-weight: 600;
+         line-height: 1.5em;
+         position: absolute;
+         top: 50%;
+         left: 50%;
+         transform: translate(-50%, 30%);
+
+     }
+ }
+
+
+ /* @media screen and (min-width:416px) and (max-width:549px){
 
     } */
 
-    @media screen and (max-width:584px){
-        header .list{
-            display:none;
-        }
-        
-        header .head {
-            width: 100%;
-            background-color: rgb(255, 255, 255);
-            position: fixed;
-            top: 0;
-            left:0;
-        }
+ @media screen and (max-width:584px) {
+     header .list {
+         display: none;
+     }
 
-        .header2{
-            position: fixed;
-            top: 23px;
-            right: 0;
-        }
-        .hamburger{
-            display: block;
-        }
+     header .head {
+         width: 100%;
+         background-color: rgb(255, 255, 255);
+         position: fixed;
+         top: 0;
+         left: 0;
+     }
+
+     .header2 {
+         position: fixed;
+         top: 23px;
+         right: 0;
+     }
+
+     .hamburger {
+         display: block;
+     }
 
 
-        
-        .search-bar {
-            padding: 15px 60px 15px 20px;
-            
-            font-size: 20px;
-            border: 0 solid transparent;
-            /*自定義邊框*/
-            border-radius: 50px;
-            position: relative;
-            
-        }
-        .search-btn{
-            background-size:contain;
-            width: 80px;
-            height: 45px;
-            position: absolute;
-            top:px;
-            right: 7px;
-        }
 
-        /* 漢堡選單 */
+     .search-bar {
+         padding: 15px 60px 15px 20px;
 
-        nav.main_nav {
-            border: 1px solid rgb(255, 255, 255); 
-            display: none;
-            position: absolute;
-            top:73px;
-            right: 0;
-            z-index:90;
-            width: 100vw;
-        }
+         font-size: 20px;
+         border: 0 solid transparent;
+         /*自定義邊框*/
+         border-radius: 50px;
+         position: relative;
 
-        nav.main_nav ul.nav_list li {
-            /* border: 1px solid blue; */
-            display:inline-block;
-            list-style: none;
-            font-size: 25px;
-            border-bottom: 1px solid rgb(255, 255, 255);
-            width: 100%;
-            background-color: rgb(129, 191, 188);
-            margin: 0 auto;
-            /* border: 1px solid red; */
-        }
-        nav.main_nav ul.nav_list li:last-child{
-        border-bottom:none;
+     }
 
-        }
-        nav.main_nav ul.nav_list li > a{
-            color:rgb(255, 255, 255);
-            line-height:1.5em;
-            padding: 15px 0px 0px 30px;
-            text-shadow: 1px 1px 1px rgb(99, 99, 99);
-            letter-spacing:1.2px;
-            width: 100%;
-            display:inline-block;            
-        }
-        /* 漢堡Nav hover換色 */
-        nav.main_nav ul.nav_list li:hover{
-           background-color: #C6E5E1;
-        }
-        nav.main_nav ul.nav_list li > a:hover{
-            color: black;
-            text-shadow:none
-        }
+     .search-btn {
+         background-size: contain;
+         width: 80px;
+         height: 45px;
+         position: absolute;
+         top: px;
+         right: 7px;
+     }
 
-        .banner{
-            margin-top: 95px;
-        }
+     /* 漢堡選單 */
 
-        .banner ul#light-slider li p{
-            font-size: 23px;
-            background-color: rgba(255, 255, 255, 0.582);
-            width: 80%;
-            color: rgb(255, 255, 255);
-            text-align: center;
-            border-radius:30px;
-            padding:10px 5px 10px 5px ;
-            text-shadow: rgba(0, 0, 0, 0.76) 0.1em 0.1em 0.1em;
-            font-weight:600;
-            line-height: 1.5em;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, 30%);
-        }
+     nav.main_nav {
+         border: 1px solid rgb(255, 255, 255);
+         display: none;
+         position: absolute;
+         top: 73px;
+         right: 0;
+         z-index: 90;
+         width: 100vw;
+     }
 
-        .banner ul#light-slider li p br{
-            display: none;
-        }
+     nav.main_nav ul.nav_list li {
+         /* border: 1px solid blue; */
+         display: inline-block;
+         list-style: none;
+         font-size: 25px;
+         border-bottom: 1px solid rgb(255, 255, 255);
+         width: 100%;
+         background-color: rgb(129, 191, 188);
+         margin: 0 auto;
+         /* border: 1px solid red; */
+     }
 
-}
+     nav.main_nav ul.nav_list li:last-child {
+         border-bottom: none;
+
+     }
+
+     nav.main_nav ul.nav_list li>a {
+         color: rgb(255, 255, 255);
+         line-height: 1.5em;
+         padding: 15px 0px 0px 30px;
+         text-shadow: 1px 1px 1px rgb(99, 99, 99);
+         letter-spacing: 1.2px;
+         width: 100%;
+         display: inline-block;
+     }
+
+     /* 漢堡Nav hover換色 */
+     nav.main_nav ul.nav_list li:hover {
+         background-color: #C6E5E1;
+     }
+
+     nav.main_nav ul.nav_list li>a:hover {
+         color: black;
+         text-shadow: none
+     }
+
+     .banner {
+         margin-top: 95px;
+     }
+
+     .banner ul#light-slider li p {
+         font-size: 23px;
+         background-color: rgba(255, 255, 255, 0.582);
+         width: 80%;
+         color: rgb(255, 255, 255);
+         text-align: center;
+         border-radius: 30px;
+         padding: 10px 5px 10px 5px;
+         text-shadow: rgba(0, 0, 0, 0.76) 0.1em 0.1em 0.1em;
+         font-weight: 600;
+         line-height: 1.5em;
+         position: absolute;
+         top: 50%;
+         left: 50%;
+         transform: translate(-50%, 30%);
+     }
+
+     .banner ul#light-slider li p br {
+         display: none;
+     }
+
+ }

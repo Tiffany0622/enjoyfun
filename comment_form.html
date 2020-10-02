@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="./css/comment_form.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css"
+        integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js"></script>
+    <script src="./vendors/JS/jquery-3.5.1.js"></script>
+</head>
+
+<body>
+    <button type="button" class="write">開啟 Modal 彈跳視窗</button>
+
+    <div class="overlay2">
+        <article>
+            <!-- <button type="button" class="btn_modal_close">&#10006</button> -->
+            <div class="container2">
+                <!-- 標題 -->
+                <div class="title">
+                    <h2>愛麗絲夢遊奇境體驗展</h2>
+                </div>
+                <!-- 帳號圖片 -->
+                <div class="selfimg"><img src="./picture/comment_form/selfimg.jpg" alt=""></div>
+                <!-- 評分星星 -->
+                <div class="star_Score">
+                    <span class="text">點一下來評分：</span>
+                    <div class="star_block wrapper">
+                        <span class="star" data-star="5"><i class="fas fa-star"></i></span>
+                        <span class="star" data-star="4"><i class="fas fa-star"></i></span>
+                        <span class="star" data-star="3"><i class="fas fa-star"></i></span>
+                        <span class="star" data-star="2"><i class="fas fa-star"></i></span>
+                        <span class="star" data-star="1"><i class="fas fa-star"></i></span>
+                    </div>
+                </div>
+                <form class="comment" action="">
+                    <div class="text">
+                        <textarea name="" id="" cols="30" rows="10" placeholder="詳細說明你在這個地點的親身體驗..."></textarea>
+                    </div>
+
+
+                    <!-- 選擇檔案的按鈕開始 -->
+                    <div class="upfile">
+                        <input type="file" id="file_input">
+                        <button type="button" id="choose_file">分享照片</button>
+
+                        <div id="img_block">
+                            選擇的檔案:
+                            <span id="file_name"></span><br>
+                        </div>
+                    </div>
+
+                    <!-- 選擇檔案的按鈕結束 -->
+                    <!-- 取消及確認按鈕 -->
+                    <div class="group">
+                        <button type="reset" class="btn_modal_close2">取消</button>
+                        <!-- <button type="reset">清空</button> 這個要跟form表單寫在一起，程式才知道哪份表單要清空 -->
+                        <button type="submit" class="send">確認送出</button>
+                        <!-- 表單資料送出  type 要用 submit-->
+                    </div>
+                </form>
+            </div>
+        </article>
+    </div>
+
+    <script src="./js_all/comment_form.js"></script>
+
+    <script src="./js_all/all.js"></script>
+    <script>
+        $(function () {
+            // 開啟 Modal 彈跳視窗
+            $("button.write").on("click", function () {
+                $("div.overlay2").addClass("-on");
+            });
+
+            // 關閉 Modal
+            $("button.btn_modal_close2").on("click", function () {
+                $("div.overlay2").addClass("-opacity-zero");
+
+                // 設定隔一秒後，移除相關 class
+                setTimeout(function () {
+                    $("div.overlay2").removeClass("-on -opacity-zero");
+                }, 1000);
+            });
+
+        });
+    </script>
+</body>
+
+</html>

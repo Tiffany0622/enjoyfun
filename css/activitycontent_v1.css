@@ -1,0 +1,356 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: 'Noto Sans TC', sans-serif;
+}
+body{
+    background-color:rgb(247, 247, 247);
+}
+
+.container{
+  font-size: 0;
+  min-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  /* border:1px solid green; */
+}
+
+div.breadcrumb{
+    margin-top: 170px;
+    /* border:3px solid red; */
+    font-size: 0;
+    padding-bottom: 50px;
+}
+.breadcrumb > ol{
+    font-size: 22px;
+    /* border:3px solid rgb(23, 10, 205); */
+    margin: 0 auto;
+    width: 1200px;
+    display: flex;
+}
+div.breadcrumb ol.breadcrumb_list{
+  /* margin: 0;
+  padding: 0; */
+  list-style: none;
+}
+div.breadcrumb ol.breadcrumb_list > li{
+  display: inline-block;
+  margin-right: 10px;
+}
+
+/* 利用 ::before 擬似元素，創造斜線做為分隔 */
+div.breadcrumb ol.breadcrumb_list > li::before{
+  content: ">";
+  font-size: 18px;
+  color: rgb(28, 26, 26);
+  margin-right: 12px;
+}
+/* 第一個 li 元素，將 ::before 設定回來需要的 */
+div.breadcrumb ol.breadcrumb_list > li:first-child::before{
+  content: "";
+  margin-right: 0;
+}
+
+/* 基本文字樣式 */
+div.breadcrumb ol.breadcrumb_list > li > a{
+  text-decoration: none;
+  display: inline-block;
+  color: #1d1d1d;
+  padding: 5px;
+}
+div.breadcrumb ol.breadcrumb_list > li:nth-child(3) a{
+    display: inline-block;
+    /* font-weight: bolder; */
+    color:rgb(255, 255, 255);
+    background-color: rgb(129, 191, 188);
+    /* text-shadow: 1px 1px 0px rgb(124, 124, 124); */
+}
+
+/* 滑動移過後文字增加陰影 */
+div.breadcrumb ol.breadcrumb_list > li > a:hover{
+  text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.467);
+}
+
+/* 資料內容開始 */
+.maincontent{
+  /* border:1px solid rgb(4, 0, 223); */
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-top: 100px;
+}
+.maincontent .top{
+  display: flex;
+  justify-content: space-between;
+}
+.maincontent .top .title h2{
+  font-size: 35px;
+  font-weight: 500;
+}
+.maincontent .top .star{
+    display: flex;
+    text-align: start;
+    align-items: baseline;
+    font-weight: bolder;
+    margin-right:10px;
+    /* border:1px solid red; */
+}
+.maincontent .top .star p.score{
+  font-size: 40px;
+  font-weight: 400;
+}
+/*總分星星*/
+.maincontent .top .star > i{
+  color: rgb(255, 197, 87);
+  font-size: 35px;
+  padding: 1px;
+  text-shadow: 1px 1px 1px rgb(180, 180, 180);
+  /* border:1px solid rgb(255, 145, 0); */
+  margin: 0 0 0 4px;
+}
+
+.maincontent .toptext{
+  font-size: 30px;
+  float: right;
+  margin: 50px 10px 20px 0;
+}
+/*清空前面的浮動元素空間*/
+.topbtn{
+  content: "";
+  display: block; 
+  clear: both;
+}
+
+.maincontent .topbtn{
+  /* border: 1px solid yellow; */
+  display: flex;
+  justify-content: flex-end;
+  margin:5px 0 30px 0 ;
+}
+.maincontent .topbtn button{
+font-size: 25px;
+margin: auto 10px;
+line-height:1.5em;
+letter-spacing:1px;
+padding: 0 10px 0 10px;
+}
+
+.maincontent .topbtn button.fb,.maincontent .topbtn button.line,.maincontent .content .menu01 button.introd,.maincontent .content .menu02 button.allpic {
+  background-color: rgb(255, 255, 255);
+  border:.5px solid rgba(20, 20, 20, 0.5);
+}
+
+.maincontent .topbtn button.like,.maincontent .topbtn button.write{
+  background-color: rgb(232, 244, 243);
+  border:.5px solid rgba(20, 20, 20, 0.5);
+}
+
+
+.maincontent .topbtn button.fb > i{
+  color:rgb(24,119,242);
+  font-size:28px;
+  padding-left:3px;
+}
+
+.maincontent .topbtn button.line > i{
+  color:#00c300;
+  font-size:28px;
+  padding-left:3px;
+}
+
+
+.maincontent .mainpic{
+  width: 1200px;
+}
+.maincontent .mainpic img{
+  max-width: 100%;
+}
+.maincontent .content{}
+.maincontent .content .menu01{
+  margin-top: 50px;
+  /* border: 1px solid pink; */
+}
+.maincontent .content .menu01 button.info,.maincontent .content .menu02 button.allcomment{
+background-color:rgb(129, 191, 188);
+color: white;
+text-shadow:1px 1px 0px rgb(124, 124, 124);
+padding: 5px;
+}
+.maincontent .content .menu01 button,.maincontent .content .menu02 button{
+  margin-right:10px;
+  font-size: 25px;
+  width: 155px;
+  border:.5px solid rgba(20, 20, 20, 0.5);
+  padding: 5px;
+}
+
+.maincontent .content .infotext{
+  font-size: 25px;
+  /* margin: auto 10px; */
+  padding: 20px 10px;
+}
+/*分隔線*/
+.maincontent .content .infotext::after{
+  content: '';
+  display: block;
+  width: 1200px;
+  height: 1px;
+  background-color: rgba(39, 39, 39, 0.616);
+  margin: 40px auto;
+  margin-left: -11px;
+}
+
+.maincontent .content .infotext p{
+line-height: 2em;
+}
+.maincontent .content .infotext a{
+  color: blue;
+}
+.maincontent .content .menu02{}
+
+.maincontent .content .menu02::after{
+  content: '';
+  display: block;
+  width: 1200px;
+  height: .5px;
+  background-color: rgba(39, 39, 39, 0.616);
+  margin-left: -1px;
+  /* margin-bottom: 1px; */
+}
+
+.maincontent .content .item{
+  display: flex;
+  margin-bottom: 30px;
+  /* border-bottom: .5px solid rgba(0, 0, 0, 0.5);   */
+}
+.maincontent .content .item .pic{
+  display: flex;
+  width: 600px;
+  height: 300px;
+  /* border: 1px solid red; */
+}
+.maincontent .content .item .pic img{
+  width: 300px;
+  max-width: 100%;
+
+}
+.maincontent .content .item .comment{
+display: flex;
+width: 600px;
+/* border: 1px solid #7500ac; */
+align-items: flex-start;
+background-color: rgb(255, 255, 255);
+}
+.maincontent .content .item .comment .selfphoto{
+  width: 100px;
+  border-radius: 50%;
+  overflow: hidden;
+  /* border: 1px solid rgb(10, 218, 79); */
+  margin: 20px 10px 0 20px;
+}
+.maincontent .content .item .comment .selfphoto img{
+  max-width: 100%;
+  vertical-align: middle;
+  
+}
+.maincontent .content .item .comment .text{
+  width: 100%;
+  /* border: 1px solid peru; */
+  padding:20px 50px 0 20px;
+}
+.maincontent .content .item .comment .text a.name{
+  font-size: 25px;
+  font-weight: 600;
+  display: inline-block;
+  padding-bottom: 20px;
+  color: #1d1d1d;
+}
+
+.maincontent .content .item .comment .text .link{
+  font-size: 25px;
+  display: flex;
+  padding-bottom: 10px;
+  /* border:1px solid red; */
+  position: relative;
+  
+
+}
+
+.maincontent .content .item .comment .text .link a{
+  color: #1d1d1d;
+  position: relative;
+  margin-right:20px;
+  display: inline-block;
+  padding-bottom: 10px;
+}
+
+.maincontent .content .item .comment .text .link a:first-child::before{
+  content: '|';
+  display: inline-block;
+  color:#1d1d1d;
+  position: absolute;
+  top: -1px;
+  left: 110px;
+  pointer-events: none;
+
+}
+
+.maincontent .content .item .comment .text .star{
+  color: rgb(255, 197, 87);
+  font-size: 25px;
+  text-shadow: 1px 1px 1px rgb(180, 180, 180);
+  /* border:1px solid rgb(255, 145, 0); */
+  padding-bottom: 20px;
+  display: inline-block;
+}
+.maincontent .content .item .comment .text .textcomment{
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.5em;
+  text-align:justify;/* 讓文字可以對齊 */
+}
+
+/* 資料內容結束 */
+
+/* 頁碼開始 */
+.pagenum{
+  font-size: 20px;
+  /* border:1px solid red; */
+  margin: auto;
+  margin-top: 100px;
+  margin-bottom:100px;
+}
+.pagenum > ul{
+  display: flex;
+  margin: auto;
+  justify-content: center;
+  
+}
+
+.pagenum > ul > li{
+  border:1px solid rgba(0, 0, 0, 0.5);
+  margin: 0 8px;
+  background-color: rgb(255, 255, 255);
+  width: 40px;
+  height: 40px;
+  line-height: 2em;
+  text-align: center;
+}
+
+.pagenum > ul > li > a{
+  padding: 10px;
+  color: #1d1d1d;
+
+}
+
+.pagenum > ul > li:first-child,.pagenum > ul > li:last-child{
+  border: none;
+  background-color:rgb(247, 247, 247);
+  width: 100px;
+  height: 40px;
+  /* border:1px solid rgba(0, 0, 0, 0.589); */
+
+}
+/* 頁碼結束 */

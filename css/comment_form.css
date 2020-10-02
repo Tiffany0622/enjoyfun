@@ -1,0 +1,271 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: 'Noto Sans TC', sans-serif;
+    /* outline: 1px solid red; */
+}
+
+/* 燈箱部分 */
+/* 燈箱 */
+button {
+    cursor: pointer;
+}
+/* 關閉按鈕 */
+/* button.btn_modal_close {
+    outline: none;
+    border-width: 0;
+    text-align: center;
+    width: 30px;
+    height: 30px;
+    float: right;
+    background-color: #fff;
+    position: absolute;
+    top: 10px;
+    right: 5px;
+    border-radius: 20px;
+    font-weight: 100;
+} */
+
+div.overlay2 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: hsla(0, 0%, 0%, .5);
+    /* 預設：完全透明；設定 z-index: -1 會在整個頁面的後方，看不到，才不會擋到頁面元素。 */
+    opacity: 0;
+    z-index: -1;
+    transition: opacity .5s;
+}
+
+div.overlay2.-on {
+    /* 加上 -on 之後，Modal 漸漸出現，因為有設定 transition */
+    opacity: 1;
+    z-index: 99;
+}
+
+div.overlay2.-opacity-zero {
+    /* 關閉 Modal 時，先讓 opacity設定0，就會慢慢變成完全透明，但這時會擋到後面的元素，所以要再移除 -on 及 -opacity-zero 這兩個 class */
+    opacity: 0;
+}
+
+/* 元素 article 置中及基本樣式 */
+div.overlay2 > article {
+    width: 80%;
+    width: 400px;
+    height: 80%;
+    border-radius: 20px;
+    box-shadow: 0 0 1px #ddd;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* border: 1px solid red; */
+    overflow: hidden;
+    overflow-y: auto;
+}
+
+article.container2 {
+    overflow: hidden;
+    /* border: 5px solid red; */
+    border-radius: 20px;
+    
+}
+
+/* 最外圍 */
+.overlay2 article .container2 {
+    margin: auto;
+    overflow: hidden;
+    width: 400px;
+    height: 100%;
+    background-color: rgb(250, 250, 250);
+    text-align: center;
+    /* border: 1px solid rgb(16, 140, 255); */
+    overflow-y: auto;
+}
+
+/* 標題 */
+.overlay2 article .container2 > .title {
+    background-color: rgb(129, 191, 188);
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+
+.overlay2 article .container2 > .title > h2 {
+    color: aliceblue;
+    text-shadow: 1px 1px 1px #000;
+    text-align: center;
+    padding: 20px;
+}
+
+/* 個人檔案照片 */
+.overlay2 article .container2 .selfimg {
+    width: 110px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-left: 8%;
+    margin-bottom: 20px;
+}
+
+/* 照片 */
+.overlay2 article .container2 .selfimg img {
+    max-width: 100%;
+    vertical-align: middle;
+}
+
+/* 評價星星 */
+.overlay2 article .container2 .star_Score {
+    display: flex;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    justify-content: left;
+    align-items: center;
+    /* border: 1px solid red; */
+    width: 85%;
+}
+
+.overlay2 article .container2 .star_block {
+    /* css 內文方向, rtl: right to left */
+    direction: rtl;
+}
+
+.overlay2 article .container2 .star_block>span.star {
+    cursor: pointer;
+    margin-right: 3px;
+    font-size: 26px;
+    color: rgb(199, 199, 199);
+    /* border: 1px solid green; */
+}
+
+.overlay2 article .container2 .star_block>span.star.-on {
+    color: rgb(255, 208, 0);
+}
+
+
+/* 摸到 */
+.overlay2 article .container2 .star_block>span.star:hover {
+    color: rgb(255, 208, 0);
+    transition: all .7s;
+}
+
+/* ~ 小蚯蚓符號就是影響到此li之後的所有li */
+.overlay2 article .container2 .star_block>span.star:hover~span.star {
+    color: rgb(255, 208, 0);
+    transition: all .1s ease;
+}
+
+.overlay2 article .container2 .star_Score span.text {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.overlay2 article .container2 form.comment {
+    /* border: 1px solid red; */
+    width: 85%;
+    margin: 0 auto;
+    margin-top: 15px;
+    font-size: 18px;
+}
+
+.overlay2 article .container2 form.comment .text {
+    width: 100%;
+    /* border: 1px solid rgb(255, 0, 170); */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.overlay2 article .container2 form.comment .text textarea {
+    width: 100%;
+    /* border: 1px solid rgb(255, 208, 0); */
+}
+
+::placeholder {
+    padding: 10px;
+    color: rgb(54, 58, 58);
+    font-weight: 500;
+    text-shadow: 1px 1px 1px rgb(248, 248, 248);
+    font-size: 16px;
+}
+
+textarea:focus {
+    outline: 0;
+}
+
+.overlay2 article .container2 form.comment input#file_input {
+    /* border: 1px solid red; */
+    display: none;
+}
+
+/* 選取檔案 */
+.overlay2 article .container2 form.comment button#choose_file {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    min-width: 50px;
+    line-height: 30px;
+    height: 30px;
+    background-image: url('../picture/comment_form/image.png');
+    background-size: 30%;
+    background-repeat: no-repeat;
+    background-position: 3px center;
+    padding-left: 40px;
+    padding-right: 5px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 1px 1px 1px #ccc;
+    font-weight: 600;
+    cursor: pointer;
+}
+.overlay2 article .container2 form.comment .upfile{
+    /* border: 1px solid red; */
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+.overlay2 article .container2 form.comment button:hover {
+    opacity: .7;
+}
+
+button:focus {
+    outline: none;
+}
+
+.small_width {
+    width: 100px;
+}
+
+.overlay2 article .container2 form.comment .group {
+    float: right;
+    margin-bottom: 20px; 
+}
+
+.overlay2 article .container2 form.comment .group button {
+    background-color: rgb(255, 255, 255);
+    border: 1px solid #ccc;
+    box-shadow: 1px 1px 1px #ccc;
+    border-radius: 5px;
+    min-width: 50px;
+    line-height: 30px;
+    height: 30px;
+    font-weight: 600;
+    cursor: pointer;
+    padding-right: 5px;
+    padding-left: 5px;
+}
+
+.overlay2 article .container2 form.comment .group button.send {
+    background-color: rgb(129, 191, 188);
+    color: aliceblue;
+    text-shadow: 1px 1px 1px rgb(77, 77, 77);
+    margin-left: 15px;
+
+}
+
+.group button:focus {
+    outline: none;
+}

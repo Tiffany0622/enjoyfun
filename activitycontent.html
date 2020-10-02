@@ -1,430 +1,222 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>跳進兔子洞—愛麗絲夢遊奇境體驗展</title>
     <link rel="stylesheet" href="./css/normalize.css">
-    <link rel="stylesheet" href="./css/header02.css">
     <link rel="stylesheet" href="./css/hb.css">
+    <link rel="stylesheet" href="./css/nav_rwd_activitycontent.css">
+    <link rel="stylesheet" href="./css/footer_rwd.css">
+    <link rel="stylesheet" href="./css/lightbox.css">
     <link rel="stylesheet" href="./css/activitycontent.css">
-    <link rel="stylesheet" href="./css/footer.css">
-    <link rel="stylesheet" href="./css/index.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/comment_form.css">
+    <link rel="stylesheet" href="./vendors/lightSlider/lightslider.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css"
+        integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js"></script>
+    <script src="./vendors/JS/jquery-3.5.1.js"></script>
 </head>
+
 <body>
     <!-- header -->
     <header>
         <div class="head">
             <div class="logo">
-                <a href="./index.html"> <img src="./logo.png" alt="enjoyfun的logo"></a>
+                <a href="./index.html">
+                    <img src="./logo.png" alt="enjoyfun的logo">
+                </a>
             </div>
-            <div class="navright">
-                <div class="wrap">
-                    <div class="search">
-                        <input class="search-bar" type="text" name="search" id="search" placeholder="今天你享趣哪玩?">
-                        <div class="search-btn">
-                            <a href="./search.html">
-                            <img src="./search_button.png" alt=""></a>
-                    </div>
-                </div>
-                <button class="hamburger hamburger--stand btn_switch" type="button">
-                    <span class="hamburger-box">
-                        <span class="hamburger-inner"></span>
-                    </span>
-                </button>
-                <nav class="main_nav">
-                    <ul class="nav_list">
-                        <li>
-                            <a href="./activity.html">找活動&景點</a>
-                        </li>
-                        <li>
-                            <a href="./articleall.html">文章專欄</a>
-                        </li>
-                        <li>
-                            <a href="./mypage.html">我的頁面</a>
-                        </li>
-                        <li>
-                            <a href="./logoin.html">登入</a>
-                        </li>
-                    </ul>
-                </nav>
-            </div>
+            <ul class="list">
+                <li>
+                    <a class="button-hover" href="./activity.html">找活動＆景點</a>
+                </li>
+                <li>
+                    <a class="button-hover" href="./articleall.html">文章專欄</a>
+                </li>
+                <li>
+                    <a class="button-hover" href="./mypage.html">我的頁面</a>
+                </li>
+                <li class="testlogin">
+                    <a class="button-hover">登入</a>
+                </li>
+            </ul>
+        </div>
+        <div class="header2">
+            <button class="hamburger hamburger--stand btn_switch" type="button">
+                <span class="hamburger-box">
+                    <span class="hamburger-inner"></span>
+                </span>
+            </button>
+            <nav class="main_nav">
+                <ul class="nav_list">
+                    <li>
+                        <a href="./activity.html">找活動&景點</a>
+                    </li>
+                    <li>
+                        <a href="./articleall.html">文章專欄</a>
+                    </li>
+                    <li>
+                        <a href="./mypage.html">我的頁面</a>
+                    </li>
+                    <li class="testlogin">
+                        <a class="login">登入</a>
+                    </li>
+                </ul>
+            </nav>
         </div>
     </header>
     <!-- header -->
-    
+
     <!-- content開始 -->
     <div class="container">
-    
-        <!--breadcrumb開始-->
-    
-        <div class="breadcrumb">
-            <ol class="breadcrumb_list">
-                <li><a href="./index.html">首頁</a></li>
-                <li><a href="#">找活動&景點</a></li>
-                <li><a href="./activitycontent.html">跳進兔子洞—愛麗絲夢遊奇境體驗展</a></li>
-            </ol>
+        <!-- navtop(搜尋框、麵包屑) -->
+        <!-- 搜尋框 -->
+        <div class="navtop">
+            <div class="wrap">
+                <div class="search">
+                    <input class="search-bar" type="text" name="search" id="search" placeholder="今天你享趣哪玩?">
+                    <div class="search-btn">
+                        <a href="./search.html">
+                            <img src="./search_button.png" alt=""></a>
+                    </div>
+                </div>
+            </div>
+            <!-- 搜尋框 -->
+            <!--breadcrumb開始-->
+            <div class="breadcrumb">
+                <ol class="breadcrumb_list">
+                    <li><a href="./index.html">首頁</a></li>
+                    <li><a href="#">找活動&景點</a></li>
+                    <li><a href="./activitycontent.html">愛麗絲夢遊奇境體驗展</a></li>
+                </ol>
+            </div>
+            <!--breadcrumb結束-->
         </div>
-    
-        <!--breadcrumb結束-->
-    
         <!--資料內容開始-->
-        <div class="maincontent">
-            <div class="top">
-                <div class="title">
-                    <h2>跳進兔子洞—愛麗絲夢遊奇境體驗展</h2></div>
-                <div class="star">
-                    <p class="score">4.5</p>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star-half-alt"></i>
-                </div>
-            </div>
-            <div class="toptext">共93則評論</div>
-            <div class="topbtn">
-                <button class="fb">分享活動到<i class="fab fa-facebook"></i></button> 
-                <button class="line">分享活動到<i class="fab fa-line"></i></button>
-                <button class="like">收藏活動</button>
-                <button class="write">撰寫評論</button>
-            </div>
-            <div class="mainpic">
-                <img src="../picture/activitycontent/intro01.jpg" alt="">
-            </div>
-            <div class="content">
-                <div class="menu01">
-                    <button class="info">活動資訊</button>
-                    <button class="introd">活動介紹</button>
-                </div>
-                <div class="infotext">
-                    <p>活動時間：2019.7.5（五）- 2019.9.25（三）<br>活動地點：松山文創園區二、三號倉庫<br>價格：280 元（單人預售）<br>購票資訊：<a href="https://www.justlive.com.tw/alice/">https://www.justlive.com.tw/alice/</a>
-                        </p>
-                </div>
-                <div class="menu02">
-                    <button class="allcomment">所有評價</button>
-                    <button class="allpic">所有相片</button>
-                </div>
-                <div class="item">
-                    <div class="pic">
-                        <img src="../picture/activitycontent/com01.jpg" alt="">
-                        <img src="../picture/activitycontent/com01-1.jpg" alt="">
-                    </div>
-                    <div class="comment">
-                        <div class="selfphoto">
-                            <img src="../picture/activitycontent/01.jpg" alt="">
-                        </div>
-                        <div class="text">
-                            <a href="./mypage.html" class="name">Angela</a>
-                            <div class="link">
-                                <a href="">99則評論</a>
-                                <a href="">50張相片</a>
-                            </div>
-                            <div class="star">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star-half-alt"></i>
-                            </div>
-                            <div class="textcomment">
-                                好好玩好好拍的展覽，但是人太多，拍照還限時2分鐘，覺得有點可惜...建議大家避開假日，才能悠閒的看展~
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="pic">
-                        <img src="../picture/activitycontent/com02.jpg" alt="">
-                        <img src="../picture/activitycontent/com02-1.jpg" alt="">
-                    </div>
-                    <div class="comment">
-                        <div class="selfphoto">
-                            <img src="../picture/activitycontent/02.jpeg" alt="">
-                        </div>
-                        <div class="text">
-                            <a href="./mypage.html" class="name">Angela</a>
-                            <div class="link">
-                                <a href="">99則評論</a>
-                                <a href="">50張相片</a>
-                            </div>
-                            <div class="star">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star-half-alt"></i>
-                            </div>
-                            <div class="textcomment">
-                                好好玩好好拍的展覽，但是人太多，拍照還限時2分鐘，覺得有點可惜...建議大家避開假日，才能悠閒的看展~
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="pic">
-                        <img src="../picture/activitycontent/com03.jpg" alt="">
-                        <img src="../picture/activitycontent/com03-1.jpg" alt="">
-                    </div>
-                    <div class="comment">
-                        <div class="selfphoto">
-                            <img src="../picture/activitycontent/03.jpeg" alt="">
-                        </div>
-                        <div class="text">
-                            <a href="./mypage.html" class="name">Angela</a>
-                            <div class="link">
-                                <a href="">99則評論</a>
-                                <a href="">50張相片</a>
-                            </div>
-                            <div class="star">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star-half-alt"></i>
-                            </div>
-                            <div class="textcomment">
-                                好好玩好好拍的展覽，但是人太多，拍照還限時2分鐘，覺得有點可惜...建議大家避開假日，才能悠閒的看展~
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="pic">
-                        <img src="../picture/activitycontent/com04.jpg" alt="">
-                        <img src="../picture/activitycontent/com04-1.jpg" alt="">
-                    </div>
-                    <div class="comment">
-                        <div class="selfphoto">
-                            <img src="../picture/activitycontent/09.jpeg" alt="">
-                        </div>
-                        <div class="text">
-                            <a href="./mypage.html" class="name">Angela</a>
-                            <div class="link">
-                                <a href="">99則評論</a>
-                                <a href="">50張相片</a>
-                            </div>
-                            <div class="star">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star-half-alt"></i>
-                            </div>
-                            <div class="textcomment">
-                                好好玩好好拍的展覽，但是人太多，拍照還限時2分鐘，覺得有點可惜...建議大家避開假日，才能悠閒的看展~
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="pic">
-                        <img src="../picture/activitycontent/com05.jpg" alt="">
-                        <img src="../picture/activitycontent/com05-1.jpg" alt="">
-                    </div>
-                    <div class="comment">
-                        <div class="selfphoto">
-                            <img src="../picture/activitycontent/05.png" alt="">
-                        </div>
-                        <div class="text">
-                            <a href="./mypage.html" class="name">Angela</a>
-                            <div class="link">
-                                <a href="">99則評論</a>
-                                <a href="">50張相片</a>
-                            </div>
-                            <div class="star">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star-half-alt"></i>
-                            </div>
-                            <div class="textcomment">
-                                好好玩好好拍的展覽，但是人太多，拍照還限時2分鐘，覺得有點可惜...建議大家避開假日，才能悠閒的看展~
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="pic">
-                        <img src="../picture/activitycontent/com10.jpg" alt="">
-                        <img src="../picture/activitycontent/com10-1.jpg" alt="">
-                    </div>
-                    <div class="comment">
-                        <div class="selfphoto">
-                            <img src="../picture/activitycontent/06.jpeg" alt="">
-                        </div>
-                        <div class="text">
-                            <a href="./mypage.html" class="name">Angela</a>
-                            <div class="link">
-                                <a href="">99則評論</a>
-                                <a href="">50張相片</a>
-                            </div>
-                            <div class="star">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star-half-alt"></i>
-                            </div>
-                            <div class="textcomment">
-                                好好玩好好拍的展覽，但是人太多，拍照還限時2分鐘，覺得有點可惜...建議大家避開假日，才能悠閒的看展~
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="pic">
-                        <img src="../picture/activitycontent/com07.jpg" alt="">
-                        <img src="../picture/activitycontent/com07-1.jpg" alt="">
-                    </div>
-                    <div class="comment">
-                        <div class="selfphoto">
-                            <img src="../picture/activitycontent/07.jpeg" alt="">
-                        </div>
-                        <div class="text">
-                            <a href="./mypage.html" class="name">Angela</a>
-                            <div class="link">
-                                <a href="">99則評論</a>
-                                <a href="">50張相片</a>
-                            </div>
-                            <div class="star">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star-half-alt"></i>
-                            </div>
-                            <div class="textcomment">
-                                好好玩好好拍的展覽，但是人太多，拍照還限時2分鐘，覺得有點可惜...建議大家避開假日，才能悠閒的看展~
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="pic">
-                        <img src="../picture/activitycontent/com08.jpg" alt="">
-                        <img src="../picture/activitycontent/com08-1.jpg" alt="">
-                    </div>
-                    <div class="comment">
-                        <div class="selfphoto">
-                            <img src="../picture/activitycontent/08.jpeg" alt="">
-                        </div>
-                        <div class="text">
-                            <a href="./mypage.html" class="name">Angela</a>
-                            <div class="link">
-                                <a href="">99則評論</a>
-                                <a href="">50張相片</a>
-                            </div>
-                            <div class="star">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star-half-alt"></i>
-                            </div>
-                            <div class="textcomment">
-                                好好玩好好拍的展覽，但是人太多，拍照還限時2分鐘，覺得有點可惜...建議大家避開假日，才能悠閒的看展~
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="pic">
-                        <img src="../picture/activitycontent/com09.jpg" alt="">
-                        <img src="../picture/activitycontent/com09-1.jpg" alt="">
-                    </div>
-                    <div class="comment">
-                        <div class="selfphoto">
-                            <img src="../picture/activitycontent/09.jpeg" alt="">
-                        </div>
-                        <div class="text">
-                            <a href="./mypage.html" class="name">Angela</a>
-                            <div class="link">
-                                <a href="">99則評論</a>
-                                <a href="">50張相片</a>
-                            </div>
-                            <div class="star">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star-half-alt"></i>
-                            </div>
-                            <div class="textcomment">
-                                好好玩好好拍的展覽，但是人太多，拍照還限時2分鐘，覺得有點可惜...建議大家避開假日，才能悠閒的看展~
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
         <!--資料內容結束-->
-        <!--頁碼開始-->
-        <div class="pagenum">
-            <ul>
-                <li><a href="#">上一頁</a></li>
-                <li><a href="#">1</a></li>
-                <li><a href="#">2</a></li>
-                <li><a href="#">3</a></li>
-                <li><a href="#">4</a></li>
-                <li><a href="#">5</a></li>
-                <li><a href="#">6</a></li>
-                <li><a href="#">7</a></li>
-                <li><a href="#">8</a></li>
-                <li><a href="#">9</a></li>
-                <li><a href="#">10</a></li>
-                <li><a href="#">下一頁</a></li>
-            </ul>
-        </div>
-        <!--頁碼結束-->
-<!-- footer -->
 
-<div class="footer">
-    <div class="mainfooter">
-        <p>聯絡我們</p>
-        <div class="social">
-            <a href=""><img src="../Iconfacebook.png" alt=""></a>
-            <a href=""><img src="../IconIinstagram.png" alt=""></a>
-            <a href=""><img src="../Iconline.png" alt=""></a>
-            <a href=""><img src="../Icontwitter.png" alt=""></a>
-        </div>
-        <hr>
-        <p>&copy;2020 enjoyfun.net</p>
+        <!-- footer -->
+
+        <!-- footer -->
     </div>
-</div>
+    <!-- content結束 -->
+    <!-- 登入註冊的燈箱 -->
+    <div class="overlay">
+        <article>
+            <button type="button" class="btn_modal_close">&#10006</button>
 
-<!-- footer -->
+            <div class="container01">
+                <div class="pic">
+                    <img src="./picture/login/01-1.jpg" alt="">
+                </div>
+                <div class="global-cont">
+                    <div class="inner-cont">
+                        <div class="sign">
+                            <span class="active sign-in">帳號登入</span>
+                            <span class="sign-up">註冊帳號</span>
+                        </div>
+                        <div class="sign-in-up">
+                            <form class="sign-in-form active">
+                                <input type="text" placeholder="帳號或 E-mail">
+                                <input type="password" placeholder="密碼">
+                                <span>
+                                    <input type="checkbox"> <label>記住我</label>
+                                </span>
+                                <a href="#">忘記密碼</a>
+                                <input type="submit" value="Sign In">
+                            </form>
+                            <form class="sign-up-form">
+                                <input type="text" placeholder="E-mail">
+                                <input type="password" placeholder="密碼">
+                                <input type="password" placeholder="再次確認密碼">
+                                <input type="submit" value="Sign Up">
+                            </form>
+                            <div class="divider">
+                                <span>快速登入</span>
+                            </div>
+                            <div class="social-login">
+                                <button class="facebook">
+                                    <i class="fab fa-facebook-f"></i>
+                                </button>
+                                <button class="google">
+                                    <img src="./picture/main/Google_Logo.png" alt="">
+                                </button>
+                                <button class="Line">
+                                    <img src="/picture/main/Line_Logo.png" alt="">
+                                </button>
+                                <button class="Twitter">
+                                    <i class="fab fa-twitter"></i>
+                                </button>
 
-</div>
-<!-- content結束 -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+    </div>
+    <!--撰寫評論的燈箱 -->
+    <div class="overlay2">
+        <article>
+            <!-- <button type="button" class="btn_modal_close">&#10006</button> -->
+            <div class="container2">
+                <!-- 標題 -->
+                <div class="title">
+                    <h2>愛麗絲夢遊奇境體驗展</h2>
+                </div>
+                <!-- 帳號圖片 -->
+                <div class="selfimg"><img src="./picture/comment_form/selfimg.jpg" alt=""></div>
+                <!-- 評分星星 -->
+                <div class="star_Score">
+                    <span class="text">點一下來評分：</span>
+                    <div class="star_block wrapper">
+                        <span class="star" data-star="5"><i class="fas fa-star"></i></span>
+                        <span class="star" data-star="4"><i class="fas fa-star"></i></span>
+                        <span class="star" data-star="3"><i class="fas fa-star"></i></span>
+                        <span class="star" data-star="2"><i class="fas fa-star"></i></span>
+                        <span class="star" data-star="1"><i class="fas fa-star"></i></span>
+                    </div>
+                </div>
+                <form class="comment" action="">
+                    <div class="text">
+                        <textarea name="" id="" cols="30" rows="10" placeholder="詳細說明你在這個地點的親身體驗..."></textarea>
+                    </div>
 
 
-<!-- 載入Jquery-->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+                    <!-- 選擇檔案的按鈕開始 -->
+                    <div class="upfile">
+                        <input type="file" id="file_input">
+                        <button type="button" id="choose_file">分享照片</button>
 
-<!-- 點擊後顯示選單 -->
-<script>
-    $(function () {
-        // 點擊按鈕，選單縮放
-        $("button.btn_switch").on("click", function () {
-            $("nav.main_nav").slideToggle();
-        });
+                        <div id="img_block">
+                            選擇的檔案:
+                            <span id="file_name"></span><br>
+                        </div>
+                    </div>
 
-    });
-</script>
-<!-- 控制漢堡button變化 -->
-<script>
-    $(function () {
-
-        // hamburger icon 的切換
-        $("button.hamburger").on("click", function () {
-            $(this).toggleClass("is-active");
-        });
-
-    });
-</script>
+                    <!-- 選擇檔案的按鈕結束 -->
+                    <!-- 取消及確認按鈕 -->
+                    <div class="group">
+                        <button type="reset" class="btn_modal_close2">取消</button>
+                        <!-- <button type="reset">清空</button> 這個要跟form表單寫在一起，程式才知道哪份表單要清空 -->
+                        <button type="submit" class="send">確認送出</button>
+                        <!-- 表單資料送出  type 要用 submit-->
+                    </div>
+                </form>
+            </div>
+        </article>
+    </div>
+    <!--撰寫評論的燈箱 -->
+    <!-- 燈箱 -->
+    <button type="button" id="go_top">↑</button>
+    <!-- 載入漢堡選單 -->
+    <script src="./js_all/hamburger.js"></script>
+    <!-- gotop 、燈箱、登入註冊、tab 頁籤切換-->
+    <script src="./js_all/all.js"></script>
+    <!-- 評論燈箱及星星 -->
+    <script src="./js_all/comment_form.js"></script>
 </body>
 
 </html>

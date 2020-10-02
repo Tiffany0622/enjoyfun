@@ -19,6 +19,16 @@ body {
     /* border: 1px solid green; */
 }
 
+ /* 麵包屑位於哪頁 */
+
+ .breadcrumb ol.breadcrumb_list>li:nth-child(2) a {
+    display: inline-block;
+    border-radius: 50px;
+    /* color: rgb(255, 255, 255); */
+    background-color: #C6E5E1;
+    /* text-shadow: 1px 1px 0px rgb(124, 124, 124); */
+}
+
 
 .profile {
     /* border: 1px solid rgb(10, 71, 238); */

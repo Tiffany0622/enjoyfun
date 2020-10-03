@@ -539,7 +539,7 @@ h3 {
 
     /* 標題 */
     h3 {
-        width: 95%;
+        width: 90%;
         font-size: 20px;
         margin-bottom: 40px;
     }
@@ -565,8 +565,9 @@ h3 {
 
     .content .item .text p.date {
         font-size: 16px;
+        padding: 10px 10px 15px 10px;
         width: 100%;
-        /* border: 1px solid rgb(255, 0, 128); */
+        border: 1px solid rgb(255, 0, 128);
         order: 1;
     }
 
@@ -588,9 +589,11 @@ h3 {
         max-height: 100%;
         max-width: 100%;
     }
-    .content .item .text .heart{
+
+    .content .item .text .heart {
         padding-bottom: 20px;
     }
+
     .content .item .text .heart i {
         font-size: 20px;
     }

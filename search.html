@@ -1,72 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>搜尋結果</title>
     <link rel="stylesheet" href="./css/normalize.css">
-    <link rel="stylesheet" href="./css/header02.css">
     <link rel="stylesheet" href="./css/hb.css">
+    <link rel="stylesheet" href="./css/nav_rwd.css">
+    <link rel="stylesheet" href="./css/footer_rwd.css">
+    <link rel="stylesheet" href="./css/lightbox.css">
     <link rel="stylesheet" href="./css/search.css">
-    <link rel="stylesheet" href="./css/footer.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
+    <link rel="stylesheet" href="./vendors/lightSlider/lightslider.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css"
+        integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js"></script>
+    <script src="./vendors/JS/jquery-3.5.1.js"></script>
 </head>
+
 <body>
     <!-- header -->
     <header>
         <div class="head">
             <div class="logo">
-                <a href="./index.html"> <img src="./logo.png" alt="enjoyfun的logo"></a>
+                <a href="./index.html">
+                    <img src="./logo.png" alt="enjoyfun的logo">
+                </a>
             </div>
-            <div class="navright">
-                <div class="wrap">
-                    <div class="search">
-                        <input class="search-bar" type="text" name="search" id="search" placeholder="今天你享趣哪玩?">
-                        <div class="search-btn">
-                            <a href="https://www.google.com.tw/?hl=zh-TW">
-                            <img src="./search_button.png" alt=""></a>
-                    </div>
-                </div>
-                <button class="hamburger hamburger--stand btn_switch" type="button">
-                    <span class="hamburger-box">
-                        <span class="hamburger-inner"></span>
-                    </span>
-                </button>
-                <nav class="main_nav">
-                    <ul class="nav_list">
-                        <li>
-                            <a href="./activity.html">找活動&景點</a>
-                        </li>
-                        <li>
-                            <a href="./articleall.html">文章專欄</a>
-                        </li>
-                        <li>
-                            <a href="./mypage.html">我的頁面</a>
-                        </li>
-                        <li>
-                            <a href="./logoin.html">登入</a>
-                        </li>
-                    </ul>
-                </nav>
-            </div>
+            <ul class="list">
+                <li>
+                    <a class="button-hover" href="./activity.html">找活動＆景點</a>
+                </li>
+                <li>
+                    <a class="button-hover" href="./articleall.html">文章專欄</a>
+                </li>
+                <li>
+                    <a class="button-hover" href="./mypage.html">我的頁面</a>
+                </li>
+                <li class="testlogin">
+                    <a class="button-hover">登入</a>
+                </li>
+            </ul>
+        </div>
+        <div class="header2">
+            <button class="hamburger hamburger--stand btn_switch" type="button">
+                <span class="hamburger-box">
+                    <span class="hamburger-inner"></span>
+                </span>
+            </button>
+            <nav class="main_nav">
+                <ul class="nav_list">
+                    <li>
+                        <a href="./activity.html">找活動&景點</a>
+                    </li>
+                    <li>
+                        <a href="./articleall.html">文章專欄</a>
+                    </li>
+                    <li>
+                        <a href="./mypage.html">我的頁面</a>
+                    </li>
+                    <li class="testlogin">
+                        <a class="login">登入</a>
+                    </li>
+                </ul>
+            </nav>
         </div>
     </header>
     <!-- header -->
 
     <!-- content開始 -->
     <div class="container">
-       
-        <!--breadcrumb開始-->
 
-        <div class="breadcrumb">
-            <ol class="breadcrumb_list">
-                <li><a href="./index.html">首頁</a></li>
-                <li><a href="./search.html">搜尋結果</a></li>
-            </ol>
+        <!-- navtop(搜尋框、麵包屑) -->
+        <!-- 搜尋框 -->
+        <div class="navtop">
+            <div class="wrap">
+                <div class="search">
+                    <input class="search-bar" type="text" name="search" id="search" placeholder="今天你享趣哪玩?">
+                    <div class="search-btn">
+                        <a href="./search.html">
+                            <img src="./search_button.png" alt=""></a>
+                    </div>
+                </div>
+            </div>
+            <!-- 搜尋框 -->
+            <!--breadcrumb開始-->
+            <div class="breadcrumb">
+                <ol class="breadcrumb_list">
+                    <li><a href="./index.html">首頁</a></li>
+                    <li><a href="./mypage.html">搜尋結果</a></li>
+                </ol>
+            </div>
+            <!--breadcrumb結束-->
         </div>
-
-        <!--breadcrumb結束-->
-
         <!--資料內容開始-->
         <h3 class="search">搜尋內容：秘境</h3>
         <div class="content">
@@ -77,7 +103,9 @@
                     </div>
                     <div class="text">
                         <p class="date">August 07, 2020</p>
-                        <a href=""><h4>波浪海堤-澎湖水族館旁的隱藏景點</h4></a>
+                        <a href="">
+                            <h4>波浪海堤-澎湖水族館旁的隱藏景點</h4>
+                        </a>
                     </div>
                     <div class="heart">
                         <i class="fas fa-heart"></i>
@@ -90,7 +118,9 @@
                     </div>
                     <div class="text">
                         <p class="date">August 07, 2020</p>
-                        <a href=""><h4>波浪海堤-澎湖水族館旁的隱藏景點</h4></a>
+                        <a href="">
+                            <h4>波浪海堤-澎湖水族館旁的隱藏景點</h4>
+                        </a>
                     </div>
                     <div class="heart">
                         <i class="fas fa-heart"></i>
@@ -105,7 +135,9 @@
                     </div>
                     <div class="text">
                         <p class="date">August 07, 2020</p>
-                        <a href=""><h4>波浪海堤-澎湖水族館旁的隱藏景點</h4></a>
+                        <a href="">
+                            <h4>波浪海堤-澎湖水族館旁的隱藏景點</h4>
+                        </a>
                     </div>
                     <div class="heart">
                         <i class="fas fa-heart"></i>
@@ -118,7 +150,9 @@
                     </div>
                     <div class="text">
                         <p class="date">August 07, 2020</p>
-                        <a href=""><h4>波浪海堤-澎湖水族館旁的隱藏景點</h4></a>
+                        <a href="">
+                            <h4>波浪海堤-澎湖水族館旁的隱藏景點</h4>
+                        </a>
                     </div>
                     <div class="heart">
                         <i class="fas fa-heart"></i>
@@ -133,7 +167,9 @@
                     </div>
                     <div class="text">
                         <p class="date">August 07, 2020</p>
-                        <a href=""><h4>波浪海堤-澎湖水族館旁的隱藏景點</h4></a>
+                        <a href="">
+                            <h4>波浪海堤-澎湖水族館旁的隱藏景點</h4>
+                        </a>
                     </div>
                     <div class="heart">
                         <i class="fas fa-heart"></i>
@@ -146,7 +182,9 @@
                     </div>
                     <div class="text">
                         <p class="date">August 07, 2020</p>
-                        <a href=""><h4>波浪海堤-澎湖水族館旁的隱藏景點</h4></a>
+                        <a href="">
+                            <h4>波浪海堤-澎湖水族館旁的隱藏景點</h4>
+                        </a>
                     </div>
                     <div class="heart">
                         <i class="fas fa-heart"></i>
@@ -161,7 +199,9 @@
                     </div>
                     <div class="text">
                         <p class="date">August 07, 2020</p>
-                        <a href=""><h4>波浪海堤-澎湖水族館旁的隱藏景點</h4></a>
+                        <a href="">
+                            <h4>波浪海堤-澎湖水族館旁的隱藏景點</h4>
+                        </a>
                     </div>
                     <div class="heart">
                         <i class="fas fa-heart"></i>
@@ -174,7 +214,9 @@
                     </div>
                     <div class="text">
                         <p class="date">August 07, 2020</p>
-                        <a href=""><h4>波浪海堤-澎湖水族館旁的隱藏景點</h4></a>
+                        <a href="">
+                            <h4>波浪海堤-澎湖水族館旁的隱藏景點</h4>
+                        </a>
                     </div>
                     <div class="heart">
                         <i class="fas fa-heart"></i>
@@ -189,7 +231,9 @@
                     </div>
                     <div class="text">
                         <p class="date">August 07, 2020</p>
-                        <a href=""><h4>波浪海堤-澎湖水族館旁的隱藏景點</h4></a>
+                        <a href="">
+                            <h4>波浪海堤-澎湖水族館旁的隱藏景點</h4>
+                        </a>
                     </div>
                     <div class="heart">
                         <i class="fas fa-heart"></i>
@@ -202,7 +246,9 @@
                     </div>
                     <div class="text">
                         <p class="date">August 07, 2020</p>
-                        <a href=""><h4>波浪海堤-澎湖水族館旁的隱藏景點</h4></a>
+                        <a href="">
+                            <h4>波浪海堤-澎湖水族館旁的隱藏景點</h4>
+                        </a>
                     </div>
                     <div class="heart">
                         <i class="fas fa-heart"></i>
@@ -210,8 +256,8 @@
                     </div>
                 </div>
             </div>
-            
         </div>
+
         <!--資料內容結束-->
         <!--頁碼開始-->
         <div class="pagenum">
@@ -246,36 +292,106 @@
                 <p>&copy;2020 enjoyfun.net</p>
             </div>
         </div>
-
         <!-- footer -->
-
     </div>
     <!-- content結束 -->
+    <!-- 燈箱Html -->
+    <div class="overlay">
+        <article>
+            <button type="button" class="btn_modal_close">&#10006</button>
 
+            <div class="container01">
+                <div class="pic">
+                    <img src="./picture/login/01-1.jpg" alt="">
+                </div>
+                <div class="global-cont">
+                    <div class="inner-cont">
+                        <div class="sign">
+                            <span class="active sign-in">帳號登入</span>
+                            <span class="sign-up">註冊帳號</span>
+                        </div>
+                        <div class="sign-in-up">
+                            <form class="sign-in-form active">
+                                <input type="text" placeholder="帳號或 E-mail">
+                                <input type="password" placeholder="密碼">
+                                <span>
+                                    <input type="checkbox"> <label>記住我</label>
+                                </span>
+                                <a href="#">忘記密碼</a>
+                                <input type="submit" value="Sign In">
+                            </form>
+                            <form class="sign-up-form">
+                                <input type="text" placeholder="E-mail">
+                                <input type="password" placeholder="密碼">
+                                <input type="password" placeholder="再次確認密碼">
+                                <input type="submit" value="Sign Up">
+                            </form>
+                            <div class="divider">
+                                <span>快速登入</span>
+                            </div>
+                            <div class="social-login">
+                                <button class="facebook">
+                                    <i class="fab fa-facebook-f"></i>
+                                </button>
+                                <button class="google">
+                                    <img src="./picture/main/Google_Logo.png" alt="">
+                                </button>
+                                <button class="Line">
+                                    <img src="/picture/main/Line_Logo.png" alt="">
+                                </button>
+                                <button class="Twitter">
+                                    <i class="fab fa-twitter"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+    </div>
+    <!-- 燈箱Html -->
+    <!-- go_top -->
+    <button type="button" id="go_top">↑</button>
+    <!-- 載入漢堡選單 -->
+    <script src="./js_all/hamburger.js"></script>
+    <!-- gotop 、燈箱、登入註冊、tab 頁籤切換-->
+    <script src="./js_all/all.js"></script>
 
-    <!-- 載入Jquery-->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
-    <!-- 點擊後顯示選單 -->
+    <!-- 愛心 -->
     <script>
-        $(function () {
-            // 點擊按鈕，選單縮放
-            $("button.btn_switch").on("click", function () {
-                $("nav.main_nav").slideToggle();
-            });
+        var heart = document.getElementsByClassName("fas");
+        console.log(heart);
 
-        });
+        for (let i = 0; i < heart.length; i++) {
+            heart[i].addEventListener("click", function () {
+                //console.log("hi");
+                var item = heart[i].closest(".heart");
+                var num = item.querySelector("p.num");
+                //console.log(num);
+                let num300 = parseInt(num.innerText);
+                //console.log(num300);
+
+                if (heart[i].classList.contains("active")) {
+                    heart[i].classList.remove("active");
+                    num.innerText = num300 - 1;
+                } else {
+                    heart[i].classList.add("active");
+                    num.innerText = num300 + 1;
+                }
+            });
+        }
     </script>
-    <!-- 控制漢堡button變化 -->
+
     <script>
-        $(function () {
+        $(document).ready(function () {
 
-            // hamburger icon 的切換
-            $("button.hamburger").on("click", function () {
-                $(this).toggleClass("is-active");
-            });
+            $('.heart').click(function () {
+                $(this).toggleClass('.is-active');
+            })
 
-        });
+        })
     </script>
+    <!-- 愛心 -->
 </body>
+
 </html>

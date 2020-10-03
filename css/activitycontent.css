@@ -17,12 +17,12 @@ body {
   width: 100%;
   /* width: 1200px; */
   margin: 0 auto;
-  border:1px solid green;
+  /* border:1px solid green; */
 }
 
 /* 資料內容開始 */
 .maincontent {
-  border:1px solid rgb(4, 0, 223);
+  /* border:1px solid rgb(4, 0, 223); */
   max-width:1200px;
   margin: 0 auto;
   margin-top: 100px;

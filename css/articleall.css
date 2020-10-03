@@ -588,7 +588,9 @@ h3 {
         max-height: 100%;
         max-width: 100%;
     }
-
+    .content .item .text .heart{
+        padding-bottom: 10px;
+    }
     .content .item .text .heart i {
         font-size: 20px;
     }

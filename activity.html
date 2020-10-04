@@ -1,27 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>找活動&景點</title>
     <link rel="stylesheet" href="./css/normalize.css">
     <link rel="stylesheet" href="./css/hb.css">
-    <link rel="stylesheet" href="./css/nav_test_rwd.css">
+    <link rel="stylesheet" href="./css/nav_rwd.css">
     <link rel="stylesheet" href="./css/footer_rwd.css">
     <link rel="stylesheet" href="./css/lightbox.css">
-
     <link rel="stylesheet" href="./css/activity.css">
-    
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
+    <link rel="stylesheet" href="./vendors/lightSlider/lightslider.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css"
+        integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js"></script>
     <script src="./vendors/JS/jquery-3.5.1.js"></script>
 </head>
+
 <body>
     <!-- header -->
     <header>
         <div class="head">
             <div class="logo">
-                <a href="">
+                <a href="./index.html">
                     <img src="./logo.png" alt="enjoyfun的logo">
                 </a>
             </div>
@@ -65,29 +67,39 @@
         </div>
     </header>
     <!-- header -->
-    
+
     <!-- content開始 -->
     <div class="container">
-    
-        <!--breadcrumb開始-->
-    
-        <div class="breadcrumb">
-            <ol class="breadcrumb_list">
-                <li><a href="./index.html">首頁</a></li>
-                <li><a href="#">找活動 & 景點&ensp;>&ensp;全部</a></li>
-            </ol>
+        <!-- navtop(搜尋框、麵包屑) -->
+        <!-- 搜尋框 -->
+        <div class="navtop">
+            <div class="wrap">
+                <div class="search">
+                    <input class="search-bar" type="text" name="search" id="search" placeholder="今天你享趣哪玩?">
+                    <div class="search-btn">
+                        <a href="./search.html">
+                            <img src="./search_button.png" alt=""></a>
+                    </div>
+                </div>
+            </div>
+            <!-- 搜尋框 -->
+            <!--breadcrumb開始-->
+            <div class="breadcrumb">
+                <ol class="breadcrumb_list">
+                    <li><a href="./index.html">首頁</a></li>
+                    <li><a href="./mypage.html">找活動 & 景點</a></li>
+                </ol>
+            </div>
+            <!--breadcrumb結束-->
         </div>
-    
-        <!--breadcrumb結束-->
-        
         <!--選單開始-->
-        <div class="menu">
-            <ul>
-                <li class="list"><a href="./activity.html">所有活動 & 景點</a></li>
-                <li class="list"><a href="./activity.html">NEW</a></li>
-                <li class="list"><a href="./activity.html">HOT</a></li>
-                <li class="list"><a href="./activity.html">期間限定</a></li>
-                <li class="list"><a href="./activity.html">約會聖地</a></li>
+        <div class="menu tab_list_block">
+            <ul class=" tab_list">
+                <li class="list"><a href="#" data-target="tab1" class="tab -on">所有活動 & 景點</a></li>
+                <li class="list"><a href="#" data-target="tab2" class="tab">NEW</a></li>
+                <li class="list"><a href="#" data-target="tab3" class="tab">HOT</a></li>
+                <li class="list"><a href="#" data-target="tab4" class="tab">期間限定</a></li>
+                <li class="list"><a href="#" data-target="tab5" class="tab">約會聖地</a></li>
             </ul>
         </div>
         <!--選單結束-->
@@ -106,63 +118,70 @@
                         <a href="./activitycontent.html">
                             <img src="./picture/activity/01.jpg" alt="">
                         </a>
+                        <div class="star">
+                            <p class="score">5.0</p>
+                            <i class="fas fa-star"></i>
+                        </div>
                     </div>
                     <div class="text">
                         <div class="top">
                             <p class="type">NEW</p>
-                            <a href="./activitycontent.html">
-                                <p class="title">西班牙奇幻攝影大師-尤尼歐特展</p>
-                            </a>
+                            <div class="text_right">
+                                <a href="./activitycontent.html">
+                                    纖維工藝博物館年度特展
+                                </a>
+                                <p class="date">2020.08.15 - 2020.12.31</p>
+                            </div>
                         </div>
-                        <p class="date">2020 . 08 . 15 - 2020 . 12 . 31</p>
+
+                    </div>
+                </div>
+                <div class="right">
+                    <div class="rightitem">
+                        <div class="pic">
+                            <a href="./activitycontent.html">
+                                <img src="./picture/activity/2-2.jpg" alt="">
+                            </a>
                             <div class="star">
                                 <p class="score">5.0</p>
                                 <i class="fas fa-star"></i>
                             </div>
+                        </div>
+                        <div class="text">
+                            <div class="top">
+                                <p class="type">NEW</p>
+                                <div class="text_right">
+                                    <a href="./activitycontent.html">
+                                        纖維工藝博物館年度特展
+                                    </a>
+                                    <p class="date">2020.08.15 - 2020.12.31</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                </div>
-            <div class="right">
-                <div class="rightitem">
-                    <div class="pic">
-                        <a href="./activitycontent.html">
-                            <img src="./picture/activity/2-2.jpg" alt="">
-                        </a>
-                    </div>
-                    <div class="text">
-                        <div class="top">
-                            <p class="type">NEW</p>
+                    <div class="rightitem">
+                        <div class="pic">
                             <a href="./activitycontent.html">
-                                <p class="title">纖維工藝博物館年度特展</p>
+                                <img src="./picture/activity/2-3.jpg" alt="">
                             </a>
+                            <div class="star">
+                                <p class="score">5.0</p>
+                                <i class="fas fa-star"></i>
+                            </div>
                         </div>
-                        <p class="date">2020.08.15 - 2020.12.31</p>
-                        <div class="star">
-                            <p class="score">5.0</p>
-                            <i class="fas fa-star"></i>
+                        <div class="text">
+                            <div class="top">
+                                <p class="type">NEW</p>
+                                <div class="text_right">
+                                    <a href="./activitycontent.html">
+                                        纖維工藝博物館年度特展
+                                    </a>
+                                    <p class="date">2020.08.15 - 2020.12.31</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="rightitem">
-                    <div class="pic">
-                        <a href="./activitycontent.html">
-                            <img src="./picture/activity/2-3.jpg" alt="">
-                        </a>
-                    </div>
-                    <div class="text">
-                        <div class="top">
-                            <p class="type">NEW</p>
-                            <a href="./activitycontent.html">
-                                <p class="title">纖維工藝博物館年度特展</p>
-                            </a>
-                        </div>
-                        <p class="date">2020.08.15 - 2020.12.31</p>
-                        <div class="star">
-                            <p class="score">5.0</p>
-                            <i class="fas fa-star"></i>
-                        </div>
-                    </div>
-                </div>
-            </div>
             </div>
             <div class="item02">
                 <div class="rowitem">
@@ -170,238 +189,251 @@
                         <a href="./activitycontent.html">
                             <img src="./picture/activity/3-1.jpg" alt="">
                         </a>
+                        <div class="star">
+                            <p class="score">5.0</p>
+                            <i class="fas fa-star"></i>
+                        </div>
                     </div>
                     <div class="text">
                         <div class="top">
                             <p class="type">NEW</p>
-                            <a href="./activitycontent.html">
-                                <p class="title">纖維工藝博物館年度特展</p>
-                            </a>
-                        </div>
-                        <!-- <p class="date">2020.08.15 - 2020.12.31</p> -->
-                        <div class="star">
-                            <p class="score">5.0</p>
-                            <i class="fas fa-star"></i>
+                            <div class="text_right">
+                                <a href="./activitycontent.html">
+                                    纖維工藝博物館年度特展
+                                </a>
+                                <p class="date">2020.08.15 - 2020.12.31</p>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div class="rowitem">
                     <div class="pic">
                         <a href="./activitycontent.html">
-                            <img src="./picture/activity/3-2.jpg" alt="">
+                            <img src="./picture/activity/3-1.jpg" alt="">
                         </a>
+                        <div class="star">
+                            <p class="score">5.0</p>
+                            <i class="fas fa-star"></i>
+                        </div>
                     </div>
                     <div class="text">
                         <div class="top">
                             <p class="type">NEW</p>
-                            <a href="./activitycontent.html">
-                                <p class="title">纖維工藝博物館年度特展</p>
-                            </a>
-                        </div>
-                        <!-- <p class="date">2020.08.15 - 2020.12.31</p> -->
-                        <div class="star">
-                            <p class="score">5.0</p>
-                            <i class="fas fa-star"></i>
+                            <div class="text_right">
+                                <a href="./activitycontent.html">
+                                    纖維工藝博物館年度特展
+                                </a>
+                                <p class="date">2020.08.15 - 2020.12.31</p>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div class="rowitem">
                     <div class="pic">
                         <a href="./activitycontent.html">
-                            <img src="./picture/activity/3-3.jpg" alt="">
+                            <img src="./picture/activity/3-1.jpg" alt="">
                         </a>
-                    </div>
-                    <div class="text">
-                        <div class="top">
-                            <p class="type">HOT</p>
-                            <a href="./activitycontent.html">
-                                <p class="title">纖維工藝博物館年度特展</p>
-                            </a>
-                        </div>
-                        <!-- <p class="date">2020.08.15 - 2020.12.31</p> -->
                         <div class="star">
                             <p class="score">5.0</p>
                             <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <div class="text">
+                        <div class="top">
+                            <p class="type">NEW</p>
+                            <div class="text_right">
+                                <a href="./activitycontent.html">
+                                    纖維工藝博物館年度特展
+                                </a>
+                                <p class="date">2020.08.15 - 2020.12.31</p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="item03">
                 <div class="left">
-                        <div class="leftitem">
-                            <div class="pic">
+                    <div class="pic">
+                        <a href="./activitycontent.html">
+                            <img src="./picture/activity/01.jpg" alt="">
+                        </a>
+                        <div class="star">
+                            <p class="score">5.0</p>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <div class="text">
+                        <div class="top">
+                            <p class="type">NEW</p>
+                            <div class="text_right">
                                 <a href="./activitycontent.html">
-                                    <img src="./picture/activity/5-3.jpg" alt="">
+                                    纖維工藝博物館年度特展
                                 </a>
-                            </div>
-                            <div class="text">
-                                <div class="top">
-                                    <p class="type">NEW</p>
-                                    <a href="./activitycontent.html">
-                                        <p class="title">纖維工藝博物館年度特展</p>
-                                    </a>
-                                </div>
                                 <p class="date">2020.08.15 - 2020.12.31</p>
-                                <div class="star">
-                                    <p class="score">5.0</p>
-                                    <i class="fas fa-star"></i>
-                                </div>
                             </div>
                         </div>
-                        <div class="leftitem">
-                            <div class="pic">
-                                <a href="./activitycontent.html">
-                                    <img src="./picture/activity/5-2.jpg" alt="">
-                                </a>
-                            </div>
-                            <div class="text">
-                                <div class="top">
-                                    <p class="type">NEW</p>
-                                    <a href="./activitycontent.html">
-                                        <p class="title">纖維工藝博物館年度特展</p>
-                                    </a>
-                                </div>
-                                <p class="date">2020.08.15 - 2020.12.31</p>
-                                <div class="star">
-                                    <p class="score">5.0</p>
-                                    <i class="fas fa-star"></i>
-                                </div>
-                            </div>
-                        </div>
+                    </div>
                 </div>
                 <div class="right">
-                    <div class="pic">
-                        <a href="./activitycontent.html">
-                            <img src="./picture/activity/01-1.jpg" alt="">
-                        </a>
-                    </div>
-                    <div class="text">
-                        <div class="top">
-                            <p class="type">HOT</p>
+                    <div class="rightitem">
+                        <div class="pic">
                             <a href="./activitycontent.html">
-                                <p class="title">愛麗絲夢遊奇境體驗展</p>
+                                <img src="./picture/activity/2-2.jpg" alt="">
                             </a>
+                            <div class="star">
+                                <p class="score">5.0</p>
+                                <i class="fas fa-star"></i>
+                            </div>
                         </div>
-                        <p class="date">2020 . 08 . 15 - 2020 . 12 . 31</p>
-                        <div class="star">
-                            <p class="score">5.0</p>
-                            <i class="fas fa-star"></i>
+                        <div class="text">
+                            <div class="top">
+                                <p class="type">NEW</p>
+                                <div class="text_right">
+                                    <a href="./activitycontent.html">
+                                        纖維工藝博物館年度特展
+                                    </a>
+                                    <p class="date">2020.08.15 - 2020.12.31</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="rightitem">
+                        <div class="pic">
+                            <a href="./activitycontent.html">
+                                <img src="./picture/activity/2-3.jpg" alt="">
+                            </a>
+                            <div class="star">
+                                <p class="score">5.0</p>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                        <div class="text">
+                            <div class="top">
+                                <p class="type">NEW</p>
+                                <div class="text_right">
+                                    <a href="./activitycontent.html">
+                                        纖維工藝博物館年度特展
+                                    </a>
+                                    <p class="date">2020.08.15 - 2020.12.31</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-             <div class="item02">
+            <div class="item02">
                 <div class="rowitem">
                     <div class="pic">
                         <a href="./activitycontent.html">
-                            <img src="./picture/activity/5-1.jpg" alt="">
+                            <img src="./picture/activity/3-1.jpg" alt="">
                         </a>
+                        <div class="star">
+                            <p class="score">5.0</p>
+                            <i class="fas fa-star"></i>
+                        </div>
                     </div>
                     <div class="text">
                         <div class="top">
                             <p class="type">NEW</p>
-                            <a href="./activitycontent.html">
-                                <p class="title">纖維工藝博物館年度特展</p>
-                            </a>
-                        </div>
-                        <p class="date">2020.08.15 - 2020.12.31</p>
-                        <div class="star">
-                            <p class="score">5.0</p>
-                            <i class="fas fa-star"></i>
+                            <div class="text_right">
+                                <a href="./activitycontent.html">
+                                    纖維工藝博物館年度特展
+                                </a>
+                                <p class="date">2020.08.15 - 2020.12.31</p>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div class="rowitem">
                     <div class="pic">
                         <a href="./activitycontent.html">
-                            <img src="./picture/activity/4-3.jpg" alt="">
+                            <img src="./picture/activity/3-1.jpg" alt="">
                         </a>
+                        <div class="star">
+                            <p class="score">5.0</p>
+                            <i class="fas fa-star"></i>
+                        </div>
                     </div>
                     <div class="text">
                         <div class="top">
                             <p class="type">NEW</p>
-                            <a href="./activitycontent.html">
-                                <p class="title">纖維工藝博物館年度特展</p>
-                            </a>
-                        </div>
-                        <p class="date">2020.08.15 - 2020.12.31</p>
-                        <div class="star">
-                            <p class="score">5.0</p>
-                            <i class="fas fa-star"></i>
+                            <div class="text_right">
+                                <a href="./activitycontent.html">
+                                    纖維工藝博物館年度特展
+                                </a>
+                                <p class="date">2020.08.15 - 2020.12.31</p>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div class="rowitem">
                     <div class="pic">
                         <a href="./activitycontent.html">
-                            <img src="./picture/activity/4-1.jpg" alt="">
+                            <img src="./picture/activity/3-1.jpg" alt="">
                         </a>
+                        <div class="star">
+                            <p class="score">5.0</p>
+                            <i class="fas fa-star"></i>
+                        </div>
                     </div>
                     <div class="text">
                         <div class="top">
                             <p class="type">NEW</p>
-                            <a href="./activitycontent.html">
-                                <p class="title">纖維工藝博物館年度特展</p>
-                            </a>
-                        </div>
-                        <p class="date">2020.08.15 - 2020.12.31</p>
-                        <div class="star">
-                            <p class="score">5.0</p>
-                            <i class="fas fa-star"></i>
+                            <div class="text_right">
+                                <a href="./activitycontent.html">
+                                    纖維工藝博物館年度特展
+                                </a>
+                                <p class="date">2020.08.15 - 2020.12.31</p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-           
-        </div>
-
-
-         <!--資料內容結束-->
-        <!--頁碼開始-->
-        <div class="pagenum">
-            <ul>
-                <li><a href="#">上一頁</a></li>
-                <li><a href="#">1</a></li>
-                <li><a href="#">2</a></li>
-                <li><a href="#">3</a></li>
-                <li><a href="#">4</a></li>
-                <li><a href="#">5</a></li>
-                <li><a href="#">6</a></li>
-                <li><a href="#">7</a></li>
-                <li><a href="#">8</a></li>
-                <li><a href="#">9</a></li>
-                <li><a href="#">10</a></li>
-                <li><a href="#">下一頁</a></li>
-            </ul>
-        </div>
-        <!--頁碼結束-->
-<!-- footer -->
-
-<div class="footer">
-    <div class="mainfooter">
-        <p>聯絡我們</p>
-        <div class="social">
-            <a href=""><img src="../Iconfacebook.png" alt=""></a>
-            <a href=""><img src="../IconIinstagram.png" alt=""></a>
-            <a href=""><img src="../Iconline.png" alt=""></a>
-            <a href=""><img src="../Icontwitter.png" alt=""></a>
-        </div>
-        <hr>
-        <p>&copy;2020 enjoyfun.net</p>
     </div>
-</div>
+    <!--資料內容結束-->
+    <!--頁碼開始-->
+    <div class="pagenum">
+        <ul>
+            <li><a href="#">上一頁</a></li>
+            <li><a href="#">1</a></li>
+            <li><a href="#">2</a></li>
+            <li><a href="#">3</a></li>
+            <li><a href="#">4</a></li>
+            <li><a href="#">5</a></li>
+            <li><a href="#">6</a></li>
+            <li><a href="#">7</a></li>
+            <li><a href="#">8</a></li>
+            <li><a href="#">9</a></li>
+            <li><a href="#">10</a></li>
+            <li><a href="#">下一頁</a></li>
+        </ul>
+    </div>
+    <!--頁碼結束-->
+    <!-- footer -->
 
-<!-- footer -->
-
-</div>
-<!-- content結束 -->
-    <!-- 燈箱 -->
+    <div class="footer">
+        <div class="mainfooter">
+            <p>聯絡我們</p>
+            <div class="social">
+                <a href=""><img src="Iconfacebook.png" alt=""></a>
+                <a href=""><img src="IconIinstagram.png" alt=""></a>
+                <a href=""><img src="Iconline.png" alt=""></a>
+                <a href=""><img src="Icontwitter.png" alt=""></a>
+            </div>
+            <hr>
+            <p>&copy;2020 enjoyfun.net</p>
+        </div>
+    </div>
+    <!-- footer -->
+    </div>
+    <!-- content結束 -->
+    <!-- 燈箱Html -->
     <div class="overlay">
         <article>
             <button type="button" class="btn_modal_close">&#10006</button>
 
-            <div class="container">
+            <div class="container01">
                 <div class="pic">
                     <img src="./picture/login/01-1.jpg" alt="">
                 </div>
@@ -424,7 +456,7 @@
                             <form class="sign-up-form">
                                 <input type="text" placeholder="E-mail">
                                 <input type="password" placeholder="密碼">
-                                <input type="text" placeholder="再次確認密碼">
+                                <input type="password" placeholder="再次確認密碼">
                                 <input type="submit" value="Sign Up">
                             </form>
                             <div class="divider">
@@ -443,7 +475,6 @@
                                 <button class="Twitter">
                                     <i class="fab fa-twitter"></i>
                                 </button>
-
                             </div>
                         </div>
                     </div>
@@ -451,55 +482,13 @@
             </div>
         </article>
     </div>
-    <!-- 燈箱 -->
-
-<!-- 載入Jquery-->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script src="./css/login.js"></script>
-<!-- 點擊後顯示選單 -->
-<script>
-    $(function () {
-        // 點擊按鈕，選單縮放
-        $("button.btn_switch").on("click", function () {
-            $("nav.main_nav").slideToggle();
-        });
-
-    });
-</script>
-<!-- 控制漢堡button變化 -->
-<script>
-    $(function () {
-
-        // hamburger icon 的切換
-        $("button.hamburger").on("click", function () {
-            $(this).toggleClass("is-active");
-        });
-
-    });
-</script>
-    <!-- 燈箱 -->
-    <script>
-        $(function () {
-
-            // 開啟 Modal 彈跳視窗
-            $("li.log-in").on("click", function () {
-                $("div.overlay").addClass("-on");
-            });
-
-            // 關閉 Modal
-            $("button.btn_modal_close").on("click", function () {
-                $("div.overlay").addClass("-opacity-zero");
-
-                // 設定隔一秒後，移除相關 class
-                setTimeout(function () {
-                    $("div.overlay").removeClass("-on -opacity-zero");
-                }, 1000);
-            });
-
-        });
-    </script>
-    <!-- 燈箱 -->
-
-
+    <!-- 燈箱Html -->
+    <!-- go_top -->
+    <button type="button" id="go_top">↑</button>
+    <!-- 載入漢堡選單 -->
+    <script src="./js_all/hamburger.js"></script>
+    <!-- gotop 、燈箱、登入註冊、tab 頁籤切換-->
+    <script src="./js_all/all.js"></script>
 </body>
+
 </html>

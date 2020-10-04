@@ -5,6 +5,8 @@
     text-decoration: none;
     box-sizing: border-box;
     font-family: 'Noto Sans TC', sans-serif;
+    /* outline: .5px solid red; */
+
 }
 
 body {
@@ -19,9 +21,9 @@ body {
     /* border: 1px solid green; */
 }
 
- /* 麵包屑位於哪頁 */
+/* 麵包屑位於哪頁 */
 
- .breadcrumb ol.breadcrumb_list>li:nth-child(2) a {
+.breadcrumb ol.breadcrumb_list>li:nth-child(2) a {
     display: inline-block;
     border-radius: 50px;
     /* color: rgb(255, 255, 255); */
@@ -32,7 +34,7 @@ body {
 
 .profile {
     /* border: 1px solid rgb(10, 71, 238); */
-    width: 1200px;
+    width: 1150px;
     display: flex;
     align-items: center;
     margin: 0 auto;
@@ -76,7 +78,7 @@ body {
     /* border: 1px solid red; */
     margin: 0 auto;
     margin-bottom: 100px;
-    width: 1200px;
+    width: 1150px;
 }
 
 .menu ul {
@@ -129,8 +131,10 @@ li.list a:hover {
 }
 
 /* 解決頁籤分隔線摸到會變色的問題 */
-.menu>ul.tab_list li.list>a.-on:hover::before {
-    width: 0%;
+.menu>ul.tab_list li.list>a.-on::after {
+    color: #1d1d1d;
+    text-shadow: none;
+
 }
 
 /* 可切換頁籤 結束*/
@@ -138,7 +142,7 @@ li.list a:hover {
 
 /* 文章內容開始 */
 .article {
-    width: 1200px;
+    width: 1180px;
     /* width: 100px; */
     /* border: 1px solid red; */
     margin: 0 auto;
@@ -240,7 +244,7 @@ li.list a:hover {
     font-size: 20px;
     margin-bottom: 100px;
     /* border: 1px solid rgb(255, 166, 0); */
-    width: 1200px;
+    width: 98%;
 }
 
 .pagenum>ul {
@@ -574,9 +578,9 @@ li.list a:hover {
     }
 
     .article>.item:nth-child(1),
-.article>.item:nth-child(2) {
-    margin-right: 0px;
-}
+    .article>.item:nth-child(2) {
+        margin-right: 0px;
+    }
 
     /* 頁碼開始 */
     .pagenum {

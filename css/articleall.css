@@ -63,12 +63,6 @@ body {
     pointer-events: none;
     color: rgb(50, 50, 50);
 }
-
-.menu ul li:nth-child(1) a::after {
-    content: '';
-}
-
-
 /* 第一個 li 元素，將 ::before 設定回來需要的 */
 .menu ul :nth-child(1) ::after {
     content: '';
@@ -213,7 +207,7 @@ h3 {
     font-size: 20px;
     margin-bottom: 100px;
     /* border: 1px solid rgb(255, 166, 0); */
-    width: 1200px;
+    width: 96%;
 }
 
 .pagenum>ul {

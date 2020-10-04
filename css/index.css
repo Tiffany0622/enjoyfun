@@ -1,19 +1,29 @@
 body{
     background-color:rgb(247, 247, 247);
-    /* overflow-x: hidden; */
+    overflow-x: hidden;
     /* 把橫向卷軸關閉 */
+    
 }
 *{
     /* border:1px solid black; */
+    /* outline: 1px solid red; */
 }
 
-.week,.new,.hot,.article,.aboutme{
+.week,.hot,.article,.aboutme{
 font-size: 0;
 max-width:1200px;
 width: 100%;
 margin: 0 auto;
 /* border:1px solid red; */
 margin-bottom:150px;
+}
+.new{
+    font-size: 0;
+max-width:1200px;
+width: 100%;
+margin: 0 auto;
+/* border:1px solid red; */
+margin-bottom:50px;
 }
 
 /*all標題h1*/
@@ -399,7 +409,7 @@ div.new div.content div.star i{
  /*注目新文*/
 
 div.block_yellow{
-    width: 1195px;
+    width: 98%;
     height: 280px;
     background-color: rgb(255, 244, 216);
     margin-top:300px ;
@@ -407,7 +417,7 @@ div.block_yellow{
     
 }
 div.block_white{
-    width: 1195px;
+    width: 98%;
     height: 280px;
     background-color: rgb(255, 255, 255);
     margin-top:600px;
@@ -1144,7 +1154,7 @@ div.article > div.content > div.block_yellow > div.item02 > a.img > img, div.art
        width: 90%;
        margin: 0 auto;
        /* border:1px solid rgb(97, 0, 243); */
-       margin-bottom:100px;
+       /* margin-bottom:100px; */
     }
 
     .week h1,.title1 > h1,.hot > h1,.article > h1{

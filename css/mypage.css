@@ -129,6 +129,14 @@ li.list a:hover {
     text-shadow: 1px 1px 0px rgba(58, 58, 58, 0.493);
     border-radius: 50px;
 }
+.pagenum > ul.tab_list > li.list > a.-on {
+    /* display: inline-block; */
+    background-color: rgb(129, 191, 188);
+    color: aliceblue;
+    text-shadow: 1px 1px 0px rgba(58, 58, 58, 0.493);
+    border-radius: 50px;
+    border: 1px solid purple;
+}
 
 /* 解決頁籤分隔線摸到會變色的問題 */
 .menu>ul.tab_list li.list>a.-on::after {

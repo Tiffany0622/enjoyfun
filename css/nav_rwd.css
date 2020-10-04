@@ -603,6 +603,7 @@ button.-onScroll {
          width: 100%;
          display: inline-block;
      }
+    
 
      /* 漢堡Nav hover換色 */
      nav.main_nav ul.nav_list li:hover {

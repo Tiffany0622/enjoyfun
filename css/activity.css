@@ -95,13 +95,13 @@ ul a:hover {
 }
 
 /* 解除衝突nav_rwd的套用 */
-li>a::after {
+/* li>a::after {
   content: '';
   display: inline-block;
   width: 0%;
   height: 0px;
   margin-top: 0px;
-}
+} */
 
 /* 解決頁籤分隔線摸到會變色的問題 */
 .menu>ul.tab_list li.list>a.-on::before {
@@ -1241,10 +1241,14 @@ li>a::after {
 
   }
 
+  .menu ul li {
+    line-height: 10px;
+  }
   .menu ul li a {
     font-size: 15px;
-    padding: 4px 5px 2px 4px;
+    padding: 12px 5px 0px 4px;
     border-bottom: 1px solid #1d1d1d;
+    
   }
 
   /* 解決頁籤底線按到會出現的的問題 */

@@ -14,30 +14,30 @@
 
  /* 往上跑的按鈕 */
  #go_top {
-     width: 40px;
-     height: 40px;
-     background: none;
-     position: fixed;
-     right: 20px;
-     bottom: 30px;
-     color: rgb(255, 255, 255);
-     background-color: #76C5BB;
-     border-radius: 50%;
-     font-size: 20px;
-     line-height: 1;
-     outline: none;
-     cursor: pointer;
-     border-width: 0px;
-     text-shadow: 3px 1px 1px rgba(43, 43, 43, 0.349);
-     box-shadow: 3px 1px 1px rgba(43, 43, 43, 0.349);
-     opacity: 0;
-     transition: opacity .8s;
- }
+    width: 40px;
+    height: 40px;
+    background: none;
+    position: fixed;
+    right: 20px;
+    bottom: 30px;
+    color: rgb(255, 255, 255);
+    background-color: #76C5BB;
+    border-radius: 50%;
+    font-size: 20px;
+    line-height: 1;
+    outline: none;
+    cursor: pointer;
+    border-width: 0px;
+    text-shadow: 3px 1px 1px rgba(43, 43, 43, 0.349);
+    box-shadow: 3px 1px 1px rgba(43, 43, 43, 0.349);
+    opacity: 0;
+    transition: opacity .8s;
+}
 
- button.-onScroll {
-     opacity: 1;
-     transition: opacity .8s;
- }
+button.-onScroll {
+    opacity: 1 !important;
+    transition: opacity .8s !important;
+}
 
  /* Nav導覽 */
 

@@ -6,11 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>新手也能爬的避暑高山步道TOP3，高山草原、枯木湖泊，躲到山裡涼爽一下！</title>
     <link rel="stylesheet" href="./css/normalize.css">
-    <link rel="stylesheet" href="./css/header02.css">
     <link rel="stylesheet" href="./css/hb.css">
+    <link rel="stylesheet" href="./css/nav_rwd_activitycontent.css">
+    <link rel="stylesheet" href="./css/lightbox.css">
     <link rel="stylesheet" href="./css/articlepage.css">
-    <link rel="stylesheet" href="./css/footer.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/comment_form.css">
+    <link rel="stylesheet" href="./css/footer_rwd.css">
+    <link rel="stylesheet" href="./vendors/lightSlider/lightslider.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css"
+        integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js"></script>
+    <script src="./vendors/JS/jquery-3.5.1.js"></script>
 </head>
 
 <body>
@@ -18,62 +24,80 @@
     <header>
         <div class="head">
             <div class="logo">
-                <a href="./index.html"> <img src="./logo.png" alt="enjoyfun的logo"></a>
+                <a href="./index.html">
+                    <img src="./logo.png" alt="enjoyfun的logo">
+                </a>
             </div>
-            <div class="navright">
-                <div class="wrap">
-                    <div class="search">
-                        <input class="search-bar" type="text" name="search" id="search" placeholder="今天你享趣哪玩?">
-                        <div class="search-btn">
-                            <a href="./search.html">
-                            <img src="./search_button.png" alt=""></a>
-                    </div>
-                </div>
-                <button class="hamburger hamburger--stand btn_switch" type="button">
-                    <span class="hamburger-box">
-                        <span class="hamburger-inner"></span>
-                    </span>
-                </button>
-                <nav class="main_nav">
-                    <ul class="nav_list">
-                        <li>
-                            <a href="./activity.html">找活動&景點</a>
-                        </li>
-                        <li>
-                            <a href="./articleall.html">文章專欄</a>
-                        </li>
-                        <li>
-                            <a href="./mypage.html">我的頁面</a>
-                        </li>
-                        <li>
-                            <a href="./logoin.html">登入</a>
-                        </li>
-                    </ul>
-                </nav>
-            </div>
+            <ul class="list">
+                <li>
+                    <a class="button-hover" href="./activity.html">找活動＆景點</a>
+                </li>
+                <li>
+                    <a class="button-hover" href="./articleall.html">文章專欄</a>
+                </li>
+                <li>
+                    <a class="button-hover" href="./mypage.html">我的頁面</a>
+                </li>
+                <li class="testlogin">
+                    <a class="button-hover">登入</a>
+                </li>
+            </ul>
+        </div>
+        <div class="header2">
+            <button class="hamburger hamburger--stand btn_switch" type="button">
+                <span class="hamburger-box">
+                    <span class="hamburger-inner"></span>
+                </span>
+            </button>
+            <nav class="main_nav">
+                <ul class="nav_list">
+                    <li>
+                        <a href="./activity.html">找活動&景點</a>
+                    </li>
+                    <li>
+                        <a href="./articleall.html">文章專欄</a>
+                    </li>
+                    <li>
+                        <a href="./mypage.html">我的頁面</a>
+                    </li>
+                    <li class="testlogin">
+                        <a class="login">登入</a>
+                    </li>
+                </ul>
+            </nav>
         </div>
     </header>
     <!-- header -->
 
     <!-- content開始 -->
     <div class="container">
-
-        <!--breadcrumb開始-->
-
-        <div class="breadcrumb">
-            <ol class="breadcrumb_list">
-                <li><a href="./index.html">首頁</a></li>
-                <li><a href="./articleall.html">文章專欄</a></li>
-                <li><a href="./articlepage.html">新手也能爬的避暑高山步道TOP3，高山草原、枯木湖泊，躲到山裡涼爽一下！</a></li>
-            </ol>
+        <!-- navtop(搜尋框、麵包屑) -->
+        <!-- 搜尋框 -->
+        <div class="navtop">
+            <div class="wrap">
+                <div class="search">
+                    <input class="search-bar" type="text" name="search" id="search" placeholder="今天你享趣哪玩?">
+                    <div class="search-btn">
+                        <a href="./search.html">
+                            <img src="./search_button.png" alt=""></a>
+                    </div>
+                </div>
+            </div>
+            <!-- 搜尋框 -->
+            <!--breadcrumb開始-->
+            <div class="breadcrumb">
+                <ol class="breadcrumb_list">
+                    <li><a href="./index.html">首頁</a></li>
+                    <li><a href="#">文章專欄</a></li>
+                    <li><a href="./activitycontent.html">新手也能爬的避暑高山步道TOP3</a></li>
+                </ol>
+            </div>
+            <!--breadcrumb結束-->
         </div>
-
-        <!--breadcrumb結束-->
-
         <!--資料內容開始-->
         <div class="content">
             <div class="mainitem">
-                <h3>新手也能爬的避暑高山步道TOP3，高山草原、枯木湖泊，躲到山裡涼爽一下！</h3>
+                <h3>新手也能爬的避暑高山步道TOP3</h3>
                 <div class="toptext">
                     <div class="text">
                         <p class="date">August 07, 2020</p>
@@ -152,50 +176,50 @@
                         <img src="./picture/articlepage/06.jpg" alt="">
                     </div>
                     <h3>登山攻略大全！隱藏注意事項、路線難度分級都幫你整理好啦！</h4>
-                    <div class="heart">
-                        <i class="fas fa-heart"></i>
-                        <div class="num">199</div>
-                    </div>
+                        <div class="heart">
+                            <i class="fas fa-heart"></i>
+                            <div class="num">199</div>
+                        </div>
                 </div>
                 <div class="asideitem01">
                     <div class="pic">
                         <img src="./picture/articlepage/06.jpg" alt="">
                     </div>
                     <h3>登山攻略大全！隱藏注意事項、路線難度分級都幫你整理好啦！</h4>
-                    <div class="heart">
-                        <i class="fas fa-heart"></i>
-                        <div class="num">199</div>
-                    </div>
+                        <div class="heart">
+                            <i class="fas fa-heart"></i>
+                            <div class="num">199</div>
+                        </div>
                 </div>
                 <div class="asideitem01">
                     <div class="pic">
                         <img src="./picture/articlepage/06.jpg" alt="">
                     </div>
                     <h3>登山攻略大全！隱藏注意事項、路線難度分級都幫你整理好啦！</h4>
-                    <div class="heart">
-                        <i class="fas fa-heart"></i>
-                        <div class="num">199</div>
-                    </div>
+                        <div class="heart">
+                            <i class="fas fa-heart"></i>
+                            <div class="num">199</div>
+                        </div>
                 </div>
                 <div class="asideitem01">
                     <div class="pic">
                         <img src="./picture/articlepage/06.jpg" alt="">
                     </div>
                     <h3>登山攻略大全！隱藏注意事項、路線難度分級都幫你整理好啦！</h4>
-                    <div class="heart">
-                        <i class="fas fa-heart"></i>
-                        <div class="num">199</div>
-                    </div>
+                        <div class="heart">
+                            <i class="fas fa-heart"></i>
+                            <div class="num">199</div>
+                        </div>
                 </div>
                 <div class="asideitem01">
                     <div class="pic">
                         <img src="./picture/articlepage/06.jpg" alt="">
                     </div>
                     <h3>登山攻略大全！隱藏注意事項、路線難度分級都幫你整理好啦！</h4>
-                    <div class="heart">
-                        <i class="fas fa-heart"></i>
-                        <div class="num">199</div>
-                    </div>
+                        <div class="heart">
+                            <i class="fas fa-heart"></i>
+                            <div class="num">199</div>
+                        </div>
                 </div>
             </div>
         </div>
@@ -221,32 +245,66 @@
 
     </div>
     <!-- content結束 -->
+    <!-- 登入註冊的燈箱 -->
+    <div class="overlay">
+        <article>
+            <button type="button" class="btn_modal_close">&#10006</button>
 
+            <div class="container01">
+                <div class="pic">
+                    <img src="./picture/login/01-1.jpg" alt="">
+                </div>
+                <div class="global-cont">
+                    <div class="inner-cont">
+                        <div class="sign">
+                            <span class="active sign-in">帳號登入</span>
+                            <span class="sign-up">註冊帳號</span>
+                        </div>
+                        <div class="sign-in-up">
+                            <form class="sign-in-form active">
+                                <input type="text" placeholder="帳號或 E-mail">
+                                <input type="password" placeholder="密碼">
+                                <span>
+                                    <input type="checkbox"> <label>記住我</label>
+                                </span>
+                                <a href="#">忘記密碼</a>
+                                <input type="submit" value="Sign In">
+                            </form>
+                            <form class="sign-up-form">
+                                <input type="text" placeholder="E-mail">
+                                <input type="password" placeholder="密碼">
+                                <input type="password" placeholder="再次確認密碼">
+                                <input type="submit" value="Sign Up">
+                            </form>
+                            <div class="divider">
+                                <span>快速登入</span>
+                            </div>
+                            <div class="social-login">
+                                <button class="facebook">
+                                    <i class="fab fa-facebook-f"></i>
+                                </button>
+                                <button class="google">
+                                    <img src="./picture/main/Google_Logo.png" alt="">
+                                </button>
+                                <button class="Line">
+                                    <img src="/picture/main/Line_Logo.png" alt="">
+                                </button>
+                                <button class="Twitter">
+                                    <i class="fab fa-twitter"></i>
+                                </button>
 
-    <!-- 載入Jquery-->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
-    <!-- 點擊後顯示選單 -->
-    <script>
-        $(function () {
-            // 點擊按鈕，選單縮放
-            $("button.btn_switch").on("click", function () {
-                $("nav.main_nav").slideToggle();
-            });
-
-        });
-    </script>
-    <!-- 控制漢堡button變化 -->
-    <script>
-        $(function () {
-
-            // hamburger icon 的切換
-            $("button.hamburger").on("click", function () {
-                $(this).toggleClass("is-active");
-            });
-
-        });
-    </script>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+    </div>
+    <button type="button" id="go_top">↑</button>
+    <!-- 載入漢堡選單 -->
+    <script src="./js_all/hamburger.js"></script>
+    <!-- gotop 、燈箱、登入註冊、tab 頁籤切換-->
+    <script src="./js_all/all.js"></script>
 </body>
 
 </html>

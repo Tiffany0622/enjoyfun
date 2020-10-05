@@ -129,7 +129,8 @@ li.list a:hover {
     text-shadow: 1px 1px 0px rgba(58, 58, 58, 0.493);
     border-radius: 50px;
 }
-.pagenum > ul.tab_list > li.list > a.-on {
+
+.pagenum>ul.tab_list>li.list>a.-on {
     /* display: inline-block; */
     background-color: rgb(129, 191, 188);
     color: aliceblue;

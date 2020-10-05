@@ -14,30 +14,30 @@
 
  /* 往上跑的按鈕 */
  #go_top {
-    width: 40px;
-    height: 40px;
-    background: none;
-    position: fixed;
-    right: 20px;
-    bottom: 30px;
-    color: rgb(255, 255, 255);
-    background-color: #76C5BB;
-    border-radius: 50%;
-    font-size: 20px;
-    line-height: 1;
-    outline: none;
-    cursor: pointer;
-    border-width: 0px;
-    text-shadow: 3px 1px 1px rgba(43, 43, 43, 0.349);
-    box-shadow: 3px 1px 1px rgba(43, 43, 43, 0.349);
-    opacity: 0;
-    transition: opacity .8s;
-}
+     width: 40px;
+     height: 40px;
+     background: none;
+     position: fixed;
+     right: 20px;
+     bottom: 30px;
+     color: rgb(255, 255, 255);
+     background-color: #76C5BB;
+     border-radius: 50%;
+     font-size: 20px;
+     line-height: 1;
+     outline: none;
+     cursor: pointer;
+     border-width: 0px;
+     text-shadow: 3px 1px 1px rgba(43, 43, 43, 0.349);
+     box-shadow: 3px 1px 1px rgba(43, 43, 43, 0.349);
+     opacity: 0;
+     transition: opacity .8s;
+ }
 
-button.-onScroll {
-    opacity: 1 !important;
-    transition: opacity .8s !important;
-}
+ button.-onScroll {
+     opacity: 1 !important;
+     transition: opacity .8s !important;
+ }
 
  /* Nav導覽 */
 
@@ -446,10 +446,10 @@ button.-onScroll {
      }
 
      .breadcrumb ol.breadcrumb_list>li>a {
-        font-size: 18px;
-        /* border: 1px solid blue; */
-        padding: 8px 4px;
-    }
+         font-size: 18px;
+         /* border: 1px solid blue; */
+         padding: 8px 4px;
+     }
 
  }
 
@@ -526,59 +526,59 @@ button.-onScroll {
      }
 
      .navtop {
-        display: flex;
-        width: 96%;
-        justify-content: center;
-        margin: 0 auto;
-        margin-top: 130px;
-        margin-bottom: 30px;
-        /* border: 1px solid rgb(255, 0, 0); */
-        flex-direction: column;
-    }
+         display: flex;
+         width: 96%;
+         justify-content: center;
+         margin: 0 auto;
+         margin-top: 130px;
+         margin-bottom: 30px;
+         /* border: 1px solid rgb(255, 0, 0); */
+         flex-direction: column;
+     }
 
-    .wrap {
-        margin: auto 0;
-        /* border: 1px solid red; */
-        order: 0;
-        align-self: flex-end;
-        margin-bottom: 30px;
-    }
+     .wrap {
+         margin: auto 0;
+         /* border: 1px solid red; */
+         order: 0;
+         align-self: flex-end;
+         margin-bottom: 30px;
+     }
 
-    .search-bar {
-        width: 350px;
-        /* border: 1px solid red; */
-    }
+     .search-bar {
+         width: 350px;
+         /* border: 1px solid red; */
+     }
 
-    .search-btn a img {
-        width: 80px;
-        height: 40px;
-    }
+     .search-btn a img {
+         width: 80px;
+         height: 40px;
+     }
 
-    .search-btn {
-        transform: translate(260px, 7px);
-    }
+     .search-btn {
+         transform: translate(260px, 7px);
+     }
 
-    .breadcrumb {
-        /* border: 1px solid rgb(255, 0, 119); */
-        align-self: flex-start;
-    }
+     .breadcrumb {
+         /* border: 1px solid rgb(255, 0, 119); */
+         align-self: flex-start;
+     }
 
-    .breadcrumb ol.breadcrumb_list>li>a {
-        font-size: 16px;
-        /* border: 1px solid blue; */
-        padding: 8px 0px;
-    }
+     .breadcrumb ol.breadcrumb_list>li>a {
+         font-size: 16px;
+         /* border: 1px solid blue; */
+         padding: 8px 0px;
+     }
 
-    .breadcrumb ol.breadcrumb_list>li:nth-child(3) a {
-        padding: 8px;
-    }
+     .breadcrumb ol.breadcrumb_list>li:nth-child(3) a {
+         padding: 8px;
+     }
 
-    .breadcrumb ol.breadcrumb_list>li::before {
-        content: ">";
-        font-weight: 500;
-        font-size: 10px;
-        margin-right: 6px;
-    }
+     .breadcrumb ol.breadcrumb_list>li::before {
+         content: ">";
+         font-weight: 500;
+         font-size: 10px;
+         margin-right: 6px;
+     }
 
  }
 
@@ -674,8 +674,8 @@ button.-onScroll {
      }
 
      .search-bar {
-         width: 250px;
-         font-size: 14px;
+         width: 270px;
+         font-size: 16px;
          /* border: 1px solid red; */
      }
 
@@ -685,7 +685,7 @@ button.-onScroll {
      }
 
      .search-btn {
-         transform: translate(175px, 7px);
+         transform: translate(190px, 7px);
      }
 
      .search input::placeholder {

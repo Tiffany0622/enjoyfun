@@ -31,11 +31,12 @@ body {
 /* 選單開始 */
 
 .menu {
-  width: 800px;
+  width: 98%;
   /* border:1px solid red; */
   margin: 0 auto;
   margin-bottom: 100px;
   position: relative;
+  font-size: 25px;
 }
 
 .menu ul {
@@ -43,7 +44,7 @@ body {
   margin: 0 auto;
   /* border: 1px solid purple; */
   width: 100%;
-  justify-content: center;
+  /* justify-content: center; */
 
 }
 
@@ -52,10 +53,10 @@ body {
 }
 
 .menu ul li a {
-  font-size: 25px;
+
   color: #1d1d1d;
   display: inline-block;
-  padding: 4px 18px;
+  padding: 8px 20px;
   position: relative;
 }
 
@@ -63,9 +64,9 @@ body {
 .menu ul>li>a::before {
   content: '|';
   position: absolute;
-  top: 2px;
+  top: 5px;
   left: 0px;
-  transform: translateX(-14px);
+  transform: translateX(-44px);
 }
 
 /* 第一個 li 元素，將 ::before 設定回來需要的 */
@@ -93,15 +94,14 @@ ul a:hover {
   border-radius: 50px;
   /* border: 1px solid rgb(65, 27, 203); */
 }
-
 /* 解除衝突nav_rwd的套用 */
-/* li>a::after {
+.menu>ul.tab_list>li.list>a::after {
   content: '';
-  display: inline-block;
+  display: block;
   width: 0%;
   height: 0px;
   margin-top: 0px;
-} */
+}
 
 /* 解決頁籤分隔線摸到會變色的問題 */
 .menu>ul.tab_list li.list>a.-on::before {
@@ -822,7 +822,13 @@ ul a:hover {
   .menu ul li a {
     font-size: 22px;
   }
-
+  .menu ul>li>a::before {
+    content: '|';
+    position: absolute;
+    top: 5px;
+    left: 0px;
+    transform: translateX(-24px);
+  }
 
   /* 滾動視差 */
   .titlebanner>h2 {
@@ -1238,17 +1244,17 @@ ul a:hover {
 
   .menu {
     margin-bottom: 40px;
-
   }
 
   .menu ul li {
-    line-height: 10px;
+    /* line-height: 10px; */
   }
+
   .menu ul li a {
     font-size: 15px;
-    padding: 12px 5px 0px 4px;
+    padding: 12px 5px 12px 4px;
     border-bottom: 1px solid #1d1d1d;
-    
+
   }
 
   /* 解決頁籤底線按到會出現的的問題 */
@@ -1290,7 +1296,7 @@ ul a:hover {
 
   /* 第一層 、第三層*/
   .content .item01,
-  .content .item03{
+  .content .item03 {
     width: 95%;
     flex-direction: column;
     margin-bottom: 0px;
@@ -1298,7 +1304,7 @@ ul a:hover {
 
   .content .item01 .left,
   .content .item03 .left,
-  .content .item02 .rowitem{
+  .content .item02 .rowitem {
     width: 100%;
     overflow: hidden;
     /* border: 3px solid rgb(46, 211, 0); */
@@ -1307,7 +1313,9 @@ ul a:hover {
     margin-bottom: 50px;
     align-items: center;
   }
-  .content .item01 .right,.content .item03 .right{
+
+  .content .item01 .right,
+  .content .item03 .right {
     width: 100%;
     overflow: hidden;
     /* border: 3px solid rgb(46, 211, 0); */
@@ -1319,39 +1327,41 @@ ul a:hover {
 
 
   .content .item01 .left .pic,
-  .content .item03 .left .pic{
+  .content .item03 .left .pic {
     width: 295px;
     height: 295px;
     overflow: hidden;
     /* border: 3px solid rgb(0, 211, 204); */
   }
-  
+
   .content .item01 .right .rightitem .pic,
-  .content .item03 .right .rightitem .pic{
-    width: 295px ;
-    height: 295px ;
+  .content .item03 .right .rightitem .pic {
+    width: 295px;
+    height: 295px;
     overflow: hidden;
     /* border: 3px solid rgb(177, 177, 39); */
     margin: 0 auto;
   }
+
   .content .item02 .rowitem .pic {
-    width: 280px ;
-    height: 280px ;
+    width: 280px;
+    height: 280px;
     overflow: hidden !important;
     /* border: 3px solid rgb(177, 177, 39); */
     margin: 0 auto;
   }
 
   .content .item01 .left .pic a img,
-  .content .item03 .left .pic a img{
+  .content .item03 .left .pic a img {
     max-width: 100%;
-    height: 500px ;
+    height: 500px;
     margin-top: -80px !important;
     /* border:3px solid rgb(194, 19, 112); */
 
   }
+
   .item01 .right .pic img,
-  .content .item03 .right .pic img  {
+  .content .item03 .right .pic img {
     max-width: 100%;
     height: 300px !important;
     margin-top: 0px !important;
@@ -1361,23 +1371,23 @@ ul a:hover {
   }
 
 
-  .content .item02 .rowitem .pic a img{
+  .content .item02 .rowitem .pic a img {
     max-width: 100%;
     /* border:3px solid rgb(194, 19, 112); */
   }
 
   /*文字 */
- 
+
   .content .item01 .right .text,
   .content .item03 .right .text {
     /* border:3px solid rgb(194, 19, 112); */
-   
+
   }
 
- .content .item01 .right .text .top,
- .content .item03 .right .text .top {
-  /* border:3px solid rgb(35, 30, 33); */
-  justify-content: center;
+  .content .item01 .right .text .top,
+  .content .item03 .right .text .top {
+    /* border:3px solid rgb(35, 30, 33); */
+    justify-content: center;
   }
 
   /* 閃爍NEW */
@@ -1391,23 +1401,30 @@ ul a:hover {
   }
 
   /* 標題 */
-  .content .item01 .left .text .top .text_right,.content .item03 .left .text .top .text_right,.content .item01 .right .text .top .text_right,.content .item03 .right .text .top .text_right,.content .item02 .rowitem .text .text_right{
+  .content .item01 .left .text .top .text_right,
+  .content .item03 .left .text .top .text_right,
+  .content .item01 .right .text .top .text_right,
+  .content .item03 .right .text .top .text_right,
+  .content .item02 .rowitem .text .text_right {
     margin: 0;
   }
+
   .content .item01 .left .text .top .text_right a,
   .content .item01 .right .text .top .text_right a,
   .content .item03 .right .text .top .text_right a,
-  .content .item03 .left .text .top .text_right a,.content .item02 .rowitem .text .text_right a {
+  .content .item03 .left .text .top .text_right a,
+  .content .item02 .rowitem .text .text_right a {
     padding: 10px 2px 10px 0px;
     font-size: 17px;
-    letter-spacing: 0; 
+    letter-spacing: 0;
   }
 
   /* 日期 */
   .content .item01 .left .text .top .text_right p.date,
   .content .item01 .right .text .top .text_right p.date,
-  .content .item03 .left .text .top .text_right p.date, .content .item03 .right .text .top .text_right p.date,
-  .content .item02 .rowitem .text .text_right p.date  {
+  .content .item03 .left .text .top .text_right p.date,
+  .content .item03 .right .text .top .text_right p.date,
+  .content .item02 .rowitem .text .text_right p.date {
     font-size: 15px;
     font-weight: 400;
     padding: 0px 0px 10px 0px;
@@ -1416,11 +1433,12 @@ ul a:hover {
 
   /* 星星 */
   .content .item01 .left .pic .star,
-  .content .item03 .left .pic .star{
+  .content .item03 .left .pic .star {
     width: 75px;
     height: 35px;
     transform: translate(0px, 10px);
   }
+
   .content .item01 .right .rightitem .pic .star,
   .content .item03 .right .rightitem .pic .star,
   .item02 .rowitem .pic .star {
@@ -1445,10 +1463,12 @@ ul a:hover {
   .item02 .rowitem .pic .star i {
     font-size: 18px;
   }
-  .content .item01 .right .rightitem,.content .item03 .right .rightitem{
+
+  .content .item01 .right .rightitem,
+  .content .item03 .right .rightitem {
     margin-bottom: 50px;
   }
-  
+
   /* 第二層 */
   .item02 {
     display: flex;

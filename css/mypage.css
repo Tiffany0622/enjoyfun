@@ -13,6 +13,15 @@ body {
     background-color: rgb(247, 247, 247);
 }
 
+/* 切換的CSS */
+.tab {
+    display: none;
+}
+
+.tab.-on {
+    display: flex;
+}
+
 .container {
     font-size: 0;
     width: 1200px;
@@ -127,16 +136,18 @@ li.list a:hover {
     background-color: rgb(129, 191, 188);
     color: aliceblue;
     text-shadow: 1px 1px 0px rgba(58, 58, 58, 0.493);
-    border-radius: 50px;
+    /* border-radius: 50px; */
+    border: 1px solid  rgb(129, 191, 188);
 }
 
-.pagenum>ul.tab_list>li.list>a.-on {
-    /* display: inline-block; */
+div.pagenum>ul>li>a.tab.-on {
+    display: inline-block;
     background-color: rgb(129, 191, 188);
     color: aliceblue;
     text-shadow: 1px 1px 0px rgba(58, 58, 58, 0.493);
-    border-radius: 50px;
-    border: 1px solid purple;
+    /* border-radius: 50px; */
+    border: 1px solid  rgb(129, 191, 188);
+    ;
 }
 
 /* 解決頁籤分隔線摸到會變色的問題 */
@@ -264,35 +275,46 @@ li.list a:hover {
 
 }
 
+/* 不要在li設寬高 */
 .pagenum>ul>li {
-    border: 1px solid rgba(145, 143, 143, 0.5);
+    /* border: 1px solid rgba(145, 143, 143, 0.5); */
     margin: auto 8px;
     background-color: rgb(255, 255, 255);
-    width: 40px;
-    height: 40px;
+    /* width: 40px;
+    height: 40px; */
     text-align: center;
     /* border:1px solid rgb(0, 47, 255); */
     border-radius: 20px;
-
 }
 
+/* 在a標籤設寬高，這樣才可以用line-Height行高 */
 .pagenum>ul>li>a {
     color: #444343;
     display: inline-block;
-    width: 100%;
+    /* width: 100%; */
     border-radius: 20px;
-    padding-top: 6px;
+    /* padding-top: 6px; */
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    border: 1px solid rgba(145, 143, 143, 0.5);
+
 }
 
+.pagenum>ul>li:first-child a,
+.pagenum>ul>li:last-child a{
+    width: 100%;
 
-.pagenum>ul>li:first-child,
-.pagenum>ul>li:last-child {
+}
+
+.pagenum>ul>li:first-child a,
+.pagenum>ul>li:last-child a {
     border: none;
     background-color: rgb(247, 247, 247);
     width: 100px;
     height: 40px;
     border-radius: 0px;
-    /* border:1px solid rgba(0, 0, 0, 0.589); */
+    border:0px solid rgba(0, 0, 0, 0.589);
 }
 
 
@@ -310,13 +332,13 @@ li.list a:hover {
 
 
 /* 切換的CSS */
-.tab {
+/* .tab {
     display: none;
 }
 
 .tab.-on {
     display: flex;
-}
+} */
 
 /* 切換的CSS */
 

@@ -19,14 +19,14 @@ $(function () {
 
 // 點擊星星
 var clickStar = document.getElementsByClassName("star");
-console.log(clickStar);
+// console.log(clickStar);
 
 // ==== 星號的重要性 ===== //
 for (let i = 0; i < clickStar.length; i++) {
     clickStar[i].addEventListener("click", function (e) {
         //alert("hello");
         if (e.target.closest("span")) {
-            console.log(e);
+            // console.log(e);
             let span_el = e.target.closest("span");
             if (span_el.classList.contains("star")) {
 
@@ -72,7 +72,7 @@ file_input.addEventListener("change", function () {
     //讀取this.files[0]這個檔案
     reader.addEventListener("load", function () {
         //讀取完檔案會執行下列 function()的程式
-        console.log(reader.result);
+        // console.log(reader.result);
         var img_block = document.getElementById("img_block");
         //取得html上img_block這個元素
         var img_str = '<img src="' + reader.result + '"class="small_width">';
